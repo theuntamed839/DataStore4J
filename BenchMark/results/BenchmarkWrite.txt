@@ -1,0 +1,1496 @@
+java  -jar ./target/dbBenchmarks.jar BenchmarkWrite -f 3 -wi 3 -i 3 -to 60m -rf json -rff BenchmarkWrite.json | tee BenchmarkWrite.txt
+
+# JMH version: 1.37
+# VM version: JDK 22, OpenJDK 64-Bit Server VM, 22+36-2370
+# VM invoker: /home/ganesh/Documents/jdk-22/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, single-shot each
+# Measurement: 3 iterations, single-shot each
+# Timeout: 60 min per iteration
+# Threads: 1 thread
+# Benchmark mode: Single shot invocation time
+# Benchmark: io.github.theuntamed839.BenchmarkWrite.writeFixedSizeData
+# Parameters: (dbProvider = DATASTORE4J, entryCount = 1000000, keySize = 500, valueSize = 500)
+
+# Run progress: 0.00% complete, ETA 00:00:00
+# Fork: 1 of 3
+# Warmup Iteration   1: DataStore4JAdaptor_3e97b480-f454-4acf-803f-8006f3542825 Folder size: 1039
+14.985 s/op
+# Warmup Iteration   2: DataStore4JAdaptor_e8781ae7-d8d8-40c9-a6a7-fe9c0e5ccd79 Folder size: 1039
+14.199 s/op
+# Warmup Iteration   3: DataStore4JAdaptor_51ac1342-9ab4-4fb1-aa71-6b751c8169fc Folder size: 1039
+13.813 s/op
+Iteration   1: DataStore4JAdaptor_0f816e78-be53-4faa-9582-e3665fce87ed Folder size: 1039
+14.458 s/op
+Iteration   2: DataStore4JAdaptor_ab9874f0-73cf-417e-a2ab-8925f868d8cc Folder size: 1039
+13.959 s/op
+Iteration   3: DataStore4JAdaptor_2af66764-d206-49a5-92bd-2b32409d9270 Folder size: 1039
+13.933 s/op
+
+# Run progress: 2.08% complete, ETA 01:07:50
+# Fork: 2 of 3
+# Warmup Iteration   1: DataStore4JAdaptor_cc75799f-d593-430b-a34a-34d9767db057 Folder size: 1039
+14.355 s/op
+# Warmup Iteration   2: DataStore4JAdaptor_e78e939a-d829-4598-b040-ddac312423f9 Folder size: 1039
+14.052 s/op
+# Warmup Iteration   3: DataStore4JAdaptor_6723c208-d101-4139-b606-a32034ab83a5 Folder size: 1039
+13.814 s/op
+Iteration   1: DataStore4JAdaptor_1d4eb2e3-9bd3-4974-b328-b0627cfea173 Folder size: 1039
+13.836 s/op
+Iteration   2: DataStore4JAdaptor_4ceba6ae-f7c9-4746-8a61-284318671c99 Folder size: 1039
+13.975 s/op
+Iteration   3: DataStore4JAdaptor_f09f2060-37d5-4b99-948b-4fc0fd25b68a Folder size: 1039
+13.888 s/op
+
+# Run progress: 4.17% complete, ETA 01:05:50
+# Fork: 3 of 3
+# Warmup Iteration   1: DataStore4JAdaptor_8fa69dbd-0eef-46f9-81df-182315bdee6a Folder size: 1039
+14.948 s/op
+# Warmup Iteration   2: DataStore4JAdaptor_0f6786f4-eecc-45f1-b939-8d8577e4aac2 Folder size: 1039
+13.940 s/op
+# Warmup Iteration   3: DataStore4JAdaptor_805f839e-f3b1-431b-be49-17165e9bb703 Folder size: 1039
+13.863 s/op
+Iteration   1: DataStore4JAdaptor_0fa22cb8-58b2-4e31-90a0-8f7898bb504b Folder size: 1039
+13.911 s/op
+Iteration   2: DataStore4JAdaptor_edffc3d2-0d7f-4847-993b-caf8d17e11a7 Folder size: 1039
+14.174 s/op
+Iteration   3: DataStore4JAdaptor_ff4a873d-34da-463c-898a-9ed0f6c70810 Folder size: 1039
+14.282 s/op
+
+
+Result "io.github.theuntamed839.BenchmarkWrite.writeFixedSizeData":
+  N = 9
+  mean =     14.046 ±(99.9%) 0.354 s/op
+
+  Histogram, s/op:
+    [13.800, 13.850) = 1 
+    [13.850, 13.900) = 1 
+    [13.900, 13.950) = 2 
+    [13.950, 14.000) = 2 
+    [14.000, 14.050) = 0 
+    [14.050, 14.100) = 0 
+    [14.100, 14.150) = 0 
+    [14.150, 14.200) = 1 
+    [14.200, 14.250) = 0 
+    [14.250, 14.300) = 1 
+    [14.300, 14.350) = 0 
+    [14.350, 14.400) = 0 
+    [14.400, 14.450) = 0 
+
+  Percentiles, s/op:
+      p(0.0000) =     13.836 s/op
+     p(50.0000) =     13.959 s/op
+     p(90.0000) =     14.458 s/op
+     p(95.0000) =     14.458 s/op
+     p(99.0000) =     14.458 s/op
+     p(99.9000) =     14.458 s/op
+     p(99.9900) =     14.458 s/op
+     p(99.9990) =     14.458 s/op
+     p(99.9999) =     14.458 s/op
+    p(100.0000) =     14.458 s/op
+
+
+# JMH version: 1.37
+# VM version: JDK 22, OpenJDK 64-Bit Server VM, 22+36-2370
+# VM invoker: /home/ganesh/Documents/jdk-22/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, single-shot each
+# Measurement: 3 iterations, single-shot each
+# Timeout: 60 min per iteration
+# Threads: 1 thread
+# Benchmark mode: Single shot invocation time
+# Benchmark: io.github.theuntamed839.BenchmarkWrite.writeFixedSizeData
+# Parameters: (dbProvider = DATASTORE4J, entryCount = 5000000, keySize = 500, valueSize = 500)
+
+# Run progress: 6.25% complete, ETA 01:04:31
+# Fork: 1 of 3
+# Warmup Iteration   1: DataStore4JAdaptor_6362f794-31f8-4c42-8890-0e811087b25b Folder size: 5197
+84.211 s/op
+# Warmup Iteration   2: DataStore4JAdaptor_a0533e1c-6918-4738-9239-3803304ece53 Folder size: 5196
+84.317 s/op
+# Warmup Iteration   3: DataStore4JAdaptor_60480a5d-fa2b-493a-be4e-822868657c87 Folder size: 5196
+87.248 s/op
+Iteration   1: DataStore4JAdaptor_2a577927-9a2d-48b7-8dda-e7b78d0ce7ec Folder size: 5196
+85.755 s/op
+Iteration   2: DataStore4JAdaptor_8ed0dce9-a55d-4ac3-a744-6fac6db2ac23 Folder size: 5197
+83.342 s/op
+Iteration   3: DataStore4JAdaptor_9bc13b22-bfee-48c9-8ede-e528dd1fea8b Folder size: 5196
+83.813 s/op
+
+# Run progress: 8.33% complete, ETA 02:21:25
+# Fork: 2 of 3
+# Warmup Iteration   1: DataStore4JAdaptor_af85950d-bd72-4d8f-ba92-9549097d5bea Folder size: 5197
+81.452 s/op
+# Warmup Iteration   2: DataStore4JAdaptor_38f78416-183a-43a5-8ed8-a03a966cf910 Folder size: 5196
+82.398 s/op
+# Warmup Iteration   3: DataStore4JAdaptor_f9972e4c-a354-4794-b1ba-d5a156e73b16 Folder size: 5196
+87.983 s/op
+Iteration   1: DataStore4JAdaptor_0f867c0e-7758-4910-bdab-bae498a488a6 Folder size: 5196
+84.432 s/op
+Iteration   2: DataStore4JAdaptor_1fd23dcd-16c1-446b-beb7-e6f68d83e312 Folder size: 5197
+80.834 s/op
+Iteration   3: DataStore4JAdaptor_c9689ff9-ae37-4a4b-a763-a8caac9ac10a Folder size: 5196
+82.418 s/op
+
+# Run progress: 10.42% complete, ETA 03:02:49
+# Fork: 3 of 3
+# Warmup Iteration   1: DataStore4JAdaptor_68e4fae5-1ab8-4bf4-83cc-01a2afd7ca04 Folder size: 5197
+81.025 s/op
+# Warmup Iteration   2: DataStore4JAdaptor_64fc73f7-995e-446e-a8cd-832b07fe8fa7 Folder size: 5196
+82.734 s/op
+# Warmup Iteration   3: DataStore4JAdaptor_4928aca3-b315-468d-978a-4a730dcdee80 Folder size: 5196
+85.374 s/op
+Iteration   1: DataStore4JAdaptor_9ef046fa-cf21-43b0-9ae1-e7ad47e12a67 Folder size: 5196
+82.798 s/op
+Iteration   2: DataStore4JAdaptor_211381b5-690f-4ce8-8f8e-6a6f9e43d270 Folder size: 5197
+80.817 s/op
+Iteration   3: DataStore4JAdaptor_917cdbf6-b376-4166-9697-6fb3f16f4f35 Folder size: 5196
+82.594 s/op
+
+
+Result "io.github.theuntamed839.BenchmarkWrite.writeFixedSizeData":
+  N = 9
+  mean =     82.978 ±(99.9%) 2.685 s/op
+
+  Histogram, s/op:
+    [80.000, 80.500) = 0 
+    [80.500, 81.000) = 2 
+    [81.000, 81.500) = 0 
+    [81.500, 82.000) = 0 
+    [82.000, 82.500) = 1 
+    [82.500, 83.000) = 2 
+    [83.000, 83.500) = 1 
+    [83.500, 84.000) = 1 
+    [84.000, 84.500) = 1 
+    [84.500, 85.000) = 0 
+    [85.000, 85.500) = 0 
+
+  Percentiles, s/op:
+      p(0.0000) =     80.817 s/op
+     p(50.0000) =     82.798 s/op
+     p(90.0000) =     85.755 s/op
+     p(95.0000) =     85.755 s/op
+     p(99.0000) =     85.755 s/op
+     p(99.9000) =     85.755 s/op
+     p(99.9900) =     85.755 s/op
+     p(99.9990) =     85.755 s/op
+     p(99.9999) =     85.755 s/op
+    p(100.0000) =     85.755 s/op
+
+
+# JMH version: 1.37
+# VM version: JDK 22, OpenJDK 64-Bit Server VM, 22+36-2370
+# VM invoker: /home/ganesh/Documents/jdk-22/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, single-shot each
+# Measurement: 3 iterations, single-shot each
+# Timeout: 60 min per iteration
+# Threads: 1 thread
+# Benchmark mode: Single shot invocation time
+# Benchmark: io.github.theuntamed839.BenchmarkWrite.writeFixedSizeData
+# Parameters: (dbProvider = ROCKSDB, entryCount = 1000000, keySize = 500, valueSize = 500)
+
+# Run progress: 12.50% complete, ETA 03:27:09
+# Fork: 1 of 3
+# Warmup Iteration   1: RocksDBAdaptor_8ab5f4c1-7eed-4ecd-952a-52b00ad87e30 Folder size: 971
+7.189 s/op
+# Warmup Iteration   2: RocksDBAdaptor_cbd6484b-dd4b-4106-b67d-1137434f5ed7 Folder size: 971
+6.961 s/op
+# Warmup Iteration   3: RocksDBAdaptor_ee160517-a4f9-4853-b11a-6c91f9061f6d Folder size: 971
+6.996 s/op
+Iteration   1: RocksDBAdaptor_f1bbbaf1-a792-4ec5-a160-1a9a921faed5 Folder size: 971
+7.146 s/op
+Iteration   2: RocksDBAdaptor_f02ec885-a8fd-4bbd-abd2-85169c8ebc87 Folder size: 971
+7.137 s/op
+Iteration   3: RocksDBAdaptor_a8e496fa-ed98-4c10-a8d8-672463e0bd63 Folder size: 971
+7.006 s/op
+
+# Run progress: 14.58% complete, ETA 02:57:36
+# Fork: 2 of 3
+# Warmup Iteration   1: RocksDBAdaptor_7113f074-62f8-4db4-98ca-1df22246f9be Folder size: 971
+7.114 s/op
+# Warmup Iteration   2: RocksDBAdaptor_f4f7ee5c-1479-4fd6-970e-82b6fc60b819 Folder size: 971
+7.189 s/op
+# Warmup Iteration   3: RocksDBAdaptor_cbaaad5f-70b7-475f-914c-3f453f097411 Folder size: 971
+7.127 s/op
+Iteration   1: RocksDBAdaptor_38032582-651d-4923-956d-87b788729735 Folder size: 971
+7.002 s/op
+Iteration   2: RocksDBAdaptor_f145ea36-2616-47aa-b60a-c0743019afd6 Folder size: 971
+7.100 s/op
+Iteration   3: RocksDBAdaptor_00c212be-dc62-4a84-9085-c7ce7a728f0e Folder size: 971
+7.110 s/op
+
+# Run progress: 16.67% complete, ETA 02:35:17
+# Fork: 3 of 3
+# Warmup Iteration   1: RocksDBAdaptor_0b951cd4-0f90-4724-b693-181005e3f13d Folder size: 971
+7.537 s/op
+# Warmup Iteration   2: RocksDBAdaptor_f78352ff-0b4b-473c-916c-b7dbfd46f0f4 Folder size: 971
+7.396 s/op
+# Warmup Iteration   3: RocksDBAdaptor_902c3bce-55ff-4ae4-b046-0206ee18493c Folder size: 971
+7.237 s/op
+Iteration   1: RocksDBAdaptor_7b5aab05-e0c8-4987-bc3f-1bbee1de8a8c Folder size: 971
+7.319 s/op
+Iteration   2: RocksDBAdaptor_5023d1d7-d230-4e34-8d9b-9e585459571b Folder size: 971
+7.200 s/op
+Iteration   3: RocksDBAdaptor_29d20ea7-eedf-45c0-aad7-2f954047f22a Folder size: 971
+7.257 s/op
+
+
+Result "io.github.theuntamed839.BenchmarkWrite.writeFixedSizeData":
+  N = 9
+  mean =      7.142 ±(99.9%) 0.177 s/op
+
+  Histogram, s/op:
+    [7.000, 7.025) = 2 
+    [7.025, 7.050) = 0 
+    [7.050, 7.075) = 0 
+    [7.075, 7.100) = 1 
+    [7.100, 7.125) = 1 
+    [7.125, 7.150) = 2 
+    [7.150, 7.175) = 0 
+    [7.175, 7.200) = 0 
+    [7.200, 7.225) = 1 
+    [7.225, 7.250) = 0 
+    [7.250, 7.275) = 1 
+    [7.275, 7.300) = 0 
+    [7.300, 7.325) = 1 
+    [7.325, 7.350) = 0 
+    [7.350, 7.375) = 0 
+    [7.375, 7.400) = 0 
+
+  Percentiles, s/op:
+      p(0.0000) =      7.002 s/op
+     p(50.0000) =      7.137 s/op
+     p(90.0000) =      7.319 s/op
+     p(95.0000) =      7.319 s/op
+     p(99.0000) =      7.319 s/op
+     p(99.9000) =      7.319 s/op
+     p(99.9900) =      7.319 s/op
+     p(99.9990) =      7.319 s/op
+     p(99.9999) =      7.319 s/op
+    p(100.0000) =      7.319 s/op
+
+
+# JMH version: 1.37
+# VM version: JDK 22, OpenJDK 64-Bit Server VM, 22+36-2370
+# VM invoker: /home/ganesh/Documents/jdk-22/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, single-shot each
+# Measurement: 3 iterations, single-shot each
+# Timeout: 60 min per iteration
+# Threads: 1 thread
+# Benchmark mode: Single shot invocation time
+# Benchmark: io.github.theuntamed839.BenchmarkWrite.writeFixedSizeData
+# Parameters: (dbProvider = ROCKSDB, entryCount = 5000000, keySize = 500, valueSize = 500)
+
+# Run progress: 18.75% complete, ETA 02:17:51
+# Fork: 1 of 3
+# Warmup Iteration   1: RocksDBAdaptor_4a79f1bc-375b-402c-9afd-93ff1c3a9dbd Folder size: 4856
+58.556 s/op
+# Warmup Iteration   2: RocksDBAdaptor_a8bf2bd1-3627-4476-9f06-0cc94acb869e Folder size: 4856
+53.885 s/op
+# Warmup Iteration   3: RocksDBAdaptor_9f31a492-dc83-4ab6-a161-5878a9133928 Folder size: 4856
+50.062 s/op
+Iteration   1: RocksDBAdaptor_5ff5e591-8612-47fc-aff0-0390dcc968af Folder size: 4856
+51.524 s/op
+Iteration   2: RocksDBAdaptor_e4351adf-3030-4d94-a59e-cc47006c1033 Folder size: 4856
+50.287 s/op
+Iteration   3: RocksDBAdaptor_14eb90e7-bd07-495a-84c1-c65e6680a181 Folder size: 4856
+52.405 s/op
+
+# Run progress: 20.83% complete, ETA 02:21:14
+# Fork: 2 of 3
+# Warmup Iteration   1: RocksDBAdaptor_f6288dd1-fdf9-45a6-b234-fe3f124c1775 Folder size: 4856
+58.880 s/op
+# Warmup Iteration   2: RocksDBAdaptor_ba864327-e403-44c0-8259-b6207ebe0d38 Folder size: 4856
+54.190 s/op
+# Warmup Iteration   3: RocksDBAdaptor_a8f631dd-81b8-4f2b-881a-361d4ccc486f Folder size: 4856
+48.981 s/op
+Iteration   1: RocksDBAdaptor_98ca7fe8-0b35-40e2-bd58-6752767ed990 Folder size: 4856
+52.241 s/op
+Iteration   2: RocksDBAdaptor_44e66148-cadf-47c5-8d8f-65cd7bbd28f9 Folder size: 4856
+50.310 s/op
+Iteration   3: RocksDBAdaptor_21af7c31-366c-459a-8648-4e0bdbe46f15 Folder size: 4856
+51.064 s/op
+
+# Run progress: 22.92% complete, ETA 02:22:59
+# Fork: 3 of 3
+# Warmup Iteration   1: RocksDBAdaptor_42332597-dd3c-4e56-8907-8188b0ab962f Folder size: 4856
+63.687 s/op
+# Warmup Iteration   2: RocksDBAdaptor_b381d3ea-80d2-466c-846b-9eabd7f41340 Folder size: 4856
+53.015 s/op
+# Warmup Iteration   3: RocksDBAdaptor_4bf2f95e-8ebf-4e75-b427-4166a3894766 Folder size: 4856
+51.849 s/op
+Iteration   1: RocksDBAdaptor_611228d1-5046-46c2-96ec-03e117356b26 Folder size: 4856
+50.872 s/op
+Iteration   2: RocksDBAdaptor_496cf05e-5aac-4df9-8e36-c93f50516364 Folder size: 4856
+51.300 s/op
+Iteration   3: RocksDBAdaptor_f726802e-c448-477c-a980-9f182a7989d1 Folder size: 4856
+58.339 s/op
+
+
+Result "io.github.theuntamed839.BenchmarkWrite.writeFixedSizeData":
+  N = 9
+  mean =     52.038 ±(99.9%) 4.161 s/op
+
+  Histogram, s/op:
+    [50.000, 50.500) = 2 
+    [50.500, 51.000) = 1 
+    [51.000, 51.500) = 2 
+    [51.500, 52.000) = 1 
+    [52.000, 52.500) = 2 
+    [52.500, 53.000) = 0 
+    [53.000, 53.500) = 0 
+    [53.500, 54.000) = 0 
+    [54.000, 54.500) = 0 
+    [54.500, 55.000) = 0 
+    [55.000, 55.500) = 0 
+    [55.500, 56.000) = 0 
+    [56.000, 56.500) = 0 
+    [56.500, 57.000) = 0 
+    [57.000, 57.500) = 0 
+    [57.500, 58.000) = 0 
+    [58.000, 58.500) = 1 
+
+  Percentiles, s/op:
+      p(0.0000) =     50.287 s/op
+     p(50.0000) =     51.300 s/op
+     p(90.0000) =     58.339 s/op
+     p(95.0000) =     58.339 s/op
+     p(99.0000) =     58.339 s/op
+     p(99.9000) =     58.339 s/op
+     p(99.9900) =     58.339 s/op
+     p(99.9990) =     58.339 s/op
+     p(99.9999) =     58.339 s/op
+    p(100.0000) =     58.339 s/op
+
+
+# JMH version: 1.37
+# VM version: JDK 22, OpenJDK 64-Bit Server VM, 22+36-2370
+# VM invoker: /home/ganesh/Documents/jdk-22/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, single-shot each
+# Measurement: 3 iterations, single-shot each
+# Timeout: 60 min per iteration
+# Threads: 1 thread
+# Benchmark mode: Single shot invocation time
+# Benchmark: io.github.theuntamed839.BenchmarkWrite.writeFixedSizeData
+# Parameters: (dbProvider = LEVELDB_JAVA, entryCount = 1000000, keySize = 500, valueSize = 500)
+
+# Run progress: 25.00% complete, ETA 02:24:13
+# Fork: 1 of 3
+# Warmup Iteration   1: PureJavaLevelDBAdaptor_becce4c8-57dd-4888-8fb0-18d8bb066fe0 Folder size: 997
+70.479 s/op
+# Warmup Iteration   2: PureJavaLevelDBAdaptor_c9571b6a-e008-48b3-8309-a160de536b99 Folder size: 997
+73.897 s/op
+# Warmup Iteration   3: PureJavaLevelDBAdaptor_02745bff-f02b-4545-8746-a2ed336f9348 Folder size: 997
+74.608 s/op
+Iteration   1: PureJavaLevelDBAdaptor_d977bf7e-8c0b-4df7-a1b5-99268885b44b Folder size: 993
+74.281 s/op
+Iteration   2: PureJavaLevelDBAdaptor_fd38b7bb-bd9b-4cf3-88cc-422f9785943a Folder size: 997
+74.458 s/op
+Iteration   3: PureJavaLevelDBAdaptor_973a56de-cea3-4a0b-9cfd-34ac46392581 Folder size: 997
+73.717 s/op
+
+# Run progress: 27.08% complete, ETA 02:29:19
+# Fork: 2 of 3
+# Warmup Iteration   1: PureJavaLevelDBAdaptor_13b79a55-0d55-446b-955a-5590e38eebcf Folder size: 997
+73.594 s/op
+# Warmup Iteration   2: PureJavaLevelDBAdaptor_67b1a52b-a16e-43f1-b611-303c980cb40a Folder size: 993
+75.709 s/op
+# Warmup Iteration   3: PureJavaLevelDBAdaptor_ea1745b1-c494-4ad7-9342-bc4f115f6723 Folder size: 997
+76.452 s/op
+Iteration   1: PureJavaLevelDBAdaptor_6f048b1f-999f-428e-b8b1-83c3cfb33a66 Folder size: 997
+73.075 s/op
+Iteration   2: PureJavaLevelDBAdaptor_330a3c3d-383d-4eb8-9c8a-383a443dedbe Folder size: 996
+74.061 s/op
+Iteration   3: PureJavaLevelDBAdaptor_31947e61-9375-4bdb-a834-28772843aa1d Folder size: 996
+74.943 s/op
+
+# Run progress: 29.17% complete, ETA 02:32:54
+# Fork: 3 of 3
+# Warmup Iteration   1: PureJavaLevelDBAdaptor_42e5a44d-94a7-4ceb-b92a-9374c90eda38 Folder size: 996
+74.697 s/op
+# Warmup Iteration   2: PureJavaLevelDBAdaptor_73fd7e8c-bbd2-4429-82d8-4d4eb88f389d Folder size: 997
+75.389 s/op
+# Warmup Iteration   3: PureJavaLevelDBAdaptor_9f26ed9f-f3d4-4f13-8d82-003df921f50d Folder size: 996
+75.068 s/op
+Iteration   1: PureJavaLevelDBAdaptor_3b5cc8d4-3c33-4701-b456-c859fc9eb6fb Folder size: 996
+74.870 s/op
+Iteration   2: PureJavaLevelDBAdaptor_765cea58-75c6-4f8d-abb0-983db34bab00 Folder size: 998
+74.496 s/op
+Iteration   3: PureJavaLevelDBAdaptor_6c4797da-22e5-4bac-9113-0e87f0c3ac7e Folder size: 997
+67.319 s/op
+
+
+Result "io.github.theuntamed839.BenchmarkWrite.writeFixedSizeData":
+  N = 9
+  mean =     73.469 ±(99.9%) 3.995 s/op
+
+  Histogram, s/op:
+    [67.000, 67.500) = 1 
+    [67.500, 68.000) = 0 
+    [68.000, 68.500) = 0 
+    [68.500, 69.000) = 0 
+    [69.000, 69.500) = 0 
+    [69.500, 70.000) = 0 
+    [70.000, 70.500) = 0 
+    [70.500, 71.000) = 0 
+    [71.000, 71.500) = 0 
+    [71.500, 72.000) = 0 
+    [72.000, 72.500) = 0 
+    [72.500, 73.000) = 0 
+    [73.000, 73.500) = 1 
+    [73.500, 74.000) = 1 
+    [74.000, 74.500) = 4 
+
+  Percentiles, s/op:
+      p(0.0000) =     67.319 s/op
+     p(50.0000) =     74.281 s/op
+     p(90.0000) =     74.943 s/op
+     p(95.0000) =     74.943 s/op
+     p(99.0000) =     74.943 s/op
+     p(99.9000) =     74.943 s/op
+     p(99.9900) =     74.943 s/op
+     p(99.9990) =     74.943 s/op
+     p(99.9999) =     74.943 s/op
+    p(100.0000) =     74.943 s/op
+
+
+# JMH version: 1.37
+# VM version: JDK 22, OpenJDK 64-Bit Server VM, 22+36-2370
+# VM invoker: /home/ganesh/Documents/jdk-22/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, single-shot each
+# Measurement: 3 iterations, single-shot each
+# Timeout: 60 min per iteration
+# Threads: 1 thread
+# Benchmark mode: Single shot invocation time
+# Benchmark: io.github.theuntamed839.BenchmarkWrite.writeFixedSizeData
+# Parameters: (dbProvider = LEVELDB_JAVA, entryCount = 5000000, keySize = 500, valueSize = 500)
+
+# Run progress: 31.25% complete, ETA 02:34:48
+# Fork: 1 of 3
+# Warmup Iteration   1: PureJavaLevelDBAdaptor_1880b9d9-378e-4698-b20d-3beca17d6677 Folder size: 4989
+655.080 s/op
+# Warmup Iteration   2: PureJavaLevelDBAdaptor_c8d8b106-4d88-48a0-a67c-7c68085bd1e8 Folder size: 4988
+643.813 s/op
+# Warmup Iteration   3: PureJavaLevelDBAdaptor_04fec097-fd87-4b8a-ac1f-be7be5f21e5f Folder size: 4989
+643.891 s/op
+Iteration   1: PureJavaLevelDBAdaptor_5d6dc8a8-972c-4e2b-ba13-9ae6f7d12029 Folder size: 4989
+643.603 s/op
+Iteration   2: PureJavaLevelDBAdaptor_4880b4d7-abe3-4f54-97d9-9986efd32736 Folder size: 4989
+652.092 s/op
+Iteration   3: PureJavaLevelDBAdaptor_dd0932e3-c377-4e72-bb37-df1b1fc14dbb Folder size: 4989
+654.107 s/op
+
+# Run progress: 33.33% complete, ETA 04:30:38
+# Fork: 2 of 3
+# Warmup Iteration   1: PureJavaLevelDBAdaptor_64a8b6ba-e8fa-4c32-98d5-3e53b48189c0 Folder size: 4988
+658.359 s/op
+# Warmup Iteration   2: PureJavaLevelDBAdaptor_767d0399-042d-49bd-a171-b82aed91ad68 Folder size: 4986
+664.373 s/op
+# Warmup Iteration   3: PureJavaLevelDBAdaptor_28921b9f-6de3-4604-9194-975ddc5c7958 Folder size: 4990
+668.528 s/op
+Iteration   1: PureJavaLevelDBAdaptor_3e4e7a75-92ee-4c15-973a-bdf1a05b999f Folder size: 4990
+667.791 s/op
+Iteration   2: PureJavaLevelDBAdaptor_bceee836-4687-4e0c-924a-af261c4d4d84 Folder size: 4990
+674.974 s/op
+Iteration   3: PureJavaLevelDBAdaptor_376f4f2b-6c53-4d04-897e-4681ee77bd80 Folder size: 4990
+674.434 s/op
+
+# Run progress: 35.42% complete, ETA 06:08:42
+# Fork: 3 of 3
+# Warmup Iteration   1: PureJavaLevelDBAdaptor_909fb14d-c856-44aa-b2d7-945a29ad6397 Folder size: 4989
+657.355 s/op
+# Warmup Iteration   2: PureJavaLevelDBAdaptor_c1c099df-0967-4809-81fa-dcea7014c40f Folder size: 4990
+658.397 s/op
+# Warmup Iteration   3: PureJavaLevelDBAdaptor_87d011e5-7696-44f8-9725-146b038a0046 Folder size: 4989
+675.474 s/op
+Iteration   1: PureJavaLevelDBAdaptor_a2774231-d5d4-4ae9-aff2-b119edb8cb39 Folder size: 4990
+672.684 s/op
+Iteration   2: PureJavaLevelDBAdaptor_ed66d9ba-5742-4ebe-b5f5-b540ad6d0400 Folder size: 4990
+666.762 s/op
+Iteration   3: PureJavaLevelDBAdaptor_a141c014-9ce7-4c00-b33c-4de9160b85eb Folder size: 4989
+677.434 s/op
+
+
+Result "io.github.theuntamed839.BenchmarkWrite.writeFixedSizeData":
+  N = 9
+  mean =    664.876 ±(99.9%) 20.200 s/op
+
+  Histogram, s/op:
+    [640.000, 642.500) = 0 
+    [642.500, 645.000) = 1 
+    [645.000, 647.500) = 0 
+    [647.500, 650.000) = 0 
+    [650.000, 652.500) = 1 
+    [652.500, 655.000) = 1 
+    [655.000, 657.500) = 0 
+    [657.500, 660.000) = 0 
+    [660.000, 662.500) = 0 
+    [662.500, 665.000) = 0 
+    [665.000, 667.500) = 1 
+    [667.500, 670.000) = 1 
+    [670.000, 672.500) = 0 
+    [672.500, 675.000) = 3 
+    [675.000, 677.500) = 1 
+
+  Percentiles, s/op:
+      p(0.0000) =    643.603 s/op
+     p(50.0000) =    667.791 s/op
+     p(90.0000) =    677.434 s/op
+     p(95.0000) =    677.434 s/op
+     p(99.0000) =    677.434 s/op
+     p(99.9000) =    677.434 s/op
+     p(99.9900) =    677.434 s/op
+     p(99.9990) =    677.434 s/op
+     p(99.9999) =    677.434 s/op
+    p(100.0000) =    677.434 s/op
+
+
+# JMH version: 1.37
+# VM version: JDK 22, OpenJDK 64-Bit Server VM, 22+36-2370
+# VM invoker: /home/ganesh/Documents/jdk-22/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, single-shot each
+# Measurement: 3 iterations, single-shot each
+# Timeout: 60 min per iteration
+# Threads: 1 thread
+# Benchmark mode: Single shot invocation time
+# Benchmark: io.github.theuntamed839.BenchmarkWrite.writeFixedSizeData
+# Parameters: (dbProvider = LEVELDB_NATIVE, entryCount = 1000000, keySize = 500, valueSize = 500)
+
+# Run progress: 37.50% complete, ETA 07:28:27
+# Fork: 1 of 3
+# Warmup Iteration   1: NativeLevelDBAdaptor_706428e7-5148-441c-964c-41cf87ac18d9 Folder size: 992
+111.532 s/op
+# Warmup Iteration   2: NativeLevelDBAdaptor_cfb9075c-62fa-477a-91be-0e8240c47f10 Folder size: 992
+112.942 s/op
+# Warmup Iteration   3: NativeLevelDBAdaptor_ef6de7f2-ea90-4b76-8740-f87a4c5665c9 Folder size: 992
+111.255 s/op
+Iteration   1: NativeLevelDBAdaptor_c727ac97-a2f0-4d37-8564-25689cfb72df Folder size: 992
+112.108 s/op
+Iteration   2: NativeLevelDBAdaptor_6e358cb7-a199-46fd-b0bf-80d8ccb6a2ad Folder size: 992
+111.709 s/op
+Iteration   3: NativeLevelDBAdaptor_01c59344-e034-4ec3-b929-5d0a07132dc1 Folder size: 992
+110.950 s/op
+
+# Run progress: 39.58% complete, ETA 07:07:47
+# Fork: 2 of 3
+# Warmup Iteration   1: NativeLevelDBAdaptor_c60f714b-9fef-4e66-a987-ce7188ea5926 Folder size: 992
+96.420 s/op
+# Warmup Iteration   2: NativeLevelDBAdaptor_a2eaf972-a69c-4255-b91f-36c53f13b83a Folder size: 992
+108.919 s/op
+# Warmup Iteration   3: NativeLevelDBAdaptor_0544b050-47d0-4ded-a619-ced6370330d5 Folder size: 992
+112.529 s/op
+Iteration   1: NativeLevelDBAdaptor_04e4b94c-2b3c-431a-8be0-f1da47e622b1 Folder size: 993
+114.501 s/op
+Iteration   2: NativeLevelDBAdaptor_d47ae2d5-3f1c-45fb-a7c5-ceec185a6505 Folder size: 992
+96.458 s/op
+Iteration   3: NativeLevelDBAdaptor_8e8645ed-03e5-4dfd-9d69-9c1145bc6f99 Folder size: 992
+109.029 s/op
+
+# Run progress: 41.67% complete, ETA 06:47:18
+# Fork: 3 of 3
+# Warmup Iteration   1: NativeLevelDBAdaptor_8bf45b86-9b56-442f-a037-afea3a988564 Folder size: 992
+109.790 s/op
+# Warmup Iteration   2: NativeLevelDBAdaptor_d41b10e1-c32b-4443-96fd-cf766e23db8a Folder size: 992
+111.155 s/op
+# Warmup Iteration   3: NativeLevelDBAdaptor_6fd6cfb6-2a16-4f6e-8218-2f39b1a68dda Folder size: 992
+110.382 s/op
+Iteration   1: NativeLevelDBAdaptor_15eefe88-9cec-42c3-a0e6-f097ea772e77 Folder size: 992
+110.401 s/op
+Iteration   2: NativeLevelDBAdaptor_88dc6b41-4974-4600-b371-425e45e53026 Folder size: 992
+110.605 s/op
+Iteration   3: NativeLevelDBAdaptor_cc4843f5-f1b4-478d-8ff9-7085c22f5b47 Folder size: 992
+110.748 s/op
+
+
+Result "io.github.theuntamed839.BenchmarkWrite.writeFixedSizeData":
+  N = 9
+  mean =    109.612 ±(99.9%) 8.662 s/op
+
+  Histogram, s/op:
+    [ 90.000,  92.500) = 0 
+    [ 92.500,  95.000) = 0 
+    [ 95.000,  97.500) = 1 
+    [ 97.500, 100.000) = 0 
+    [100.000, 102.500) = 0 
+    [102.500, 105.000) = 0 
+    [105.000, 107.500) = 0 
+    [107.500, 110.000) = 1 
+    [110.000, 112.500) = 6 
+    [112.500, 115.000) = 1 
+    [115.000, 117.500) = 0 
+
+  Percentiles, s/op:
+      p(0.0000) =     96.458 s/op
+     p(50.0000) =    110.748 s/op
+     p(90.0000) =    114.501 s/op
+     p(95.0000) =    114.501 s/op
+     p(99.0000) =    114.501 s/op
+     p(99.9000) =    114.501 s/op
+     p(99.9900) =    114.501 s/op
+     p(99.9990) =    114.501 s/op
+     p(99.9999) =    114.501 s/op
+    p(100.0000) =    114.501 s/op
+
+
+# JMH version: 1.37
+# VM version: JDK 22, OpenJDK 64-Bit Server VM, 22+36-2370
+# VM invoker: /home/ganesh/Documents/jdk-22/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, single-shot each
+# Measurement: 3 iterations, single-shot each
+# Timeout: 60 min per iteration
+# Threads: 1 thread
+# Benchmark mode: Single shot invocation time
+# Benchmark: io.github.theuntamed839.BenchmarkWrite.writeFixedSizeData
+# Parameters: (dbProvider = LEVELDB_NATIVE, entryCount = 5000000, keySize = 500, valueSize = 500)
+
+# Run progress: 43.75% complete, ETA 06:28:17
+# Fork: 1 of 3
+# Warmup Iteration   1: NativeLevelDBAdaptor_2d4b65a1-2227-4bc8-bbee-6d37e790efd9 Folder size: 4993
+863.482 s/op
+# Warmup Iteration   2: NativeLevelDBAdaptor_d21a7c34-cf23-477a-b289-2b4f64fae611 Folder size: 4992
+876.680 s/op
+# Warmup Iteration   3: NativeLevelDBAdaptor_cb602c3c-3fd9-4ae5-965c-3d3eee65353c Folder size: 4993
+863.785 s/op
+Iteration   1: NativeLevelDBAdaptor_50acfa8d-fb67-439e-ad62-fab02ef20440 Folder size: 4993
+879.327 s/op
+Iteration   2: NativeLevelDBAdaptor_a1d134e1-bca9-47ec-8b74-16504ea73409 Folder size: 4992
+867.977 s/op
+Iteration   3: NativeLevelDBAdaptor_36b8286e-95ff-43e9-87d7-c389a54b18c4 Folder size: 4994
+884.070 s/op
+
+# Run progress: 45.83% complete, ETA 07:40:07
+# Fork: 2 of 3
+# Warmup Iteration   1: NativeLevelDBAdaptor_92502854-fe5a-4777-8fbb-ce71b5f6d3f0 Folder size: 4994
+877.125 s/op
+# Warmup Iteration   2: NativeLevelDBAdaptor_a70e6a9d-5e3a-4f04-b512-d95c7ad44aff Folder size: 4993
+875.249 s/op
+# Warmup Iteration   3: NativeLevelDBAdaptor_12db4731-a0b0-4627-8269-0d7a1a39bb3a Folder size: 4992
+880.128 s/op
+Iteration   1: NativeLevelDBAdaptor_5ce5d679-16fa-4b94-ab7b-f89178f8f331 Folder size: 4993
+882.405 s/op
+Iteration   2: NativeLevelDBAdaptor_0998e4ac-58a2-4fea-a70d-a5752196dcea Folder size: 4992
+882.088 s/op
+Iteration   3: NativeLevelDBAdaptor_a4963b98-5729-4afc-a8dd-30c91942268d Folder size: 4993
+881.788 s/op
+
+# Run progress: 47.92% complete, ETA 08:38:54
+# Fork: 3 of 3
+# Warmup Iteration   1: NativeLevelDBAdaptor_4735d34a-2ecd-498b-a4bd-e7dd5e641163 Folder size: 4993
+872.885 s/op
+# Warmup Iteration   2: NativeLevelDBAdaptor_416d1e36-dd66-4218-ac36-ac227b8e4e9e Folder size: 4993
+874.650 s/op
+# Warmup Iteration   3: NativeLevelDBAdaptor_855fc1b5-5b46-4ffa-8abf-41eec9d0f16f Folder size: 4993
+854.691 s/op
+Iteration   1: NativeLevelDBAdaptor_d513e0fe-2950-4547-9d76-c3fe27a31cd2 Folder size: 4993
+851.083 s/op
+Iteration   2: NativeLevelDBAdaptor_c6fcb160-6010-47d6-9ed2-0ba959863ef9 Folder size: 4993
+879.737 s/op
+Iteration   3: NativeLevelDBAdaptor_5ec39cf7-36f1-4b2c-b6d9-3b310f989df4 Folder size: 4992
+876.960 s/op
+
+
+Result "io.github.theuntamed839.BenchmarkWrite.writeFixedSizeData":
+  N = 9
+  mean =    876.159 ±(99.9%) 17.701 s/op
+
+  Histogram, s/op:
+    [850.000, 852.500) = 1 
+    [852.500, 855.000) = 0 
+    [855.000, 857.500) = 0 
+    [857.500, 860.000) = 0 
+    [860.000, 862.500) = 0 
+    [862.500, 865.000) = 0 
+    [865.000, 867.500) = 0 
+    [867.500, 870.000) = 1 
+    [870.000, 872.500) = 0 
+    [872.500, 875.000) = 0 
+    [875.000, 877.500) = 1 
+    [877.500, 880.000) = 2 
+    [880.000, 882.500) = 3 
+    [882.500, 885.000) = 1 
+    [885.000, 887.500) = 0 
+
+  Percentiles, s/op:
+      p(0.0000) =    851.083 s/op
+     p(50.0000) =    879.737 s/op
+     p(90.0000) =    884.070 s/op
+     p(95.0000) =    884.070 s/op
+     p(99.0000) =    884.070 s/op
+     p(99.9000) =    884.070 s/op
+     p(99.9900) =    884.070 s/op
+     p(99.9990) =    884.070 s/op
+     p(99.9999) =    884.070 s/op
+    p(100.0000) =    884.070 s/op
+
+
+# JMH version: 1.37
+# VM version: JDK 22, OpenJDK 64-Bit Server VM, 22+36-2370
+# VM invoker: /home/ganesh/Documents/jdk-22/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, single-shot each
+# Measurement: 3 iterations, single-shot each
+# Timeout: 60 min per iteration
+# Threads: 1 thread
+# Benchmark mode: Single shot invocation time
+# Benchmark: io.github.theuntamed839.BenchmarkWrite.writeVariableSizeData
+# Parameters: (dbProvider = DATASTORE4J, entryCount = 1000000, keySize = 500, valueSize = 500)
+
+# Run progress: 50.00% complete, ETA 09:24:17
+# Fork: 1 of 3
+# Warmup Iteration   1: DataStore4JAdaptor_b353fb33-2834-450e-89b1-584ac1e50626 Folder size: 545
+10.384 s/op
+# Warmup Iteration   2: DataStore4JAdaptor_ed4af9b0-0c2e-4541-9dab-2c7bb3e41dbe Folder size: 545
+9.644 s/op
+# Warmup Iteration   3: DataStore4JAdaptor_60fa46de-2be3-4e19-afb1-a92e159999f0 Folder size: 546
+9.593 s/op
+Iteration   1: DataStore4JAdaptor_72bc916c-1d9b-4bfd-8a9d-7cd58ced0077 Folder size: 545
+9.406 s/op
+Iteration   2: DataStore4JAdaptor_0b36f0cf-2ff1-4743-917d-d816516ec95c Folder size: 545
+10.158 s/op
+Iteration   3: DataStore4JAdaptor_33667cee-7058-4d28-8497-1e282f988c37 Folder size: 545
+9.642 s/op
+
+# Run progress: 52.08% complete, ETA 08:40:05
+# Fork: 2 of 3
+# Warmup Iteration   1: DataStore4JAdaptor_5742535a-4d2f-4b47-a056-3c051f445c4a Folder size: 545
+10.357 s/op
+# Warmup Iteration   2: DataStore4JAdaptor_98239059-2433-4a3b-8e3b-48e6b61be55b Folder size: 545
+10.063 s/op
+# Warmup Iteration   3: DataStore4JAdaptor_90291e81-f86b-4753-bb70-9db192797b10 Folder size: 546
+9.705 s/op
+Iteration   1: DataStore4JAdaptor_00fad9ec-0a6c-43e1-acea-ea869eb9ceac Folder size: 545
+9.458 s/op
+Iteration   2: DataStore4JAdaptor_e1f91d3d-6ac2-4752-949a-67b29b5c9a70 Folder size: 545
+9.735 s/op
+Iteration   3: DataStore4JAdaptor_dd959960-e4cf-49a1-bbce-12c857a26d9b Folder size: 545
+9.762 s/op
+
+# Run progress: 54.17% complete, ETA 07:59:12
+# Fork: 3 of 3
+# Warmup Iteration   1: DataStore4JAdaptor_1074d7b9-dc72-464b-a708-b570df593b82 Folder size: 545
+10.525 s/op
+# Warmup Iteration   2: DataStore4JAdaptor_5519a83f-eeac-4d0b-8f44-a27028bec2d3 Folder size: 545
+9.649 s/op
+# Warmup Iteration   3: DataStore4JAdaptor_5fdd9cac-2e84-44a8-978d-d85fc4a9b59f Folder size: 546
+10.020 s/op
+Iteration   1: DataStore4JAdaptor_d13cec09-10c4-47a0-a0d4-baf078d56892 Folder size: 545
+9.407 s/op
+Iteration   2: DataStore4JAdaptor_b874003d-2fb3-48d0-b55b-b26bc92fac45 Folder size: 545
+10.117 s/op
+Iteration   3: DataStore4JAdaptor_fa825c1c-06b4-4d37-8483-a1f5aebd39fa Folder size: 545
+9.968 s/op
+
+
+Result "io.github.theuntamed839.BenchmarkWrite.writeVariableSizeData":
+  N = 9
+  mean =      9.739 ±(99.9%) 0.490 s/op
+
+  Histogram, s/op:
+    [ 9.400,  9.450) = 2 
+    [ 9.450,  9.500) = 1 
+    [ 9.500,  9.550) = 0 
+    [ 9.550,  9.600) = 0 
+    [ 9.600,  9.650) = 1 
+    [ 9.650,  9.700) = 0 
+    [ 9.700,  9.750) = 1 
+    [ 9.750,  9.800) = 1 
+    [ 9.800,  9.850) = 0 
+    [ 9.850,  9.900) = 0 
+    [ 9.900,  9.950) = 0 
+    [ 9.950, 10.000) = 1 
+    [10.000, 10.050) = 0 
+    [10.050, 10.100) = 0 
+    [10.100, 10.150) = 1 
+    [10.150, 10.200) = 1 
+
+  Percentiles, s/op:
+      p(0.0000) =      9.406 s/op
+     p(50.0000) =      9.735 s/op
+     p(90.0000) =     10.158 s/op
+     p(95.0000) =     10.158 s/op
+     p(99.0000) =     10.158 s/op
+     p(99.9000) =     10.158 s/op
+     p(99.9900) =     10.158 s/op
+     p(99.9990) =     10.158 s/op
+     p(99.9999) =     10.158 s/op
+    p(100.0000) =     10.158 s/op
+
+
+# JMH version: 1.37
+# VM version: JDK 22, OpenJDK 64-Bit Server VM, 22+36-2370
+# VM invoker: /home/ganesh/Documents/jdk-22/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, single-shot each
+# Measurement: 3 iterations, single-shot each
+# Timeout: 60 min per iteration
+# Threads: 1 thread
+# Benchmark mode: Single shot invocation time
+# Benchmark: io.github.theuntamed839.BenchmarkWrite.writeVariableSizeData
+# Parameters: (dbProvider = DATASTORE4J, entryCount = 5000000, keySize = 500, valueSize = 500)
+
+# Run progress: 56.25% complete, ETA 07:21:16
+# Fork: 1 of 3
+# Warmup Iteration   1: DataStore4JAdaptor_1ec4b8c6-5236-4544-8fa2-1b7312a66602 Folder size: 2730
+60.148 s/op
+# Warmup Iteration   2: DataStore4JAdaptor_80846437-904f-4a62-9177-02ee21738142 Folder size: 2730
+60.272 s/op
+# Warmup Iteration   3: DataStore4JAdaptor_3e72568d-6352-43f4-a9bb-f335a0ef0685 Folder size: 2730
+59.808 s/op
+Iteration   1: DataStore4JAdaptor_7249d1b8-8b4c-4f04-ab73-333173cb8806 Folder size: 2730
+59.922 s/op
+Iteration   2: DataStore4JAdaptor_82a00dc9-078a-46ad-a567-bb2a149fc6c7 Folder size: 2730
+59.801 s/op
+Iteration   3: DataStore4JAdaptor_03fd513d-a584-4714-87e0-f24bcf830057 Folder size: 2730
+60.689 s/op
+
+# Run progress: 58.33% complete, ETA 06:49:34
+# Fork: 2 of 3
+# Warmup Iteration   1: DataStore4JAdaptor_4b3e6959-23be-42ae-95df-494840ad179c Folder size: 2730
+61.568 s/op
+# Warmup Iteration   2: DataStore4JAdaptor_612f294a-1ca4-4407-b303-394ddd7c709b Folder size: 2730
+60.650 s/op
+# Warmup Iteration   3: DataStore4JAdaptor_51e61439-0658-4b9c-a8ca-97f8e45ea3cc Folder size: 2730
+60.402 s/op
+Iteration   1: DataStore4JAdaptor_753eb533-b9f8-4a4e-8cc3-ad0ed2a8a5aa Folder size: 2730
+60.976 s/op
+Iteration   2: DataStore4JAdaptor_091a094a-5ad1-46da-9e34-00ccf88db0e7 Folder size: 2730
+59.954 s/op
+Iteration   3: DataStore4JAdaptor_6c4d3cf6-eb2c-4c04-aab5-90ac53b1563c Folder size: 2730
+60.307 s/op
+
+# Run progress: 60.42% complete, ETA 06:19:40
+# Fork: 3 of 3
+# Warmup Iteration   1: DataStore4JAdaptor_e84977b5-2e0c-4ab2-8acd-5bcc74479cc7 Folder size: 2730
+60.228 s/op
+# Warmup Iteration   2: DataStore4JAdaptor_43c074aa-ca10-4a4e-9014-a40ef383e403 Folder size: 2730
+58.887 s/op
+# Warmup Iteration   3: DataStore4JAdaptor_5f637f04-8bca-4931-a569-0f20beed23c2 Folder size: 2730
+61.459 s/op
+Iteration   1: DataStore4JAdaptor_5d235fb1-ba06-41ee-87bd-65907ba3cf2e Folder size: 2730
+59.091 s/op
+Iteration   2: DataStore4JAdaptor_f05a531f-a57b-4b59-9444-e4d5028b4224 Folder size: 2730
+58.423 s/op
+Iteration   3: DataStore4JAdaptor_b3899a06-7e65-4252-b972-7279f3619156 Folder size: 2730
+58.643 s/op
+
+
+Result "io.github.theuntamed839.BenchmarkWrite.writeVariableSizeData":
+  N = 9
+  mean =     59.756 ±(99.9%) 1.478 s/op
+
+  Histogram, s/op:
+    [58.000, 58.250) = 0 
+    [58.250, 58.500) = 1 
+    [58.500, 58.750) = 1 
+    [58.750, 59.000) = 0 
+    [59.000, 59.250) = 1 
+    [59.250, 59.500) = 0 
+    [59.500, 59.750) = 0 
+    [59.750, 60.000) = 3 
+    [60.000, 60.250) = 0 
+    [60.250, 60.500) = 1 
+    [60.500, 60.750) = 1 
+
+  Percentiles, s/op:
+      p(0.0000) =     58.423 s/op
+     p(50.0000) =     59.922 s/op
+     p(90.0000) =     60.976 s/op
+     p(95.0000) =     60.976 s/op
+     p(99.0000) =     60.976 s/op
+     p(99.9000) =     60.976 s/op
+     p(99.9900) =     60.976 s/op
+     p(99.9990) =     60.976 s/op
+     p(99.9999) =     60.976 s/op
+    p(100.0000) =     60.976 s/op
+
+
+# JMH version: 1.37
+# VM version: JDK 22, OpenJDK 64-Bit Server VM, 22+36-2370
+# VM invoker: /home/ganesh/Documents/jdk-22/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, single-shot each
+# Measurement: 3 iterations, single-shot each
+# Timeout: 60 min per iteration
+# Threads: 1 thread
+# Benchmark mode: Single shot invocation time
+# Benchmark: io.github.theuntamed839.BenchmarkWrite.writeVariableSizeData
+# Parameters: (dbProvider = ROCKSDB, entryCount = 1000000, keySize = 500, valueSize = 500)
+
+# Run progress: 62.50% complete, ETA 05:51:17
+# Fork: 1 of 3
+# Warmup Iteration   1: RocksDBAdaptor_e6dd6973-9839-47ec-9c1f-ad189d4cc2fe Folder size: 500
+5.137 s/op
+# Warmup Iteration   2: RocksDBAdaptor_f40241b5-cc7e-47c2-a2a5-0dbfa0bc2d1a Folder size: 500
+4.980 s/op
+# Warmup Iteration   3: RocksDBAdaptor_381d2a73-a899-465d-96cd-2aee0c3a4065 Folder size: 500
+4.973 s/op
+Iteration   1: RocksDBAdaptor_a9885413-bf60-4938-8a35-5f3eb9408650 Folder size: 500
+5.231 s/op
+Iteration   2: RocksDBAdaptor_115f666c-3d3b-48d1-973f-9de5531cfccb Folder size: 500
+5.009 s/op
+Iteration   3: RocksDBAdaptor_cb973cd3-b397-46df-b5e7-9587fb11e936 Folder size: 500
+5.056 s/op
+
+# Run progress: 64.58% complete, ETA 05:21:21
+# Fork: 2 of 3
+# Warmup Iteration   1: RocksDBAdaptor_b728a1e0-fc2a-4e50-b731-df8ef3a55ffe Folder size: 500
+5.505 s/op
+# Warmup Iteration   2: RocksDBAdaptor_61efec20-306e-4da7-8b63-d3a39268ae95 Folder size: 500
+5.216 s/op
+# Warmup Iteration   3: RocksDBAdaptor_5ba82630-d7e5-4401-b0fb-67e83c115c4f Folder size: 500
+5.216 s/op
+Iteration   1: RocksDBAdaptor_f861b262-60f9-41e6-b67c-21908d9a6dc4 Folder size: 500
+5.259 s/op
+Iteration   2: RocksDBAdaptor_8bbd2745-1996-44dd-a932-afaa4935e63c Folder size: 500
+5.153 s/op
+Iteration   3: RocksDBAdaptor_987842cd-0c64-4e1d-8894-80d922ef29ac Folder size: 500
+5.374 s/op
+
+# Run progress: 66.67% complete, ETA 04:53:16
+# Fork: 3 of 3
+# Warmup Iteration   1: RocksDBAdaptor_8fb807bd-40aa-4029-8c8e-d4b17b42f123 Folder size: 500
+5.431 s/op
+# Warmup Iteration   2: RocksDBAdaptor_9946ee86-184e-4f17-8902-f8711c9451f7 Folder size: 500
+5.254 s/op
+# Warmup Iteration   3: RocksDBAdaptor_30fe1e30-5ecb-48f2-bc01-410b135491eb Folder size: 500
+5.338 s/op
+Iteration   1: RocksDBAdaptor_0efd74fa-42ca-4e6f-9fe9-b1ca6dc36879 Folder size: 500
+5.249 s/op
+Iteration   2: RocksDBAdaptor_ae11c94a-5d57-481c-9a5c-c056eb8c6501 Folder size: 500
+5.267 s/op
+Iteration   3: RocksDBAdaptor_c965b9bf-bc75-4824-925e-f73ae5eaf82c Folder size: 500
+5.293 s/op
+
+
+Result "io.github.theuntamed839.BenchmarkWrite.writeVariableSizeData":
+  N = 9
+  mean =      5.210 ±(99.9%) 0.196 s/op
+
+  Histogram, s/op:
+    [5.000, 5.025) = 1 
+    [5.025, 5.050) = 0 
+    [5.050, 5.075) = 1 
+    [5.075, 5.100) = 0 
+    [5.100, 5.125) = 0 
+    [5.125, 5.150) = 0 
+    [5.150, 5.175) = 1 
+    [5.175, 5.200) = 0 
+    [5.200, 5.225) = 0 
+    [5.225, 5.250) = 2 
+    [5.250, 5.275) = 2 
+    [5.275, 5.300) = 1 
+    [5.300, 5.325) = 0 
+    [5.325, 5.350) = 0 
+    [5.350, 5.375) = 1 
+    [5.375, 5.400) = 0 
+
+  Percentiles, s/op:
+      p(0.0000) =      5.009 s/op
+     p(50.0000) =      5.249 s/op
+     p(90.0000) =      5.374 s/op
+     p(95.0000) =      5.374 s/op
+     p(99.0000) =      5.374 s/op
+     p(99.9000) =      5.374 s/op
+     p(99.9900) =      5.374 s/op
+     p(99.9990) =      5.374 s/op
+     p(99.9999) =      5.374 s/op
+    p(100.0000) =      5.374 s/op
+
+
+# JMH version: 1.37
+# VM version: JDK 22, OpenJDK 64-Bit Server VM, 22+36-2370
+# VM invoker: /home/ganesh/Documents/jdk-22/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, single-shot each
+# Measurement: 3 iterations, single-shot each
+# Timeout: 60 min per iteration
+# Threads: 1 thread
+# Benchmark mode: Single shot invocation time
+# Benchmark: io.github.theuntamed839.BenchmarkWrite.writeVariableSizeData
+# Parameters: (dbProvider = ROCKSDB, entryCount = 5000000, keySize = 500, valueSize = 500)
+
+# Run progress: 68.75% complete, ETA 04:26:52
+# Fork: 1 of 3
+# Warmup Iteration   1: RocksDBAdaptor_d0c298be-a27e-4e6d-9316-b5f1878d2d16 Folder size: 2498
+28.283 s/op
+# Warmup Iteration   2: RocksDBAdaptor_1e282d5d-65b7-461c-bb42-7c6b1ec18a5e Folder size: 2498
+27.898 s/op
+# Warmup Iteration   3: RocksDBAdaptor_874d50c6-e877-4d13-9188-3c641903714e Folder size: 2498
+28.604 s/op
+Iteration   1: RocksDBAdaptor_245cf7ce-bce7-40b7-a361-781e970e4dd9 Folder size: 2498
+28.463 s/op
+Iteration   2: RocksDBAdaptor_86d70d09-7f98-44c8-a3ba-48909c6b9981 Folder size: 2498
+28.269 s/op
+Iteration   3: RocksDBAdaptor_e4aa0332-9755-4378-81a4-7ecc14b1b487 Folder size: 2498
+27.624 s/op
+
+# Run progress: 70.83% complete, ETA 04:02:55
+# Fork: 2 of 3
+# Warmup Iteration   1: RocksDBAdaptor_179629bc-7377-4b02-8d79-c540e27c994f Folder size: 2498
+28.149 s/op
+# Warmup Iteration   2: RocksDBAdaptor_012198e3-30e8-4e48-a25d-510274469076 Folder size: 2498
+27.839 s/op
+# Warmup Iteration   3: RocksDBAdaptor_69aff03d-51ad-4275-af51-90897392fcb3 Folder size: 2498
+27.548 s/op
+Iteration   1: RocksDBAdaptor_6f7e25cd-8cfb-4bc1-bcc3-0cf01b7642f1 Folder size: 2499
+27.692 s/op
+Iteration   2: RocksDBAdaptor_8285b4a2-ee60-48f2-beb1-f534452f3d22 Folder size: 2498
+28.238 s/op
+Iteration   3: RocksDBAdaptor_d645d659-f70d-41be-8aa6-9580ef78fef5 Folder size: 2498
+28.647 s/op
+
+# Run progress: 72.92% complete, ETA 03:40:11
+# Fork: 3 of 3
+# Warmup Iteration   1: RocksDBAdaptor_78636e26-d7cf-4b47-8a96-a55f6480fde9 Folder size: 2498
+28.668 s/op
+# Warmup Iteration   2: RocksDBAdaptor_d63a5d33-767f-46ec-af17-900bae0abd79 Folder size: 2498
+28.558 s/op
+# Warmup Iteration   3: RocksDBAdaptor_974f2787-0d8e-43a9-8ac6-7a68b407294f Folder size: 2498
+28.027 s/op
+Iteration   1: RocksDBAdaptor_a53c3c61-91e7-4f78-9668-2c47c9628a8c Folder size: 2498
+28.557 s/op
+Iteration   2: RocksDBAdaptor_a335b702-ecce-4477-90af-9ba156d6a120 Folder size: 2498
+28.487 s/op
+Iteration   3: RocksDBAdaptor_60cb3407-d836-4805-8b2f-3c0365e9b71e Folder size: 2498
+28.466 s/op
+
+
+Result "io.github.theuntamed839.BenchmarkWrite.writeVariableSizeData":
+  N = 9
+  mean =     28.271 ±(99.9%) 0.623 s/op
+
+  Histogram, s/op:
+    [27.000, 27.125) = 0 
+    [27.125, 27.250) = 0 
+    [27.250, 27.375) = 0 
+    [27.375, 27.500) = 0 
+    [27.500, 27.625) = 1 
+    [27.625, 27.750) = 1 
+    [27.750, 27.875) = 0 
+    [27.875, 28.000) = 0 
+    [28.000, 28.125) = 0 
+    [28.125, 28.250) = 1 
+    [28.250, 28.375) = 1 
+    [28.375, 28.500) = 3 
+    [28.500, 28.625) = 1 
+    [28.625, 28.750) = 1 
+    [28.750, 28.875) = 0 
+
+  Percentiles, s/op:
+      p(0.0000) =     27.624 s/op
+     p(50.0000) =     28.463 s/op
+     p(90.0000) =     28.647 s/op
+     p(95.0000) =     28.647 s/op
+     p(99.0000) =     28.647 s/op
+     p(99.9000) =     28.647 s/op
+     p(99.9900) =     28.647 s/op
+     p(99.9990) =     28.647 s/op
+     p(99.9999) =     28.647 s/op
+    p(100.0000) =     28.647 s/op
+
+
+# JMH version: 1.37
+# VM version: JDK 22, OpenJDK 64-Bit Server VM, 22+36-2370
+# VM invoker: /home/ganesh/Documents/jdk-22/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, single-shot each
+# Measurement: 3 iterations, single-shot each
+# Timeout: 60 min per iteration
+# Threads: 1 thread
+# Benchmark mode: Single shot invocation time
+# Benchmark: io.github.theuntamed839.BenchmarkWrite.writeVariableSizeData
+# Parameters: (dbProvider = LEVELDB_JAVA, entryCount = 1000000, keySize = 500, valueSize = 500)
+
+# Run progress: 75.00% complete, ETA 03:18:33
+# Fork: 1 of 3
+# Warmup Iteration   1: PureJavaLevelDBAdaptor_914e8978-47e3-47ee-ad72-b8be2e82f9a0 Folder size: 508
+30.301 s/op
+# Warmup Iteration   2: PureJavaLevelDBAdaptor_10fe9f8e-a1a0-4e6b-8b3f-1dbcf68b7c37 Folder size: 508
+30.893 s/op
+# Warmup Iteration   3: PureJavaLevelDBAdaptor_26760556-8af3-4c31-b786-d20f76839ed9 Folder size: 512
+31.592 s/op
+Iteration   1: PureJavaLevelDBAdaptor_590de983-ef16-4679-816b-c6ac88bb77f5 Folder size: 514
+28.869 s/op
+Iteration   2: PureJavaLevelDBAdaptor_1e8c67f6-2a6f-4e2c-a58e-8f3974573762 Folder size: 514
+31.692 s/op
+Iteration   3: PureJavaLevelDBAdaptor_a89e7eb3-4004-4dab-ae25-d506e6b5f837 Folder size: 512
+31.669 s/op
+
+# Run progress: 77.08% complete, ETA 02:58:01
+# Fork: 2 of 3
+# Warmup Iteration   1: PureJavaLevelDBAdaptor_ff6ceea7-2cfd-43bd-9761-2650ec78cadc Folder size: 512
+30.627 s/op
+# Warmup Iteration   2: PureJavaLevelDBAdaptor_c6f1d050-5458-437f-bc90-38ccdb9a95b7 Folder size: 506
+32.828 s/op
+# Warmup Iteration   3: PureJavaLevelDBAdaptor_18202bc9-f667-4a06-8e1a-a3dffa966085 Folder size: 508
+31.862 s/op
+Iteration   1: PureJavaLevelDBAdaptor_fbeca547-f908-4786-b6ca-a3d3cfe81e81 Folder size: 512
+32.166 s/op
+Iteration   2: PureJavaLevelDBAdaptor_5b54d536-3c89-4413-a3bd-9b939ae674d5 Folder size: 508
+32.462 s/op
+Iteration   3: PureJavaLevelDBAdaptor_4c2d0f21-94c3-4b3b-bdcd-aaba46acdad0 Folder size: 506
+33.430 s/op
+
+# Run progress: 79.17% complete, ETA 02:38:26
+# Fork: 3 of 3
+# Warmup Iteration   1: PureJavaLevelDBAdaptor_aa236a26-0126-4ef3-b9e1-d21d0384c7f8 Folder size: 514
+29.471 s/op
+# Warmup Iteration   2: PureJavaLevelDBAdaptor_39f419bb-d7e6-4e4e-8b7b-62150ed0327f Folder size: 512
+30.940 s/op
+# Warmup Iteration   3: PureJavaLevelDBAdaptor_aad92483-895a-436d-83f8-1769c1e64063 Folder size: 513
+30.729 s/op
+Iteration   1: PureJavaLevelDBAdaptor_4217e881-af7b-4f40-8bb5-3155655299b3 Folder size: 511
+32.739 s/op
+Iteration   2: PureJavaLevelDBAdaptor_e6e4f4a2-196b-4b3b-9a3f-1a13e2c2f39f Folder size: 512
+31.345 s/op
+Iteration   3: PureJavaLevelDBAdaptor_a2067b96-1223-437b-a331-28bc3126c660 Folder size: 543
+32.565 s/op
+
+
+Result "io.github.theuntamed839.BenchmarkWrite.writeVariableSizeData":
+  N = 9
+  mean =     31.882 ±(99.9%) 2.180 s/op
+
+  Histogram, s/op:
+    [28.000, 28.500) = 0 
+    [28.500, 29.000) = 1 
+    [29.000, 29.500) = 0 
+    [29.500, 30.000) = 0 
+    [30.000, 30.500) = 0 
+    [30.500, 31.000) = 0 
+    [31.000, 31.500) = 1 
+    [31.500, 32.000) = 2 
+    [32.000, 32.500) = 2 
+    [32.500, 33.000) = 2 
+    [33.000, 33.500) = 1 
+
+  Percentiles, s/op:
+      p(0.0000) =     28.869 s/op
+     p(50.0000) =     32.166 s/op
+     p(90.0000) =     33.430 s/op
+     p(95.0000) =     33.430 s/op
+     p(99.0000) =     33.430 s/op
+     p(99.9000) =     33.430 s/op
+     p(99.9900) =     33.430 s/op
+     p(99.9990) =     33.430 s/op
+     p(99.9999) =     33.430 s/op
+    p(100.0000) =     33.430 s/op
+
+
+# JMH version: 1.37
+# VM version: JDK 22, OpenJDK 64-Bit Server VM, 22+36-2370
+# VM invoker: /home/ganesh/Documents/jdk-22/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, single-shot each
+# Measurement: 3 iterations, single-shot each
+# Timeout: 60 min per iteration
+# Threads: 1 thread
+# Benchmark mode: Single shot invocation time
+# Benchmark: io.github.theuntamed839.BenchmarkWrite.writeVariableSizeData
+# Parameters: (dbProvider = LEVELDB_JAVA, entryCount = 5000000, keySize = 500, valueSize = 500)
+
+# Run progress: 81.25% complete, ETA 02:19:40
+# Fork: 1 of 3
+# Warmup Iteration   1: PureJavaLevelDBAdaptor_f517eca5-06e7-46f1-8585-d13f0b87fceb Folder size: 2546
+288.588 s/op
+# Warmup Iteration   2: PureJavaLevelDBAdaptor_e5d00908-0da4-4c27-ad82-a8a8eb448db9 Folder size: 2546
+288.601 s/op
+# Warmup Iteration   3: PureJavaLevelDBAdaptor_530b55b6-47e7-400c-b07b-05ff36d30955 Folder size: 2546
+292.014 s/op
+Iteration   1: PureJavaLevelDBAdaptor_99586088-050e-4e06-88a3-0cda47b7e1b4 Folder size: 2546
+290.238 s/op
+Iteration   2: PureJavaLevelDBAdaptor_9ec83be8-a998-4763-a9bf-373b597791e1 Folder size: 2546
+285.504 s/op
+Iteration   3: PureJavaLevelDBAdaptor_be52986e-00d4-43d7-a241-196924b28afd Folder size: 2546
+282.093 s/op
+
+# Run progress: 83.33% complete, ETA 02:06:48
+# Fork: 2 of 3
+# Warmup Iteration   1: PureJavaLevelDBAdaptor_d9efffe9-8fab-4a20-a554-c17d693bf1aa Folder size: 2542
+284.721 s/op
+# Warmup Iteration   2: PureJavaLevelDBAdaptor_53f95a91-53be-4b94-8dbf-31d556b87352 Folder size: 2546
+277.288 s/op
+# Warmup Iteration   3: PureJavaLevelDBAdaptor_0b5117b1-beb3-4adb-b5a3-dfc8daede3d6 Folder size: 2547
+274.541 s/op
+Iteration   1: PureJavaLevelDBAdaptor_ce947747-5860-4ebe-8337-428df38edb63 Folder size: 2546
+282.946 s/op
+Iteration   2: PureJavaLevelDBAdaptor_f143e771-6ad6-4f77-9d0e-eeb97ffad410 Folder size: 2546
+280.142 s/op
+Iteration   3: PureJavaLevelDBAdaptor_f9d55b81-6bc3-4f1f-948f-be405944989c Folder size: 2546
+275.320 s/op
+
+# Run progress: 85.42% complete, ETA 01:53:01
+# Fork: 3 of 3
+# Warmup Iteration   1: PureJavaLevelDBAdaptor_658b6de2-7684-4c81-aac7-1370cbb49b61 Folder size: 2546
+276.722 s/op
+# Warmup Iteration   2: PureJavaLevelDBAdaptor_e4ef4b59-463f-4bf6-90a0-2dd7355d978a Folder size: 2546
+281.276 s/op
+# Warmup Iteration   3: PureJavaLevelDBAdaptor_8147ac8f-ce7b-4454-81b5-a99faf528951 Folder size: 2545
+279.928 s/op
+Iteration   1: PureJavaLevelDBAdaptor_3fd156aa-cf00-415f-abb6-9c4ddaef8e71 Folder size: 2545
+285.452 s/op
+Iteration   2: PureJavaLevelDBAdaptor_b8981937-4d52-4363-945a-3c5cb51904ce Folder size: 2546
+278.690 s/op
+Iteration   3: PureJavaLevelDBAdaptor_c4da318a-6f7c-4863-9713-e2c0642ae122 Folder size: 2546
+278.589 s/op
+
+
+Result "io.github.theuntamed839.BenchmarkWrite.writeVariableSizeData":
+  N = 9
+  mean =    282.108 ±(99.9%) 7.598 s/op
+
+  Histogram, s/op:
+    [270.000, 272.500) = 0 
+    [272.500, 275.000) = 0 
+    [275.000, 277.500) = 1 
+    [277.500, 280.000) = 2 
+    [280.000, 282.500) = 2 
+    [282.500, 285.000) = 1 
+    [285.000, 287.500) = 2 
+    [287.500, 290.000) = 0 
+    [290.000, 292.500) = 1 
+    [292.500, 295.000) = 0 
+    [295.000, 297.500) = 0 
+
+  Percentiles, s/op:
+      p(0.0000) =    275.320 s/op
+     p(50.0000) =    282.093 s/op
+     p(90.0000) =    290.238 s/op
+     p(95.0000) =    290.238 s/op
+     p(99.0000) =    290.238 s/op
+     p(99.9000) =    290.238 s/op
+     p(99.9900) =    290.238 s/op
+     p(99.9990) =    290.238 s/op
+     p(99.9999) =    290.238 s/op
+    p(100.0000) =    290.238 s/op
+
+
+# JMH version: 1.37
+# VM version: JDK 22, OpenJDK 64-Bit Server VM, 22+36-2370
+# VM invoker: /home/ganesh/Documents/jdk-22/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, single-shot each
+# Measurement: 3 iterations, single-shot each
+# Timeout: 60 min per iteration
+# Threads: 1 thread
+# Benchmark mode: Single shot invocation time
+# Benchmark: io.github.theuntamed839.BenchmarkWrite.writeVariableSizeData
+# Parameters: (dbProvider = LEVELDB_NATIVE, entryCount = 1000000, keySize = 500, valueSize = 500)
+
+# Run progress: 87.50% complete, ETA 01:38:35
+# Fork: 1 of 3
+# Warmup Iteration   1: NativeLevelDBAdaptor_c349f1ca-95e9-4205-91b9-c8c35f42d247 Folder size: 506
+30.005 s/op
+# Warmup Iteration   2: NativeLevelDBAdaptor_85d4531d-40bf-48ec-b0a5-06228c853af9 Folder size: 506
+36.204 s/op
+# Warmup Iteration   3: NativeLevelDBAdaptor_31f625b0-9199-42cd-9214-9fdb8d0c798b Folder size: 506
+38.233 s/op
+Iteration   1: NativeLevelDBAdaptor_96991035-86e4-4099-bef6-33e9336d8a16 Folder size: 506
+38.140 s/op
+Iteration   2: NativeLevelDBAdaptor_cc656188-1ba2-4250-a729-0e45257dc217 Folder size: 506
+38.374 s/op
+Iteration   3: NativeLevelDBAdaptor_cf5b68b1-5f37-431c-88ee-90ad87398e32 Folder size: 506
+37.890 s/op
+
+# Run progress: 89.58% complete, ETA 01:20:40
+# Fork: 2 of 3
+# Warmup Iteration   1: NativeLevelDBAdaptor_92b0401f-02ee-4fec-b6a1-5ce4389f3523 Folder size: 506
+36.112 s/op
+# Warmup Iteration   2: NativeLevelDBAdaptor_52571fe0-4bdd-4215-bd0d-edfea8aa895a Folder size: 506
+36.424 s/op
+# Warmup Iteration   3: NativeLevelDBAdaptor_d6a61612-c4c9-423b-b844-27fc95131687 Folder size: 506
+37.868 s/op
+Iteration   1: NativeLevelDBAdaptor_fdd0aecc-6804-4644-b667-4ce02a04bedf Folder size: 506
+38.517 s/op
+Iteration   2: NativeLevelDBAdaptor_085e595a-0e04-4bf0-8ab5-fb7669553bad Folder size: 506
+37.781 s/op
+Iteration   3: NativeLevelDBAdaptor_62fde3e3-6489-4793-8657-3dec6532ca34 Folder size: 506
+37.925 s/op
+
+# Run progress: 91.67% complete, ETA 01:03:24
+# Fork: 3 of 3
+# Warmup Iteration   1: NativeLevelDBAdaptor_faf223e9-8518-49da-bdeb-435684a952f7 Folder size: 506
+34.592 s/op
+# Warmup Iteration   2: NativeLevelDBAdaptor_91412527-7e50-45fc-a5b2-653826eb6ccb Folder size: 506
+38.118 s/op
+# Warmup Iteration   3: NativeLevelDBAdaptor_1ac402eb-07a2-425f-9d71-b41238359556 Folder size: 506
+38.095 s/op
+Iteration   1: NativeLevelDBAdaptor_72737dca-a6e7-4234-a84e-02ff5d6b6831 Folder size: 506
+37.696 s/op
+Iteration   2: NativeLevelDBAdaptor_10b34130-a095-41d8-ba86-3ab1afd560a5 Folder size: 506
+38.405 s/op
+Iteration   3: NativeLevelDBAdaptor_9a432fc7-69eb-4705-a396-01976d88353a Folder size: 506
+37.906 s/op
+
+
+Result "io.github.theuntamed839.BenchmarkWrite.writeVariableSizeData":
+  N = 9
+  mean =     38.070 ±(99.9%) 0.502 s/op
+
+  Histogram, s/op:
+    [37.600, 37.700) = 1 
+    [37.700, 37.800) = 1 
+    [37.800, 37.900) = 1 
+    [37.900, 38.000) = 2 
+    [38.000, 38.100) = 0 
+    [38.100, 38.200) = 1 
+    [38.200, 38.300) = 0 
+    [38.300, 38.400) = 1 
+    [38.400, 38.500) = 1 
+
+  Percentiles, s/op:
+      p(0.0000) =     37.696 s/op
+     p(50.0000) =     37.925 s/op
+     p(90.0000) =     38.517 s/op
+     p(95.0000) =     38.517 s/op
+     p(99.0000) =     38.517 s/op
+     p(99.9000) =     38.517 s/op
+     p(99.9900) =     38.517 s/op
+     p(99.9990) =     38.517 s/op
+     p(99.9999) =     38.517 s/op
+    p(100.0000) =     38.517 s/op
+
+
+# JMH version: 1.37
+# VM version: JDK 22, OpenJDK 64-Bit Server VM, 22+36-2370
+# VM invoker: /home/ganesh/Documents/jdk-22/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, single-shot each
+# Measurement: 3 iterations, single-shot each
+# Timeout: 60 min per iteration
+# Threads: 1 thread
+# Benchmark mode: Single shot invocation time
+# Benchmark: io.github.theuntamed839.BenchmarkWrite.writeVariableSizeData
+# Parameters: (dbProvider = LEVELDB_NATIVE, entryCount = 5000000, keySize = 500, valueSize = 500)
+
+# Run progress: 93.75% complete, ETA 00:46:45
+# Fork: 1 of 3
+# Warmup Iteration   1: NativeLevelDBAdaptor_6a04217f-5df9-42dd-b928-4baf7551bfba Folder size: 2544
+350.407 s/op
+# Warmup Iteration   2: NativeLevelDBAdaptor_3a7f876b-f803-4245-8c80-e39d3250e565 Folder size: 2544
+346.246 s/op
+# Warmup Iteration   3: NativeLevelDBAdaptor_2b634c41-8b62-4c18-b335-db5d33119b96 Folder size: 2544
+345.391 s/op
+Iteration   1: NativeLevelDBAdaptor_162f381c-ef9b-4a62-8c0f-55bf0f282927 Folder size: 2544
+347.436 s/op
+Iteration   2: NativeLevelDBAdaptor_ad273a5b-38cb-4f37-98f1-749ffb12cf00 Folder size: 2544
+346.116 s/op
+Iteration   3: NativeLevelDBAdaptor_333a5fe1-48ce-4d99-a0ee-70208a454aa6 Folder size: 2544
+345.418 s/op
+
+# Run progress: 95.83% complete, ETA 00:32:00
+# Fork: 2 of 3
+# Warmup Iteration   1: NativeLevelDBAdaptor_a1d659ed-346c-42f3-865a-e804b72b2058 Folder size: 2544
+344.350 s/op
+# Warmup Iteration   2: NativeLevelDBAdaptor_6ead3875-19e0-4780-9493-196788717268 Folder size: 2544
+343.563 s/op
+# Warmup Iteration   3: NativeLevelDBAdaptor_142ed9a8-9868-42a8-a7d6-eeede17d2298 Folder size: 2544
+345.273 s/op
+Iteration   1: NativeLevelDBAdaptor_3e28e13b-20e3-4fe0-a481-2883ea49f8fe Folder size: 2544
+344.961 s/op
+Iteration   2: NativeLevelDBAdaptor_9a2984e9-3d34-476a-9879-3ceae07db17b Folder size: 2545
+344.779 s/op
+Iteration   3: NativeLevelDBAdaptor_50137883-0a2e-43fb-a440-9c1ca34cf2af Folder size: 2544
+343.287 s/op
+
+# Run progress: 97.92% complete, ETA 00:16:23
+# Fork: 3 of 3
+# Warmup Iteration   1: NativeLevelDBAdaptor_1cdeb489-9e08-4253-a10b-289409c7c2b2 Folder size: 2544
+341.946 s/op
+# Warmup Iteration   2: NativeLevelDBAdaptor_9a9285cf-ce93-495c-aa6c-e2f1fd2996cf Folder size: 2544
+345.147 s/op
+# Warmup Iteration   3: NativeLevelDBAdaptor_d5a394de-b0dd-41f2-8bdc-676d7268fb89 Folder size: 2544
+345.603 s/op
+Iteration   1: NativeLevelDBAdaptor_276da292-32de-4740-94f5-bb8b1181b476 Folder size: 2544
+343.348 s/op
+Iteration   2: NativeLevelDBAdaptor_79f05e16-9deb-4dc6-a100-41a9b5348498 Folder size: 2544
+344.913 s/op
+Iteration   3: NativeLevelDBAdaptor_b9e401f2-bd0d-4453-9e02-1f2e4bec23d2 Folder size: 2544
+342.941 s/op
+
+
+Result "io.github.theuntamed839.BenchmarkWrite.writeVariableSizeData":
+  N = 9
+  mean =    344.800 ±(99.9%) 2.446 s/op
+
+  Histogram, s/op:
+    [342.000, 342.500) = 0 
+    [342.500, 343.000) = 1 
+    [343.000, 343.500) = 2 
+    [343.500, 344.000) = 0 
+    [344.000, 344.500) = 0 
+    [344.500, 345.000) = 3 
+    [345.000, 345.500) = 1 
+    [345.500, 346.000) = 0 
+    [346.000, 346.500) = 1 
+    [346.500, 347.000) = 0 
+    [347.000, 347.500) = 1 
+
+  Percentiles, s/op:
+      p(0.0000) =    342.941 s/op
+     p(50.0000) =    344.913 s/op
+     p(90.0000) =    347.436 s/op
+     p(95.0000) =    347.436 s/op
+     p(99.0000) =    347.436 s/op
+     p(99.9000) =    347.436 s/op
+     p(99.9900) =    347.436 s/op
+     p(99.9990) =    347.436 s/op
+     p(99.9999) =    347.436 s/op
+    p(100.0000) =    347.436 s/op
+
+
+# Run complete. Total time: 13:24:55
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark                               (dbProvider)  (entryCount)  (keySize)  (valueSize)  Mode  Cnt    Score    Error  Units
+BenchmarkWrite.writeFixedSizeData        DATASTORE4J       1000000        500          500    ss    9   14.046 ±  0.354   s/op
+BenchmarkWrite.writeFixedSizeData        DATASTORE4J       5000000        500          500    ss    9   82.978 ±  2.685   s/op
+BenchmarkWrite.writeFixedSizeData            ROCKSDB       1000000        500          500    ss    9    7.142 ±  0.177   s/op
+BenchmarkWrite.writeFixedSizeData            ROCKSDB       5000000        500          500    ss    9   52.038 ±  4.161   s/op
+BenchmarkWrite.writeFixedSizeData       LEVELDB_JAVA       1000000        500          500    ss    9   73.469 ±  3.995   s/op
+BenchmarkWrite.writeFixedSizeData       LEVELDB_JAVA       5000000        500          500    ss    9  664.876 ± 20.200   s/op
+BenchmarkWrite.writeFixedSizeData     LEVELDB_NATIVE       1000000        500          500    ss    9  109.612 ±  8.662   s/op
+BenchmarkWrite.writeFixedSizeData     LEVELDB_NATIVE       5000000        500          500    ss    9  876.159 ± 17.701   s/op
+BenchmarkWrite.writeVariableSizeData     DATASTORE4J       1000000        500          500    ss    9    9.739 ±  0.490   s/op
+BenchmarkWrite.writeVariableSizeData     DATASTORE4J       5000000        500          500    ss    9   59.756 ±  1.478   s/op
+BenchmarkWrite.writeVariableSizeData         ROCKSDB       1000000        500          500    ss    9    5.210 ±  0.196   s/op
+BenchmarkWrite.writeVariableSizeData         ROCKSDB       5000000        500          500    ss    9   28.271 ±  0.623   s/op
+BenchmarkWrite.writeVariableSizeData    LEVELDB_JAVA       1000000        500          500    ss    9   31.882 ±  2.180   s/op
+BenchmarkWrite.writeVariableSizeData    LEVELDB_JAVA       5000000        500          500    ss    9  282.108 ±  7.598   s/op
+BenchmarkWrite.writeVariableSizeData  LEVELDB_NATIVE       1000000        500          500    ss    9   38.070 ±  0.502   s/op
+BenchmarkWrite.writeVariableSizeData  LEVELDB_NATIVE       5000000        500          500    ss    9  344.800 ±  2.446   s/op
+
+Benchmark result is saved to BenchmarkWrite.json
