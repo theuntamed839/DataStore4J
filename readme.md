@@ -1,30 +1,115 @@
-# AtomDB
+# DataStore4J
+**DataStore4J** A thread-safe, high-performance key-value store, built on an LSM-tree architecture inspired by [LevelDB](https://github.com/google/leveldb), and written entirely in Java.
 
-**AtomDB** is a high-performance, LSM-tree-based key-value storage library inspired by [LevelDB](https://github.com/google/leveldb).
+### Features:
+* Implemented entirely in Java (no JNI or native code).
+* Thread-safe with robust concurrency support.
+* Zero-configuration, fully embeddable library.
+* Supports memory-mapped files for efficient OS-level management and FileChannel-based I/O for portability
+* Compatible with custom Java file systems (e.g., [JIMFS](https://github.com/google/jimfs)) for in-memory execution, useful in testing and simulations.
+* Uses Write-Ahead Logging (WAL) before memtable flush
+* Uses in-memory indexes and Bloom filters to do quick searches.
 
-## ⚙️ Architecture Overview
+### Getting started:
 
-- AtomDB uses a **Log-Structured Merge Tree (LSM)** architecture.
-- Incoming key-value pairs are first stored in an **in-memory structure (memtable)**.
-- Once full, the memtable is flushed to disk as a new **SSTable** (Sorted String Table) file.
-- **SSTables are immutable**, meaning that keys are never updated in place.
+It is available in Maven Central as [io.github.theuntamed839:DataStore4J](https://central.sonatype.com/artifact/io.github.theuntamed839/DataStore4J).
 
-## 🗑️ Deletes and Tombstones
+### Maven:
 
-- When a key is deleted, a **tombstone** marker is written instead of removing the entry.
-- Obsolete data (old values and tombstones) accumulates over time and must be cleared.
+```
+<dependency>
+    <groupId>io.github.theuntamed839</groupId>
+    <artifactId>DataStore4J</artifactId>
+    <version>0.1.0</version>
+</dependency>
+```
+#### Gradle:
 
-## 🧹 Compaction
+    implementation("io.github.theuntamed839:DataStore4J:0.1.0")
 
-- **Compaction** is a background process that:
-    - Merges multiple SSTables.
-    - Eliminates duplicate or deleted entries.
-    - Reduces disk usage and improves read performance.
+### Usage:
 
-## 🔍 Reads
+```java
+// TODO test the below code
+import io.github.theuntamed839.datastore4j.db.DB;
+import io.github.theuntamed839.datastore4j.db.DataStore4J;
+import io.github.theuntamed839.datastore4j.db.DbOptions;
+...
 
-- Reads proceed **from the newest SSTables to the oldest**, ensuring that the latest value is found first.
+Path dbPath = Files.createDirectory(Path.of("PathForDB"));
+DbOptions opt = new DbOptions();
+// opt.disallowUseOfMMap(); // to disable mmap
+DB db = new DataStore4J(dbPath, opt);
 
----
+byte[] key = "key".getBytes();
+byte[] value = "value".getBytes();
 
-Feel free to contribute or explore further!
+// write
+db.put(key, value);
+
+// read
+byte[] result = db.get(key);
+
+// update
+db.put(key, "newValue".getBytes());
+
+// delete
+db.delete(key);
+
+db.close();
+```
+### Benchmarks:
+Specs - CPU: AMD Ryzen 7 5800X 8-Core Processor, RAM: 32GB, Disk: Samsung 970 EVO Plus 1TB NVMe SSD, OS: Ubuntu 20.04 with Swapiness 0.60
+
+#### Write Benchmark:
+JMH Benchmark results for writing 1 million and 5 million entries with fixed size (500 bytes key and 500 bytes value) and variable size (up to 500 bytes key and up to 500 bytes value) data.
+The benchmark mode is single shot (ss) meaning it measures the time taken for a single operation (in this case, writing all entries) which translates to seconds per operation (s/op).
+```
+Benchmark                               (dbProvider)  (entryCount)  (keySize)  (valueSize)  Mode  Cnt    Score    Error  Units
+BenchmarkWrite.writeFixedSizeData        DATASTORE4J       1000000        500          500    ss    9   14.046 ±  0.354   s/op
+BenchmarkWrite.writeFixedSizeData        DATASTORE4J       5000000        500          500    ss    9   82.978 ±  2.685   s/op
+BenchmarkWrite.writeFixedSizeData            ROCKSDB       1000000        500          500    ss    9    7.142 ±  0.177   s/op
+BenchmarkWrite.writeFixedSizeData            ROCKSDB       5000000        500          500    ss    9   52.038 ±  4.161   s/op
+BenchmarkWrite.writeFixedSizeData       LEVELDB_JAVA       1000000        500          500    ss    9   73.469 ±  3.995   s/op
+BenchmarkWrite.writeFixedSizeData       LEVELDB_JAVA       5000000        500          500    ss    9  664.876 ± 20.200   s/op
+BenchmarkWrite.writeFixedSizeData     LEVELDB_NATIVE       1000000        500          500    ss    9  109.612 ±  8.662   s/op
+BenchmarkWrite.writeFixedSizeData     LEVELDB_NATIVE       5000000        500          500    ss    9  876.159 ± 17.701   s/op
+BenchmarkWrite.writeVariableSizeData     DATASTORE4J       1000000        500          500    ss    9    9.739 ±  0.490   s/op
+BenchmarkWrite.writeVariableSizeData     DATASTORE4J       5000000        500          500    ss    9   59.756 ±  1.478   s/op
+BenchmarkWrite.writeVariableSizeData         ROCKSDB       1000000        500          500    ss    9    5.210 ±  0.196   s/op
+BenchmarkWrite.writeVariableSizeData         ROCKSDB       5000000        500          500    ss    9   28.271 ±  0.623   s/op
+BenchmarkWrite.writeVariableSizeData    LEVELDB_JAVA       1000000        500          500    ss    9   31.882 ±  2.180   s/op
+BenchmarkWrite.writeVariableSizeData    LEVELDB_JAVA       5000000        500          500    ss    9  282.108 ±  7.598   s/op
+BenchmarkWrite.writeVariableSizeData  LEVELDB_NATIVE       1000000        500          500    ss    9   38.070 ±  0.502   s/op
+BenchmarkWrite.writeVariableSizeData  LEVELDB_NATIVE       5000000        500          500    ss    9  344.800 ±  2.446   s/op
+```
+In this particular benchmark, lower `score` is better, indicating that less time was taken to complete the write operations.
+
+If we have to rank the databases based on the time taken to write 5 million fixed size entries the ranking would be as follows:
+
+| Database | Avg time taken(seconds) Fixed Data | Avg time taken(seconds) Variable Data | 
+|----|------------------------------------|---------------------------------------|
+| ROCKSDB   | 52.038                             |28.271|
+| DATASTORE4J   | 82.978                             |59.756|
+| LEVELDB_JAVA   | 664.876                            |282.108|
+| LEVELDB_NATIVE   | 876.159                            |344.800|
+
+
+
+### Documentation:
+  * [DB internals and Design](https://github.com/theuntamed839/DataStore4J/wiki) 
+  * [More info on benchmarks](// link to read me)
+
+
+### Limitations:
+* Potential crash during compaction while adding files to the table, which may leave the database in an inconsistent state.
+* Large keys (or sporadic insertions of unusually large keys) can remain resident in memory if they happen to occupy critical pointer positions.
+* Reader objects are managed without an LRU cache, which may lead to suboptimal memory utilization for large datasets.
+
+### Planned Improvements
+1. [ ] Replace the current Guava dependency with an internal Bloom filter implementation to reduce external dependencies.
+2. [ ] Introduce smarter caching and eviction strategies for reader objects (e.g., LRU or adaptive policies).
+3. [ ] Enhance crash recovery mechanisms to enable database restoration from any intermediate state.
+4. [ ] Improve robustness for large datasets, including graceful handling of exceptions such as excessive open files or memory exhaustion.
+5. [ ] Provide configurable selection of LZ4 implementations via the API.
+6. [ ] Implement a more efficient file search algorithm.
