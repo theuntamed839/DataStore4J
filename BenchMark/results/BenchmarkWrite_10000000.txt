@@ -1,3 +1,5 @@
+java -Xmx8g -jar ./target/dbBenchmarks.jar BenchmarkWrite -f 1 -wi 1 -i 1 -to 60m -p dbProvider="DATASTORE4J,ROCKSDB" -p entryCount="10000000" -rf json -rff BenchmarkWrite_10000000.json | tee BenchmarkWrite_10000000.txt
+
 # JMH version: 1.37
 # VM version: JDK 22, OpenJDK 64-Bit Server VM, 22+36-2370
 # VM invoker: /home/ganesh/Documents/jdk-22/bin/java
