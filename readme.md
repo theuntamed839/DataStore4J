@@ -60,19 +60,21 @@ db.close();
 ```
 ### Benchmarks:
 Specs -
+```text
 OS: Ubuntu 20.04.6 LTS x86_64
 CPU: Intel i7-10850H (12) @ 5.100GHz
-RAM: 16GB
+RAM: 16 GB
 Disk: PM9A1 NVMe Samsung 512GB
 Swappiness: 60
-Virtual memory: ??? FILL
+Swap file size: 2 GB
+```
 
 **Note: All the commands used for running each test is added to the console output file of each benchmark at the top.**
 
-#### Write Benchmark:
+### Write Benchmark:
 JMH Benchmark results for writing 1 million and 5 million entries with fixed size (500 bytes key and 500 bytes value) and variable size (up to 500 bytes key and up to 500 bytes value) data.
 The benchmark mode is single shot (ss) meaning it measures the time taken for a single operation (in this case, writing all entries) which translates to seconds per operation (s/op).
-```
+```text
 Benchmark                               (dbProvider)  (entryCount)  (keySize)  (valueSize)  Mode  Cnt    Score    Error  Units
 BenchmarkWrite.writeFixedSizeData        DATASTORE4J       1000000        500          500    ss    9   14.046 ±  0.354   s/op
 BenchmarkWrite.writeFixedSizeData        DATASTORE4J       5000000        500          500    ss    9   82.978 ±  2.685   s/op
@@ -102,18 +104,20 @@ If we have to rank the databases based on the time taken to write 5 million entr
 | LEVELDB_JAVA   | 664.876                                        | 282.108                                           |
 | LEVELDB_NATIVE   | 876.159                                        | 344.800                                           |
 
-Based on the top results i ran another test for 10 million entries for ROCKSDB and DATASTORE4J with fixed size data.
+Based on the top results I ran another test for **10 million** entries for ROCKSDB and DATASTORE4J with fixed size data.
 
-```
+```text
 Benchmark                          (dbProvider)  (entryCount)  (keySize)  (valueSize)  Mode  Cnt    Score   Error  Units
 BenchmarkWrite.writeFixedSizeData   DATASTORE4J      10000000        500          500    ss       164.284           s/op
 BenchmarkWrite.writeFixedSizeData       ROCKSDB      10000000        500          500    ss       167.337           s/op
 ```
 DataStore4J demonstrates write performance on par with RocksDB for 10 million fixed-size entries.
 
-#### Read Benchmark:
-JMH Benchmark results for writing 1 million and 5 million entries with fixed size (500 bytes key and 500 bytes value) data. Again the mode is Single Shot.
-```
+### Read Benchmark:
+
+#### Fixed Size Data Read:
+JMH Benchmark results for reading 1 million and 5 million entries with fixed size (500 bytes key and 500 bytes value) data. Again the mode is Single Shot.
+```text
 Benchmark                      (dbProvider)  (entryCount)  (keySize)  (valueSize)  Mode  Cnt    Score    Error  Units
 BenchmarkRead.linearSearch      DATASTORE4J       1000000        500          500    ss    9    8.012 ±  0.405   s/op
 BenchmarkRead.linearSearch      DATASTORE4J       5000000        500          500    ss    9   75.853 ±  3.917   s/op
@@ -151,9 +155,20 @@ If we have to rank the databases based on the time taken to write 5 million entr
 | LEVELDB_JAVA   | 299.488                                   | 348.684                               |309.199 |
 | LEVELDB_NATIVE   | 80.667                                    | 81.951                               | 81.255 |
 
-and for variable size data
+Based on the top results I ran another test for **10 million** entries for ROCKSDB, DATASTORE4J and LevelDB Native with fixed size data.
 
+```text
+Benchmark                     (dbProvider)  (entryCount)  (keySize)  (valueSize)  Mode  Cnt    Score   Error  Units
+BenchmarkRead.randomSearch     DATASTORE4J      10000000        500          500    ss       740.025           s/op
+BenchmarkRead.randomSearch         ROCKSDB      10000000        500          500    ss       525.133           s/op
+BenchmarkRead.randomSearch  LEVELDB_NATIVE      10000000        500          500    ss       804.094           s/op
 ```
+
+RocksDB continues to lead in read performance for 10 million fixed-size entries, with DataStore4J following closely behind.
+
+#### Variable Size Data Read:
+JMH Benchmark results for reading 1 million and 5 million entries with variable size (up to 500 bytes key and up to 500 bytes value) data. Mode is Single Shot.
+```text
 Benchmark                                      (dbProvider)  (entryCount)  (keySize)  (valueSize)  Mode  Cnt    Score    Error  Units
 BenchmarkVariableSizeDataRead.linearSearch      DATASTORE4J       1000000        500          500    ss    9    5.692 ±  0.111   s/op
 BenchmarkVariableSizeDataRead.linearSearch      DATASTORE4J       5000000        500          500    ss    9   58.093 ±  2.579   s/op
@@ -180,7 +195,7 @@ BenchmarkVariableSizeDataRead.reverseSearch    LEVELDB_JAVA       5000000       
 BenchmarkVariableSizeDataRead.reverseSearch  LEVELDB_NATIVE       1000000        500          500    ss    9    2.832 ±  0.031   s/op
 BenchmarkVariableSizeDataRead.reverseSearch  LEVELDB_NATIVE       5000000        500          500    ss    9   52.390 ±  0.998   s/op
 ```
-Quite surprising, RocksDB seems to be slower with variable size data for reads and Native LevelDB seems to be having slight edge over DataStore4J.
+Quite surprising, RocksDB seems to be slower with variable size data for reads and Native LevelDB seems to be having some edge over DataStore4J.
 
 | Database | Avg time taken(in seconds) Sequential read | Avg time taken(in seconds) Random read | Avg time taken(in seconds) Reverse read |
 |----|--------------------------------------------|----------------------------------------|-----------------------------------------|
@@ -188,6 +203,110 @@ Quite surprising, RocksDB seems to be slower with variable size data for reads a
 | DATASTORE4J  | 58.093                                     | 62.111                                | 58.680 |
 | ROCKSDB  | 118.848                                           | 133.302                               |133.540 |
 | LEVELDB_JAVA  | 156.036                                     | 179.684                               | 162.485 |
+
+Based on the top results, I ran another test with **10 million** entries using RocksDB, DataStore4J, and LevelDB Native. The test used fixed-size data and a random search workload to better simulate real-world usage.
+
+```text
+Benchmark                                     (dbProvider)  (entryCount)  (keySize)  (valueSize)  Mode  Cnt    Score   Error  Units
+BenchmarkVariableSizeDataRead.randomSearch     DATASTORE4J      10000000        500          500    ss       175.823           s/op
+BenchmarkVariableSizeDataRead.randomSearch         ROCKSDB      10000000        500          500    ss       122.458           s/op
+BenchmarkVariableSizeDataRead.randomSearch  LEVELDB_NATIVE      10000000        500          500    ss       170.211           s/op
+```
+RocksDB continues to lead in read performance for 10 million variable-size entries, with LEVELDB_NATIVE and DataStore4J following behind, both showing competitive performance.
+
+Observing the JMH iterations makes it clear that RocksDB and LevelDB Native perform some form of caching in each iteration. I am not an expert on these databases, but it seems they also take advantage of the OS page cache with kernel-level hints on read patterns, which benefits them significantly ?
+
+```text
+Iteration from BenchmarkRead.txt
+# Benchmark: io.github.theuntamed839.BenchmarkRead.randomSearch
+# Parameters: (dbProvider = ROCKSDB, entryCount = 5000000, keySize = 500, valueSize = 500)
+
+# Fork: 1 of 3
+# Warmup Iteration   1: 68.712 s/op
+# Warmup Iteration   2: 51.240 s/op
+# Warmup Iteration   3: 51.046 s/op
+Iteration   1: 50.854 s/op
+Iteration   2: 49.290 s/op
+Iteration   3: RocksDBAdaptor_a4f0bf56-0cf7-4bbe-891d-3b00f8cdafdf Folder size: 4855
+49.890 s/op
+
+# Benchmark: io.github.theuntamed839.BenchmarkRead.randomSearch
+# Parameters: (dbProvider = LEVELDB_NATIVE, entryCount = 5000000, keySize = 500, valueSize = 500)
+
+# Fork: 1 of 3
+# Warmup Iteration   1: 105.123 s/op
+# Warmup Iteration   2: 81.080 s/op
+# Warmup Iteration   3: 80.965 s/op
+Iteration   1: 80.857 s/op
+Iteration   2: 80.923 s/op
+Iteration   3: NativeLevelDBAdaptor_7912de59-9c72-4656-b0a9-f5a078d939d2 Folder size: 5020
+80.617 s/op
+
+# Benchmark: io.github.theuntamed839.BenchmarkRead.randomSearch
+# Parameters: (dbProvider = DATASTORE4J, entryCount = 5000000, keySize = 500, valueSize = 500)
+
+# Fork: 1 of 3
+# Warmup Iteration   1: 80.361 s/op
+# Warmup Iteration   2: 82.425 s/op
+# Warmup Iteration   3: 80.628 s/op
+Iteration   1: 80.235 s/op
+Iteration   2: 82.443 s/op
+Iteration   3: DataStore4JAdaptor_aec10971-6f24-4360-91d1-89c06803ade9 Folder size: 5196
+80.949 s/op
+```
+We had a benchmark test specifically to test this scenario.
+#### Fixed Size Data Read (Fresh DB for each iteration):
+JMH Benchmark results for reading 5 million entries with Fixed size (500 bytes key and 500 bytes value) data. Mode is Single Shot.
+```text
+Benchmark                          (dbProvider)  (entryCount)  (keySize)  (valueSize)  Mode  Cnt    Score   Error  Units
+BenchmarkFreshRead.randomSearch     DATASTORE4J       5000000        500          500    ss        72.444           s/op
+BenchmarkFreshRead.randomSearch         ROCKSDB       5000000        500          500    ss        75.743           s/op
+BenchmarkFreshRead.randomSearch    LEVELDB_JAVA       5000000        500          500    ss       353.250           s/op
+BenchmarkFreshRead.randomSearch  LEVELDB_NATIVE       5000000        500          500    ss       109.559           s/op
+```
+| Database | Avg time taken(in seconds) random read |
+|----|-------------|
+| DATASTORE4J  | 72.444      |  
+| ROCKSDB  | 75.743      | 
+|  LEVELDB_NATIVE | 353.250     |
+| LEVELDB_JAVA  | 109.559     | 
+
+DataStore4J outperforms LevelDB Native in read performance when each iteration starts with a fresh database.
+
+But again this is not a very realistic scenario as in real world applications the database will be used over a period of time and not created afresh each time.
+
+### Concurrency Benchmark:
+One of the main features of DataStore4J is its concurrency support. It allows multiple threads to read and write to the database simultaneously without any external locking mechanism.
+
+#### Concurrent Writes
+JMH Benchmark results for concurrent writes with 12 threads writing to a pre-populated database with 5 million entries with fixed size (500 bytes key and 500 bytes value) data. The benchmark mode is throughput (thrpt) meaning it measures the number of operations per second (ops/s).
+```text
+Benchmark                                               (dbProvider)  (entryCount)  (keySize)  (valueSize)   Mode  Cnt      Score       Error  Units
+BenchmarkConcurrentWrite.prepopulatedConcurrentWrite     DATASTORE4J       5000000        500          500  thrpt   30  52899.349 ±  3310.037  ops/s
+BenchmarkConcurrentWrite.prepopulatedConcurrentWrite         ROCKSDB       5000000        500          500  thrpt   30  43255.954 ± 29482.900  ops/s
+BenchmarkConcurrentWrite.prepopulatedConcurrentWrite    LEVELDB_JAVA       5000000        500          500  thrpt   30   6394.339 ±  1569.415  ops/s
+BenchmarkConcurrentWrite.prepopulatedConcurrentWrite  LEVELDB_NATIVE       5000000        500          500  thrpt   30   5111.540 ±   920.209  ops/s
+```
+In this benchmark, higher `score` is better, indicating that more operations were completed per second.
+
+| Database | Avg operations per second (ops/s) |
+|----|-----------------------------------|
+| DATASTORE4J  | 52899.349                        |
+| ROCKSDB  | 43255.954                        |
+| LEVELDB_JAVA  | 6394.339                         |
+| LEVELDB_NATIVE  | 5111.540                         |
+
+DataStore4J delivered stable, predictable throughput with narrow error bounds and a healthy p99 close to its mean.
+
+While the average score for RocksDB is competitive, the most striking aspect of its performance is the exceptionally high error margin of ±29,482.90 ops/s. This indicates that the results were highly unreliable and inconsistent from one run to another.
+A closer look at the percentile data from the raw JMH results provides clear evidence of this inconsistency:
+
+| Percentile | DataStore4J (ops/s) | RocksDB (ops/s) |
+|----|----------------------------|-----------|
+| 50th (Median)  | 52932                      | 14822|
+| 99th  | 62526                | 119303 |
+
+The table shows a massive gap between RocksDB's median performance and its 99th percentile. This means that a significant portion of its benchmark runs were extremely slow, even though the peak performance was high.
 
 #### Disk size consumed for each test. WRITE
 
