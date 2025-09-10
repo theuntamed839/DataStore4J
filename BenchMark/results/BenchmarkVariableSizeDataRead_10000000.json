@@ -1,0 +1,166 @@
+[
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "io.github.theuntamed839.BenchmarkVariableSizeDataRead.randomSearch",
+        "mode" : "ss",
+        "threads" : 1,
+        "forks" : 1,
+        "jvm" : "/home/ganesh/Documents/jdk-22/bin/java",
+        "jvmArgs" : [
+            "-Xmx8g"
+        ],
+        "jdkVersion" : "22",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "22+36-2370",
+        "warmupIterations" : 1,
+        "warmupTime" : "single-shot",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 1,
+        "measurementTime" : "single-shot",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "dbProvider" : "DATASTORE4J",
+            "entryCount" : "10000000",
+            "keySize" : "500",
+            "valueSize" : "500"
+        },
+        "primaryMetric" : {
+            "score" : 175.822516729,
+            "scoreError" : "NaN",
+            "scoreConfidence" : [
+                "NaN",
+                "NaN"
+            ],
+            "scorePercentiles" : {
+                "0.0" : 175.822516729,
+                "50.0" : 175.822516729,
+                "90.0" : 175.822516729,
+                "95.0" : 175.822516729,
+                "99.0" : 175.822516729,
+                "99.9" : 175.822516729,
+                "99.99" : 175.822516729,
+                "99.999" : 175.822516729,
+                "99.9999" : 175.822516729,
+                "100.0" : 175.822516729
+            },
+            "scoreUnit" : "s/op",
+            "rawData" : [
+                [
+                    175.822516729
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "io.github.theuntamed839.BenchmarkVariableSizeDataRead.randomSearch",
+        "mode" : "ss",
+        "threads" : 1,
+        "forks" : 1,
+        "jvm" : "/home/ganesh/Documents/jdk-22/bin/java",
+        "jvmArgs" : [
+            "-Xmx8g"
+        ],
+        "jdkVersion" : "22",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "22+36-2370",
+        "warmupIterations" : 1,
+        "warmupTime" : "single-shot",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 1,
+        "measurementTime" : "single-shot",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "dbProvider" : "ROCKSDB",
+            "entryCount" : "10000000",
+            "keySize" : "500",
+            "valueSize" : "500"
+        },
+        "primaryMetric" : {
+            "score" : 122.458235909,
+            "scoreError" : "NaN",
+            "scoreConfidence" : [
+                "NaN",
+                "NaN"
+            ],
+            "scorePercentiles" : {
+                "0.0" : 122.458235909,
+                "50.0" : 122.458235909,
+                "90.0" : 122.458235909,
+                "95.0" : 122.458235909,
+                "99.0" : 122.458235909,
+                "99.9" : 122.458235909,
+                "99.99" : 122.458235909,
+                "99.999" : 122.458235909,
+                "99.9999" : 122.458235909,
+                "100.0" : 122.458235909
+            },
+            "scoreUnit" : "s/op",
+            "rawData" : [
+                [
+                    122.458235909
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "io.github.theuntamed839.BenchmarkVariableSizeDataRead.randomSearch",
+        "mode" : "ss",
+        "threads" : 1,
+        "forks" : 1,
+        "jvm" : "/home/ganesh/Documents/jdk-22/bin/java",
+        "jvmArgs" : [
+            "-Xmx8g"
+        ],
+        "jdkVersion" : "22",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "22+36-2370",
+        "warmupIterations" : 1,
+        "warmupTime" : "single-shot",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 1,
+        "measurementTime" : "single-shot",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "dbProvider" : "LEVELDB_NATIVE",
+            "entryCount" : "10000000",
+            "keySize" : "500",
+            "valueSize" : "500"
+        },
+        "primaryMetric" : {
+            "score" : 170.210535231,
+            "scoreError" : "NaN",
+            "scoreConfidence" : [
+                "NaN",
+                "NaN"
+            ],
+            "scorePercentiles" : {
+                "0.0" : 170.210535231,
+                "50.0" : 170.210535231,
+                "90.0" : 170.210535231,
+                "95.0" : 170.210535231,
+                "99.0" : 170.210535231,
+                "99.9" : 170.210535231,
+                "99.99" : 170.210535231,
+                "99.999" : 170.210535231,
+                "99.9999" : 170.210535231,
+                "100.0" : 170.210535231
+            },
+            "scoreUnit" : "s/op",
+            "rawData" : [
+                [
+                    170.210535231
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    }
+]
+
+
