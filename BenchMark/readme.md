@@ -15,6 +15,18 @@ The benchmarks are performed on four different database implementations:
 3. [LevelDB Java](https://github.com/dain/leveldb) (a Java port of LevelDB)
 4. [DataStore4J](https://github.com/theuntamed839/DataStore4J)
 
+### Running Benchmarks:
+1. Build using Maven:
+```bash
+mvn clean verify
+```
+2. To run a specific benchmark, use the following command structure, replacing "BenchmarkRead" with the desired benchmark class name:
+```bash
+java  -jar ./target/dbBenchmarks.jar BenchmarkRead -f 3 -wi 3 -i 3 -to 60m -rf json -rff BenchmarkRead.json | tee BenchmarkRead.txt
+```
+This command runs the BenchmarkRead benchmark with 3 forks, 3 warmup iterations, and 3 measurement iterations.
+The results are saved to BenchmarkRead.json and BenchmarkRead.txt.
+
 **Note: The exact commands used to run each test are recorded at the top of the console output file for that benchmark**
 
 ### Write Benchmark:
