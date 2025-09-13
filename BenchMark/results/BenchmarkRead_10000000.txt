@@ -1,0 +1,83 @@
+# JMH version: 1.37
+# VM version: JDK 22, OpenJDK 64-Bit Server VM, 22+36-2370
+# VM invoker: /home/ganesh/Documents/jdk-22/bin/java
+# VM options: -Xmx8g
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, single-shot each
+# Measurement: 1 iterations, single-shot each
+# Timeout: 60 min per iteration
+# Threads: 1 thread
+# Benchmark mode: Single shot invocation time
+# Benchmark: io.github.theuntamed839.BenchmarkRead.randomSearch
+# Parameters: (dbProvider = DATASTORE4J, entryCount = 10000000, keySize = 500, valueSize = 500)
+
+# Run progress: 0.00% complete, ETA 00:00:00
+# Fork: 1 of 1
+# Warmup Iteration   1: 721.394 s/op
+Iteration   1: DataStore4JAdaptor_d906d074-fab7-4b3d-b70a-b291c7880615 Folder size: 10393
+740.025 s/op
+
+
+
+# JMH version: 1.37
+# VM version: JDK 22, OpenJDK 64-Bit Server VM, 22+36-2370
+# VM invoker: /home/ganesh/Documents/jdk-22/bin/java
+# VM options: -Xmx8g
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, single-shot each
+# Measurement: 1 iterations, single-shot each
+# Timeout: 60 min per iteration
+# Threads: 1 thread
+# Benchmark mode: Single shot invocation time
+# Benchmark: io.github.theuntamed839.BenchmarkRead.randomSearch
+# Parameters: (dbProvider = ROCKSDB, entryCount = 10000000, keySize = 500, valueSize = 500)
+
+# Run progress: 33.33% complete, ETA 00:54:36
+# Fork: 1 of 1
+# Warmup Iteration   1: 497.240 s/op
+Iteration   1: RocksDBAdaptor_7e9bcf69-ddec-4e13-85b2-09713cff7d15 Folder size: 9711
+525.133 s/op
+
+
+
+# JMH version: 1.37
+# VM version: JDK 22, OpenJDK 64-Bit Server VM, 22+36-2370
+# VM invoker: /home/ganesh/Documents/jdk-22/bin/java
+# VM options: -Xmx8g
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, single-shot each
+# Measurement: 1 iterations, single-shot each
+# Timeout: 60 min per iteration
+# Threads: 1 thread
+# Benchmark mode: Single shot invocation time
+# Benchmark: io.github.theuntamed839.BenchmarkRead.randomSearch
+# Parameters: (dbProvider = LEVELDB_NATIVE, entryCount = 10000000, keySize = 500, valueSize = 500)
+
+# Run progress: 66.67% complete, ETA 00:23:24
+# Fork: 1 of 1
+# Warmup Iteration   1: 903.338 s/op
+Iteration   1: NativeLevelDBAdaptor_170a34ba-884d-4801-8cb5-679fa51b438e Folder size: 10156
+804.094 s/op
+
+
+
+# Run complete. Total time: 01:48:57
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark                     (dbProvider)  (entryCount)  (keySize)  (valueSize)  Mode  Cnt    Score   Error  Units
+BenchmarkRead.randomSearch     DATASTORE4J      10000000        500          500    ss       740.025           s/op
+BenchmarkRead.randomSearch         ROCKSDB      10000000        500          500    ss       525.133           s/op
+BenchmarkRead.randomSearch  LEVELDB_NATIVE      10000000        500          500    ss       804.094           s/op
+
+Benchmark result is saved to BenchmarkRead_10000000.json

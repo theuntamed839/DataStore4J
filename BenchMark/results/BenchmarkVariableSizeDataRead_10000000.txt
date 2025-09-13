@@ -1,0 +1,83 @@
+# JMH version: 1.37
+# VM version: JDK 22, OpenJDK 64-Bit Server VM, 22+36-2370
+# VM invoker: /home/ganesh/Documents/jdk-22/bin/java
+# VM options: -Xmx8g
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, single-shot each
+# Measurement: 1 iterations, single-shot each
+# Timeout: 60 min per iteration
+# Threads: 1 thread
+# Benchmark mode: Single shot invocation time
+# Benchmark: io.github.theuntamed839.BenchmarkVariableSizeDataRead.randomSearch
+# Parameters: (dbProvider = DATASTORE4J, entryCount = 10000000, keySize = 500, valueSize = 500)
+
+# Run progress: 0.00% complete, ETA 00:00:00
+# Fork: 1 of 1
+# Warmup Iteration   1: 182.359 s/op
+Iteration   1: DataStore4JAdaptor_06b71dd6-df2b-4232-b651-3e41095154c5 Folder size: 5460
+175.823 s/op
+
+
+
+# JMH version: 1.37
+# VM version: JDK 22, OpenJDK 64-Bit Server VM, 22+36-2370
+# VM invoker: /home/ganesh/Documents/jdk-22/bin/java
+# VM options: -Xmx8g
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, single-shot each
+# Measurement: 1 iterations, single-shot each
+# Timeout: 60 min per iteration
+# Threads: 1 thread
+# Benchmark mode: Single shot invocation time
+# Benchmark: io.github.theuntamed839.BenchmarkVariableSizeDataRead.randomSearch
+# Parameters: (dbProvider = ROCKSDB, entryCount = 10000000, keySize = 500, valueSize = 500)
+
+# Run progress: 33.33% complete, ETA 00:16:16
+# Fork: 1 of 1
+# Warmup Iteration   1: 141.442 s/op
+Iteration   1: RocksDBAdaptor_6e1859bd-dde9-4446-aa42-9229000fabb0 Folder size: 4994
+122.458 s/op
+
+
+
+# JMH version: 1.37
+# VM version: JDK 22, OpenJDK 64-Bit Server VM, 22+36-2370
+# VM invoker: /home/ganesh/Documents/jdk-22/bin/java
+# VM options: -Xmx8g
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, single-shot each
+# Measurement: 1 iterations, single-shot each
+# Timeout: 60 min per iteration
+# Threads: 1 thread
+# Benchmark mode: Single shot invocation time
+# Benchmark: io.github.theuntamed839.BenchmarkVariableSizeDataRead.randomSearch
+# Parameters: (dbProvider = LEVELDB_NATIVE, entryCount = 10000000, keySize = 500, valueSize = 500)
+
+# Run progress: 66.67% complete, ETA 00:06:51
+# Fork: 1 of 1
+# Warmup Iteration   1: 201.505 s/op
+Iteration   1: NativeLevelDBAdaptor_efcc6d7d-f3d9-4d71-b57b-c3b6e98f9011 Folder size: 5142
+170.211 s/op
+
+
+
+# Run complete. Total time: 00:32:56
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark                                     (dbProvider)  (entryCount)  (keySize)  (valueSize)  Mode  Cnt    Score   Error  Units
+BenchmarkVariableSizeDataRead.randomSearch     DATASTORE4J      10000000        500          500    ss       175.823           s/op
+BenchmarkVariableSizeDataRead.randomSearch         ROCKSDB      10000000        500          500    ss       122.458           s/op
+BenchmarkVariableSizeDataRead.randomSearch  LEVELDB_NATIVE      10000000        500          500    ss       170.211           s/op
+
+Benchmark result is saved to BenchmarkVariableSizeDataRead_10000000.json

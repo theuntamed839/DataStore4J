@@ -1,0 +1,1564 @@
+[
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "io.github.theuntamed839.BenchmarkRead.linearSearch",
+        "mode" : "ss",
+        "threads" : 1,
+        "forks" : 3,
+        "jvm" : "/home/ganesh/Documents/jdk-22/bin/java",
+        "jvmArgs" : [
+        ],
+        "jdkVersion" : "22",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "22+36-2370",
+        "warmupIterations" : 3,
+        "warmupTime" : "single-shot",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "single-shot",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "dbProvider" : "DATASTORE4J",
+            "entryCount" : "1000000",
+            "keySize" : "500",
+            "valueSize" : "500"
+        },
+        "primaryMetric" : {
+            "score" : 8.01215624422222,
+            "scoreError" : 0.40479641247381615,
+            "scoreConfidence" : [
+                7.607359831748404,
+                8.416952656696036
+            ],
+            "scorePercentiles" : {
+                "0.0" : 7.685360299,
+                "50.0" : 8.003796351,
+                "90.0" : 8.379272865,
+                "95.0" : 8.379272865,
+                "99.0" : 8.379272865,
+                "99.9" : 8.379272865,
+                "99.99" : 8.379272865,
+                "99.999" : 8.379272865,
+                "99.9999" : 8.379272865,
+                "100.0" : 8.379272865
+            },
+            "scoreUnit" : "s/op",
+            "rawData" : [
+                [
+                    8.003796351,
+                    8.186720267,
+                    7.933443451
+                ],
+                [
+                    8.379272865,
+                    8.198050559,
+                    8.18815306
+                ],
+                [
+                    7.782652411,
+                    7.685360299,
+                    7.751956935
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "io.github.theuntamed839.BenchmarkRead.linearSearch",
+        "mode" : "ss",
+        "threads" : 1,
+        "forks" : 3,
+        "jvm" : "/home/ganesh/Documents/jdk-22/bin/java",
+        "jvmArgs" : [
+        ],
+        "jdkVersion" : "22",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "22+36-2370",
+        "warmupIterations" : 3,
+        "warmupTime" : "single-shot",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "single-shot",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "dbProvider" : "DATASTORE4J",
+            "entryCount" : "5000000",
+            "keySize" : "500",
+            "valueSize" : "500"
+        },
+        "primaryMetric" : {
+            "score" : 75.85273068777778,
+            "scoreError" : 3.917404811444929,
+            "scoreConfidence" : [
+                71.93532587633285,
+                79.7701354992227
+            ],
+            "scorePercentiles" : {
+                "0.0" : 73.153155642,
+                "50.0" : 75.637897632,
+                "90.0" : 79.130227903,
+                "95.0" : 79.130227903,
+                "99.0" : 79.130227903,
+                "99.9" : 79.130227903,
+                "99.99" : 79.130227903,
+                "99.999" : 79.130227903,
+                "99.9999" : 79.130227903,
+                "100.0" : 79.130227903
+            },
+            "scoreUnit" : "s/op",
+            "rawData" : [
+                [
+                    78.25075522,
+                    79.130227903,
+                    78.539968046
+                ],
+                [
+                    74.196887386,
+                    74.262240006,
+                    76.289878426
+                ],
+                [
+                    73.153155642,
+                    73.213565929,
+                    75.637897632
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "io.github.theuntamed839.BenchmarkRead.linearSearch",
+        "mode" : "ss",
+        "threads" : 1,
+        "forks" : 3,
+        "jvm" : "/home/ganesh/Documents/jdk-22/bin/java",
+        "jvmArgs" : [
+        ],
+        "jdkVersion" : "22",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "22+36-2370",
+        "warmupIterations" : 3,
+        "warmupTime" : "single-shot",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "single-shot",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "dbProvider" : "ROCKSDB",
+            "entryCount" : "1000000",
+            "keySize" : "500",
+            "valueSize" : "500"
+        },
+        "primaryMetric" : {
+            "score" : 25.072356231222216,
+            "scoreError" : 0.18640405983260985,
+            "scoreConfidence" : [
+                24.885952171389604,
+                25.258760291054827
+            ],
+            "scorePercentiles" : {
+                "0.0" : 24.889560311,
+                "50.0" : 25.112129945,
+                "90.0" : 25.2156043,
+                "95.0" : 25.2156043,
+                "99.0" : 25.2156043,
+                "99.9" : 25.2156043,
+                "99.99" : 25.2156043,
+                "99.999" : 25.2156043,
+                "99.9999" : 25.2156043,
+                "100.0" : 25.2156043
+            },
+            "scoreUnit" : "s/op",
+            "rawData" : [
+                [
+                    25.160333091,
+                    25.2156043,
+                    25.16866511
+                ],
+                [
+                    24.889560311,
+                    24.962652876,
+                    25.135424947
+                ],
+                [
+                    25.017338702,
+                    24.989496799,
+                    25.112129945
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "io.github.theuntamed839.BenchmarkRead.linearSearch",
+        "mode" : "ss",
+        "threads" : 1,
+        "forks" : 3,
+        "jvm" : "/home/ganesh/Documents/jdk-22/bin/java",
+        "jvmArgs" : [
+        ],
+        "jdkVersion" : "22",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "22+36-2370",
+        "warmupIterations" : 3,
+        "warmupTime" : "single-shot",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "single-shot",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "dbProvider" : "ROCKSDB",
+            "entryCount" : "5000000",
+            "keySize" : "500",
+            "valueSize" : "500"
+        },
+        "primaryMetric" : {
+            "score" : 49.35526013711111,
+            "scoreError" : 1.9890232856742582,
+            "scoreConfidence" : [
+                47.36623685143685,
+                51.34428342278537
+            ],
+            "scorePercentiles" : {
+                "0.0" : 47.641166386,
+                "50.0" : 50.036048874,
+                "90.0" : 50.433544214,
+                "95.0" : 50.433544214,
+                "99.0" : 50.433544214,
+                "99.9" : 50.433544214,
+                "99.99" : 50.433544214,
+                "99.999" : 50.433544214,
+                "99.9999" : 50.433544214,
+                "100.0" : 50.433544214
+            },
+            "scoreUnit" : "s/op",
+            "rawData" : [
+                [
+                    50.213816145,
+                    50.250914006,
+                    50.14071761
+                ],
+                [
+                    50.433544214,
+                    50.036048874,
+                    49.715783232
+                ],
+                [
+                    47.781638039,
+                    47.641166386,
+                    47.983712728
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "io.github.theuntamed839.BenchmarkRead.linearSearch",
+        "mode" : "ss",
+        "threads" : 1,
+        "forks" : 3,
+        "jvm" : "/home/ganesh/Documents/jdk-22/bin/java",
+        "jvmArgs" : [
+        ],
+        "jdkVersion" : "22",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "22+36-2370",
+        "warmupIterations" : 3,
+        "warmupTime" : "single-shot",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "single-shot",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "dbProvider" : "LEVELDB_JAVA",
+            "entryCount" : "1000000",
+            "keySize" : "500",
+            "valueSize" : "500"
+        },
+        "primaryMetric" : {
+            "score" : 21.858737846333334,
+            "scoreError" : 0.35334529273878107,
+            "scoreConfidence" : [
+                21.505392553594554,
+                22.212083139072114
+            ],
+            "scorePercentiles" : {
+                "0.0" : 21.599347705,
+                "50.0" : 21.894350846,
+                "90.0" : 22.141568872,
+                "95.0" : 22.141568872,
+                "99.0" : 22.141568872,
+                "99.9" : 22.141568872,
+                "99.99" : 22.141568872,
+                "99.999" : 22.141568872,
+                "99.9999" : 22.141568872,
+                "100.0" : 22.141568872
+            },
+            "scoreUnit" : "s/op",
+            "rawData" : [
+                [
+                    21.625597398,
+                    21.639961061,
+                    21.599347705
+                ],
+                [
+                    21.77801751,
+                    21.899323879,
+                    21.894350846
+                ],
+                [
+                    22.098029436,
+                    22.05244391,
+                    22.141568872
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "io.github.theuntamed839.BenchmarkRead.linearSearch",
+        "mode" : "ss",
+        "threads" : 1,
+        "forks" : 3,
+        "jvm" : "/home/ganesh/Documents/jdk-22/bin/java",
+        "jvmArgs" : [
+        ],
+        "jdkVersion" : "22",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "22+36-2370",
+        "warmupIterations" : 3,
+        "warmupTime" : "single-shot",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "single-shot",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "dbProvider" : "LEVELDB_JAVA",
+            "entryCount" : "5000000",
+            "keySize" : "500",
+            "valueSize" : "500"
+        },
+        "primaryMetric" : {
+            "score" : 299.4882473185555,
+            "scoreError" : 14.868533570754073,
+            "scoreConfidence" : [
+                284.6197137478014,
+                314.3567808893096
+            ],
+            "scorePercentiles" : {
+                "0.0" : 291.465938905,
+                "50.0" : 295.16946924,
+                "90.0" : 311.272110787,
+                "95.0" : 311.272110787,
+                "99.0" : 311.272110787,
+                "99.9" : 311.272110787,
+                "99.99" : 311.272110787,
+                "99.999" : 311.272110787,
+                "99.9999" : 311.272110787,
+                "100.0" : 311.272110787
+            },
+            "scoreUnit" : "s/op",
+            "rawData" : [
+                [
+                    295.16946924,
+                    295.482651666,
+                    295.1383274
+                ],
+                [
+                    311.272110787,
+                    311.113722249,
+                    311.006322
+                ],
+                [
+                    292.814130841,
+                    291.465938905,
+                    291.931552779
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "io.github.theuntamed839.BenchmarkRead.linearSearch",
+        "mode" : "ss",
+        "threads" : 1,
+        "forks" : 3,
+        "jvm" : "/home/ganesh/Documents/jdk-22/bin/java",
+        "jvmArgs" : [
+        ],
+        "jdkVersion" : "22",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "22+36-2370",
+        "warmupIterations" : 3,
+        "warmupTime" : "single-shot",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "single-shot",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "dbProvider" : "LEVELDB_NATIVE",
+            "entryCount" : "1000000",
+            "keySize" : "500",
+            "valueSize" : "500"
+        },
+        "primaryMetric" : {
+            "score" : 2.7757486214444445,
+            "scoreError" : 0.10174936802174278,
+            "scoreConfidence" : [
+                2.6739992534227017,
+                2.877497989466187
+            ],
+            "scorePercentiles" : {
+                "0.0" : 2.678937352,
+                "50.0" : 2.772761235,
+                "90.0" : 2.868671403,
+                "95.0" : 2.868671403,
+                "99.0" : 2.868671403,
+                "99.9" : 2.868671403,
+                "99.99" : 2.868671403,
+                "99.999" : 2.868671403,
+                "99.9999" : 2.868671403,
+                "100.0" : 2.868671403
+            },
+            "scoreUnit" : "s/op",
+            "rawData" : [
+                [
+                    2.835017681,
+                    2.733678602,
+                    2.772761235
+                ],
+                [
+                    2.868671403,
+                    2.748037472,
+                    2.808668873
+                ],
+                [
+                    2.813031799,
+                    2.678937352,
+                    2.722933176
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "io.github.theuntamed839.BenchmarkRead.linearSearch",
+        "mode" : "ss",
+        "threads" : 1,
+        "forks" : 3,
+        "jvm" : "/home/ganesh/Documents/jdk-22/bin/java",
+        "jvmArgs" : [
+        ],
+        "jdkVersion" : "22",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "22+36-2370",
+        "warmupIterations" : 3,
+        "warmupTime" : "single-shot",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "single-shot",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "dbProvider" : "LEVELDB_NATIVE",
+            "entryCount" : "5000000",
+            "keySize" : "500",
+            "valueSize" : "500"
+        },
+        "primaryMetric" : {
+            "score" : 80.66725749111112,
+            "scoreError" : 0.6881129285043417,
+            "scoreConfidence" : [
+                79.97914456260678,
+                81.35537041961545
+            ],
+            "scorePercentiles" : {
+                "0.0" : 79.996994237,
+                "50.0" : 80.606821375,
+                "90.0" : 81.228059924,
+                "95.0" : 81.228059924,
+                "99.0" : 81.228059924,
+                "99.9" : 81.228059924,
+                "99.99" : 81.228059924,
+                "99.999" : 81.228059924,
+                "99.9999" : 81.228059924,
+                "100.0" : 81.228059924
+            },
+            "scoreUnit" : "s/op",
+            "rawData" : [
+                [
+                    80.496301429,
+                    80.606821375,
+                    80.207096049
+                ],
+                [
+                    80.77151425,
+                    79.996994237,
+                    80.59920365
+                ],
+                [
+                    81.228059924,
+                    81.161634499,
+                    80.937692007
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "io.github.theuntamed839.BenchmarkRead.randomSearch",
+        "mode" : "ss",
+        "threads" : 1,
+        "forks" : 3,
+        "jvm" : "/home/ganesh/Documents/jdk-22/bin/java",
+        "jvmArgs" : [
+        ],
+        "jdkVersion" : "22",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "22+36-2370",
+        "warmupIterations" : 3,
+        "warmupTime" : "single-shot",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "single-shot",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "dbProvider" : "DATASTORE4J",
+            "entryCount" : "1000000",
+            "keySize" : "500",
+            "valueSize" : "500"
+        },
+        "primaryMetric" : {
+            "score" : 8.62268828277778,
+            "scoreError" : 0.22613380946706332,
+            "scoreConfidence" : [
+                8.396554473310717,
+                8.848822092244843
+            ],
+            "scorePercentiles" : {
+                "0.0" : 8.411958751,
+                "50.0" : 8.628572479,
+                "90.0" : 8.865520898,
+                "95.0" : 8.865520898,
+                "99.0" : 8.865520898,
+                "99.9" : 8.865520898,
+                "99.99" : 8.865520898,
+                "99.999" : 8.865520898,
+                "99.9999" : 8.865520898,
+                "100.0" : 8.865520898
+            },
+            "scoreUnit" : "s/op",
+            "rawData" : [
+                [
+                    8.653439445,
+                    8.628572479,
+                    8.612560471
+                ],
+                [
+                    8.517974445,
+                    8.519663925,
+                    8.411958751
+                ],
+                [
+                    8.865520898,
+                    8.759355626,
+                    8.635148505
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "io.github.theuntamed839.BenchmarkRead.randomSearch",
+        "mode" : "ss",
+        "threads" : 1,
+        "forks" : 3,
+        "jvm" : "/home/ganesh/Documents/jdk-22/bin/java",
+        "jvmArgs" : [
+        ],
+        "jdkVersion" : "22",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "22+36-2370",
+        "warmupIterations" : 3,
+        "warmupTime" : "single-shot",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "single-shot",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "dbProvider" : "DATASTORE4J",
+            "entryCount" : "5000000",
+            "keySize" : "500",
+            "valueSize" : "500"
+        },
+        "primaryMetric" : {
+            "score" : 80.19726204855557,
+            "scoreError" : 4.500497955062966,
+            "scoreConfidence" : [
+                75.6967640934926,
+                84.69776000361854
+            ],
+            "scorePercentiles" : {
+                "0.0" : 76.683097026,
+                "50.0" : 80.949209869,
+                "90.0" : 83.377597763,
+                "95.0" : 83.377597763,
+                "99.0" : 83.377597763,
+                "99.9" : 83.377597763,
+                "99.99" : 83.377597763,
+                "99.999" : 83.377597763,
+                "99.9999" : 83.377597763,
+                "100.0" : 83.377597763
+            },
+            "scoreUnit" : "s/op",
+            "rawData" : [
+                [
+                    80.234858735,
+                    82.443485149,
+                    80.949209869
+                ],
+                [
+                    81.763997022,
+                    83.377597763,
+                    82.489956036
+                ],
+                [
+                    76.732443543,
+                    77.100713294,
+                    76.683097026
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "io.github.theuntamed839.BenchmarkRead.randomSearch",
+        "mode" : "ss",
+        "threads" : 1,
+        "forks" : 3,
+        "jvm" : "/home/ganesh/Documents/jdk-22/bin/java",
+        "jvmArgs" : [
+        ],
+        "jdkVersion" : "22",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "22+36-2370",
+        "warmupIterations" : 3,
+        "warmupTime" : "single-shot",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "single-shot",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "dbProvider" : "ROCKSDB",
+            "entryCount" : "1000000",
+            "keySize" : "500",
+            "valueSize" : "500"
+        },
+        "primaryMetric" : {
+            "score" : 25.241632695666667,
+            "scoreError" : 0.27219933004773134,
+            "scoreConfidence" : [
+                24.969433365618936,
+                25.513832025714397
+            ],
+            "scorePercentiles" : {
+                "0.0" : 25.10103077,
+                "50.0" : 25.175601997,
+                "90.0" : 25.472225182,
+                "95.0" : 25.472225182,
+                "99.0" : 25.472225182,
+                "99.9" : 25.472225182,
+                "99.99" : 25.472225182,
+                "99.999" : 25.472225182,
+                "99.9999" : 25.472225182,
+                "100.0" : 25.472225182
+            },
+            "scoreUnit" : "s/op",
+            "rawData" : [
+                [
+                    25.10103077,
+                    25.1159521,
+                    25.119620579
+                ],
+                [
+                    25.463041057,
+                    25.42596023,
+                    25.472225182
+                ],
+                [
+                    25.184972546,
+                    25.1162898,
+                    25.175601997
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "io.github.theuntamed839.BenchmarkRead.randomSearch",
+        "mode" : "ss",
+        "threads" : 1,
+        "forks" : 3,
+        "jvm" : "/home/ganesh/Documents/jdk-22/bin/java",
+        "jvmArgs" : [
+        ],
+        "jdkVersion" : "22",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "22+36-2370",
+        "warmupIterations" : 3,
+        "warmupTime" : "single-shot",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "single-shot",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "dbProvider" : "ROCKSDB",
+            "entryCount" : "5000000",
+            "keySize" : "500",
+            "valueSize" : "500"
+        },
+        "primaryMetric" : {
+            "score" : 50.369189130777784,
+            "scoreError" : 0.8405790920001911,
+            "scoreConfidence" : [
+                49.52861003877759,
+                51.209768222777974
+            ],
+            "scorePercentiles" : {
+                "0.0" : 49.289843145,
+                "50.0" : 50.455005039,
+                "90.0" : 50.915084992,
+                "95.0" : 50.915084992,
+                "99.0" : 50.915084992,
+                "99.9" : 50.915084992,
+                "99.99" : 50.915084992,
+                "99.999" : 50.915084992,
+                "99.9999" : 50.915084992,
+                "100.0" : 50.915084992
+            },
+            "scoreUnit" : "s/op",
+            "rawData" : [
+                [
+                    50.853744255,
+                    49.289843145,
+                    49.890209284
+                ],
+                [
+                    50.429883331,
+                    50.435547388,
+                    50.595430719
+                ],
+                [
+                    50.915084992,
+                    50.455005039,
+                    50.457954024
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "io.github.theuntamed839.BenchmarkRead.randomSearch",
+        "mode" : "ss",
+        "threads" : 1,
+        "forks" : 3,
+        "jvm" : "/home/ganesh/Documents/jdk-22/bin/java",
+        "jvmArgs" : [
+        ],
+        "jdkVersion" : "22",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "22+36-2370",
+        "warmupIterations" : 3,
+        "warmupTime" : "single-shot",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "single-shot",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "dbProvider" : "LEVELDB_JAVA",
+            "entryCount" : "1000000",
+            "keySize" : "500",
+            "valueSize" : "500"
+        },
+        "primaryMetric" : {
+            "score" : 23.555088380666668,
+            "scoreError" : 4.565177624779104,
+            "scoreConfidence" : [
+                18.989910755887564,
+                28.12026600544577
+            ],
+            "scorePercentiles" : {
+                "0.0" : 21.399260403,
+                "50.0" : 22.083804923,
+                "90.0" : 27.194374549,
+                "95.0" : 27.194374549,
+                "99.0" : 27.194374549,
+                "99.9" : 27.194374549,
+                "99.99" : 27.194374549,
+                "99.999" : 27.194374549,
+                "99.9999" : 27.194374549,
+                "100.0" : 27.194374549
+            },
+            "scoreUnit" : "s/op",
+            "rawData" : [
+                [
+                    22.069959462,
+                    22.083804923,
+                    22.132021472
+                ],
+                [
+                    27.119442263,
+                    27.153392544,
+                    27.194374549
+                ],
+                [
+                    21.411818759,
+                    21.431721051,
+                    21.399260403
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "io.github.theuntamed839.BenchmarkRead.randomSearch",
+        "mode" : "ss",
+        "threads" : 1,
+        "forks" : 3,
+        "jvm" : "/home/ganesh/Documents/jdk-22/bin/java",
+        "jvmArgs" : [
+        ],
+        "jdkVersion" : "22",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "22+36-2370",
+        "warmupIterations" : 3,
+        "warmupTime" : "single-shot",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "single-shot",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "dbProvider" : "LEVELDB_JAVA",
+            "entryCount" : "5000000",
+            "keySize" : "500",
+            "valueSize" : "500"
+        },
+        "primaryMetric" : {
+            "score" : 348.68386119955557,
+            "scoreError" : 28.951116189816656,
+            "scoreConfidence" : [
+                319.7327450097389,
+                377.63497738937224
+            ],
+            "scorePercentiles" : {
+                "0.0" : 333.725854625,
+                "50.0" : 340.40319761,
+                "90.0" : 372.088449335,
+                "95.0" : 372.088449335,
+                "99.0" : 372.088449335,
+                "99.9" : 372.088449335,
+                "99.99" : 372.088449335,
+                "99.999" : 372.088449335,
+                "99.9999" : 372.088449335,
+                "100.0" : 372.088449335
+            },
+            "scoreUnit" : "s/op",
+            "rawData" : [
+                [
+                    339.505080319,
+                    340.40319761,
+                    340.674211326
+                ],
+                [
+                    334.274685418,
+                    335.369165185,
+                    333.725854625
+                ],
+                [
+                    372.088449335,
+                    370.981603735,
+                    371.132503243
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "io.github.theuntamed839.BenchmarkRead.randomSearch",
+        "mode" : "ss",
+        "threads" : 1,
+        "forks" : 3,
+        "jvm" : "/home/ganesh/Documents/jdk-22/bin/java",
+        "jvmArgs" : [
+        ],
+        "jdkVersion" : "22",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "22+36-2370",
+        "warmupIterations" : 3,
+        "warmupTime" : "single-shot",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "single-shot",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "dbProvider" : "LEVELDB_NATIVE",
+            "entryCount" : "1000000",
+            "keySize" : "500",
+            "valueSize" : "500"
+        },
+        "primaryMetric" : {
+            "score" : 2.8471135076666667,
+            "scoreError" : 0.04549279808347333,
+            "scoreConfidence" : [
+                2.8016207095831933,
+                2.89260630575014
+            ],
+            "scorePercentiles" : {
+                "0.0" : 2.81134258,
+                "50.0" : 2.842377719,
+                "90.0" : 2.894781136,
+                "95.0" : 2.894781136,
+                "99.0" : 2.894781136,
+                "99.9" : 2.894781136,
+                "99.99" : 2.894781136,
+                "99.999" : 2.894781136,
+                "99.9999" : 2.894781136,
+                "100.0" : 2.894781136
+            },
+            "scoreUnit" : "s/op",
+            "rawData" : [
+                [
+                    2.843008209,
+                    2.81134258,
+                    2.841327733
+                ],
+                [
+                    2.873214641,
+                    2.8157964,
+                    2.83457838
+                ],
+                [
+                    2.894781136,
+                    2.842377719,
+                    2.867594771
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "io.github.theuntamed839.BenchmarkRead.randomSearch",
+        "mode" : "ss",
+        "threads" : 1,
+        "forks" : 3,
+        "jvm" : "/home/ganesh/Documents/jdk-22/bin/java",
+        "jvmArgs" : [
+        ],
+        "jdkVersion" : "22",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "22+36-2370",
+        "warmupIterations" : 3,
+        "warmupTime" : "single-shot",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "single-shot",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "dbProvider" : "LEVELDB_NATIVE",
+            "entryCount" : "5000000",
+            "keySize" : "500",
+            "valueSize" : "500"
+        },
+        "primaryMetric" : {
+            "score" : 81.95061684311109,
+            "scoreError" : 2.001028264608402,
+            "scoreConfidence" : [
+                79.94958857850268,
+                83.9516451077195
+            ],
+            "scorePercentiles" : {
+                "0.0" : 80.617325807,
+                "50.0" : 81.597297717,
+                "90.0" : 83.773166463,
+                "95.0" : 83.773166463,
+                "99.0" : 83.773166463,
+                "99.9" : 83.773166463,
+                "99.99" : 83.773166463,
+                "99.999" : 83.773166463,
+                "99.9999" : 83.773166463,
+                "100.0" : 83.773166463
+            },
+            "scoreUnit" : "s/op",
+            "rawData" : [
+                [
+                    80.857436643,
+                    80.92294332,
+                    80.617325807
+                ],
+                [
+                    81.597297717,
+                    81.789727477,
+                    81.432077875
+                ],
+                [
+                    83.773166463,
+                    83.392746272,
+                    83.172830014
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "io.github.theuntamed839.BenchmarkRead.reverseSearch",
+        "mode" : "ss",
+        "threads" : 1,
+        "forks" : 3,
+        "jvm" : "/home/ganesh/Documents/jdk-22/bin/java",
+        "jvmArgs" : [
+        ],
+        "jdkVersion" : "22",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "22+36-2370",
+        "warmupIterations" : 3,
+        "warmupTime" : "single-shot",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "single-shot",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "dbProvider" : "DATASTORE4J",
+            "entryCount" : "1000000",
+            "keySize" : "500",
+            "valueSize" : "500"
+        },
+        "primaryMetric" : {
+            "score" : 8.499136207777777,
+            "scoreError" : 0.15249168438843663,
+            "scoreConfidence" : [
+                8.34664452338934,
+                8.651627892166214
+            ],
+            "scorePercentiles" : {
+                "0.0" : 8.364462928,
+                "50.0" : 8.486287357,
+                "90.0" : 8.62470077,
+                "95.0" : 8.62470077,
+                "99.0" : 8.62470077,
+                "99.9" : 8.62470077,
+                "99.99" : 8.62470077,
+                "99.999" : 8.62470077,
+                "99.9999" : 8.62470077,
+                "100.0" : 8.62470077
+            },
+            "scoreUnit" : "s/op",
+            "rawData" : [
+                [
+                    8.590962105,
+                    8.62470077,
+                    8.528399024
+                ],
+                [
+                    8.388713879,
+                    8.486287357,
+                    8.364462928
+                ],
+                [
+                    8.476025644,
+                    8.448506134,
+                    8.584168029
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "io.github.theuntamed839.BenchmarkRead.reverseSearch",
+        "mode" : "ss",
+        "threads" : 1,
+        "forks" : 3,
+        "jvm" : "/home/ganesh/Documents/jdk-22/bin/java",
+        "jvmArgs" : [
+        ],
+        "jdkVersion" : "22",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "22+36-2370",
+        "warmupIterations" : 3,
+        "warmupTime" : "single-shot",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "single-shot",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "dbProvider" : "DATASTORE4J",
+            "entryCount" : "5000000",
+            "keySize" : "500",
+            "valueSize" : "500"
+        },
+        "primaryMetric" : {
+            "score" : 76.71676573955557,
+            "scoreError" : 3.2340711859723394,
+            "scoreConfidence" : [
+                73.48269455358323,
+                79.95083692552791
+            ],
+            "scorePercentiles" : {
+                "0.0" : 73.761548733,
+                "50.0" : 77.307877932,
+                "90.0" : 79.605129636,
+                "95.0" : 79.605129636,
+                "99.0" : 79.605129636,
+                "99.9" : 79.605129636,
+                "99.99" : 79.605129636,
+                "99.999" : 79.605129636,
+                "99.9999" : 79.605129636,
+                "100.0" : 79.605129636
+            },
+            "scoreUnit" : "s/op",
+            "rawData" : [
+                [
+                    78.21024048,
+                    77.307877932,
+                    79.605129636
+                ],
+                [
+                    77.861209522,
+                    77.604014518,
+                    76.543151348
+                ],
+                [
+                    75.189381488,
+                    74.368337999,
+                    73.761548733
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "io.github.theuntamed839.BenchmarkRead.reverseSearch",
+        "mode" : "ss",
+        "threads" : 1,
+        "forks" : 3,
+        "jvm" : "/home/ganesh/Documents/jdk-22/bin/java",
+        "jvmArgs" : [
+        ],
+        "jdkVersion" : "22",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "22+36-2370",
+        "warmupIterations" : 3,
+        "warmupTime" : "single-shot",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "single-shot",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "dbProvider" : "ROCKSDB",
+            "entryCount" : "1000000",
+            "keySize" : "500",
+            "valueSize" : "500"
+        },
+        "primaryMetric" : {
+            "score" : 25.096683357222222,
+            "scoreError" : 0.3031100221435778,
+            "scoreConfidence" : [
+                24.793573335078644,
+                25.3997933793658
+            ],
+            "scorePercentiles" : {
+                "0.0" : 24.921552782,
+                "50.0" : 25.002194668,
+                "90.0" : 25.34568341,
+                "95.0" : 25.34568341,
+                "99.0" : 25.34568341,
+                "99.9" : 25.34568341,
+                "99.99" : 25.34568341,
+                "99.999" : 25.34568341,
+                "99.9999" : 25.34568341,
+                "100.0" : 25.34568341
+            },
+            "scoreUnit" : "s/op",
+            "rawData" : [
+                [
+                    24.959400555,
+                    24.921552782,
+                    25.002194668
+                ],
+                [
+                    24.954552996,
+                    24.974116058,
+                    25.064580639
+                ],
+                [
+                    25.313889775,
+                    25.34568341,
+                    25.334179332
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "io.github.theuntamed839.BenchmarkRead.reverseSearch",
+        "mode" : "ss",
+        "threads" : 1,
+        "forks" : 3,
+        "jvm" : "/home/ganesh/Documents/jdk-22/bin/java",
+        "jvmArgs" : [
+        ],
+        "jdkVersion" : "22",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "22+36-2370",
+        "warmupIterations" : 3,
+        "warmupTime" : "single-shot",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "single-shot",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "dbProvider" : "ROCKSDB",
+            "entryCount" : "5000000",
+            "keySize" : "500",
+            "valueSize" : "500"
+        },
+        "primaryMetric" : {
+            "score" : 50.635491536,
+            "scoreError" : 2.140478117135368,
+            "scoreConfidence" : [
+                48.49501341886464,
+                52.77596965313537
+            ],
+            "scorePercentiles" : {
+                "0.0" : 49.572012539,
+                "50.0" : 49.854502512,
+                "90.0" : 52.462443428,
+                "95.0" : 52.462443428,
+                "99.0" : 52.462443428,
+                "99.9" : 52.462443428,
+                "99.99" : 52.462443428,
+                "99.999" : 52.462443428,
+                "99.9999" : 52.462443428,
+                "100.0" : 52.462443428
+            },
+            "scoreUnit" : "s/op",
+            "rawData" : [
+                [
+                    49.835907788,
+                    49.572012539,
+                    49.786532714
+                ],
+                [
+                    52.251161557,
+                    52.462443428,
+                    52.270335728
+                ],
+                [
+                    49.854502512,
+                    49.806541265,
+                    49.879986293
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "io.github.theuntamed839.BenchmarkRead.reverseSearch",
+        "mode" : "ss",
+        "threads" : 1,
+        "forks" : 3,
+        "jvm" : "/home/ganesh/Documents/jdk-22/bin/java",
+        "jvmArgs" : [
+        ],
+        "jdkVersion" : "22",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "22+36-2370",
+        "warmupIterations" : 3,
+        "warmupTime" : "single-shot",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "single-shot",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "dbProvider" : "LEVELDB_JAVA",
+            "entryCount" : "1000000",
+            "keySize" : "500",
+            "valueSize" : "500"
+        },
+        "primaryMetric" : {
+            "score" : 25.498887642666666,
+            "scoreError" : 7.800935268542298,
+            "scoreConfidence" : [
+                17.69795237412437,
+                33.29982291120896
+            ],
+            "scorePercentiles" : {
+                "0.0" : 22.377676668,
+                "50.0" : 22.430366323,
+                "90.0" : 31.740904205,
+                "95.0" : 31.740904205,
+                "99.0" : 31.740904205,
+                "99.9" : 31.740904205,
+                "99.99" : 31.740904205,
+                "99.999" : 31.740904205,
+                "99.9999" : 31.740904205,
+                "100.0" : 31.740904205
+            },
+            "scoreUnit" : "s/op",
+            "rawData" : [
+                [
+                    22.386839353,
+                    22.396299112,
+                    22.377676668
+                ],
+                [
+                    22.430366323,
+                    22.449907043,
+                    22.384061152
+                ],
+                [
+                    31.740904205,
+                    31.706871183,
+                    31.617063745
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "io.github.theuntamed839.BenchmarkRead.reverseSearch",
+        "mode" : "ss",
+        "threads" : 1,
+        "forks" : 3,
+        "jvm" : "/home/ganesh/Documents/jdk-22/bin/java",
+        "jvmArgs" : [
+        ],
+        "jdkVersion" : "22",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "22+36-2370",
+        "warmupIterations" : 3,
+        "warmupTime" : "single-shot",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "single-shot",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "dbProvider" : "LEVELDB_JAVA",
+            "entryCount" : "5000000",
+            "keySize" : "500",
+            "valueSize" : "500"
+        },
+        "primaryMetric" : {
+            "score" : 309.19903842522217,
+            "scoreError" : 19.79373989402085,
+            "scoreConfidence" : [
+                289.4052985312013,
+                328.99277831924303
+            ],
+            "scorePercentiles" : {
+                "0.0" : 296.873010751,
+                "50.0" : 306.25125,
+                "90.0" : 324.360842735,
+                "95.0" : 324.360842735,
+                "99.0" : 324.360842735,
+                "99.9" : 324.360842735,
+                "99.99" : 324.360842735,
+                "99.999" : 324.360842735,
+                "99.9999" : 324.360842735,
+                "100.0" : 324.360842735
+            },
+            "scoreUnit" : "s/op",
+            "rawData" : [
+                [
+                    306.25125,
+                    306.581805027,
+                    305.144467918
+                ],
+                [
+                    323.823186069,
+                    324.360842735,
+                    324.129061103
+                ],
+                [
+                    296.873010751,
+                    298.079288003,
+                    297.548434221
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "io.github.theuntamed839.BenchmarkRead.reverseSearch",
+        "mode" : "ss",
+        "threads" : 1,
+        "forks" : 3,
+        "jvm" : "/home/ganesh/Documents/jdk-22/bin/java",
+        "jvmArgs" : [
+        ],
+        "jdkVersion" : "22",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "22+36-2370",
+        "warmupIterations" : 3,
+        "warmupTime" : "single-shot",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "single-shot",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "dbProvider" : "LEVELDB_NATIVE",
+            "entryCount" : "1000000",
+            "keySize" : "500",
+            "valueSize" : "500"
+        },
+        "primaryMetric" : {
+            "score" : 2.662217911,
+            "scoreError" : 0.06612927965659994,
+            "scoreConfidence" : [
+                2.5960886313434,
+                2.7283471906565997
+            ],
+            "scorePercentiles" : {
+                "0.0" : 2.603969666,
+                "50.0" : 2.651656764,
+                "90.0" : 2.711584726,
+                "95.0" : 2.711584726,
+                "99.0" : 2.711584726,
+                "99.9" : 2.711584726,
+                "99.99" : 2.711584726,
+                "99.999" : 2.711584726,
+                "99.9999" : 2.711584726,
+                "100.0" : 2.711584726
+            },
+            "scoreUnit" : "s/op",
+            "rawData" : [
+                [
+                    2.710792681,
+                    2.651656764,
+                    2.680418307
+                ],
+                [
+                    2.696664294,
+                    2.603969666,
+                    2.624581464
+                ],
+                [
+                    2.711584726,
+                    2.630676703,
+                    2.649616594
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "io.github.theuntamed839.BenchmarkRead.reverseSearch",
+        "mode" : "ss",
+        "threads" : 1,
+        "forks" : 3,
+        "jvm" : "/home/ganesh/Documents/jdk-22/bin/java",
+        "jvmArgs" : [
+        ],
+        "jdkVersion" : "22",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "22+36-2370",
+        "warmupIterations" : 3,
+        "warmupTime" : "single-shot",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "single-shot",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "dbProvider" : "LEVELDB_NATIVE",
+            "entryCount" : "5000000",
+            "keySize" : "500",
+            "valueSize" : "500"
+        },
+        "primaryMetric" : {
+            "score" : 81.25538490833334,
+            "scoreError" : 0.9204327807864233,
+            "scoreConfidence" : [
+                80.33495212754691,
+                82.17581768911977
+            ],
+            "scorePercentiles" : {
+                "0.0" : 80.537688286,
+                "50.0" : 81.223004757,
+                "90.0" : 82.126650965,
+                "95.0" : 82.126650965,
+                "99.0" : 82.126650965,
+                "99.9" : 82.126650965,
+                "99.99" : 82.126650965,
+                "99.999" : 82.126650965,
+                "99.9999" : 82.126650965,
+                "100.0" : 82.126650965
+            },
+            "scoreUnit" : "s/op",
+            "rawData" : [
+                [
+                    81.497494865,
+                    81.92958351,
+                    82.126650965
+                ],
+                [
+                    81.223004757,
+                    81.353161337,
+                    80.71183782
+                ],
+                [
+                    81.216066157,
+                    80.702976478,
+                    80.537688286
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    }
+]
+
+

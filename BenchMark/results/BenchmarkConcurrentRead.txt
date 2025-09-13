@@ -1,0 +1,542 @@
+java -jar ./target/dbBenchmarks.jar BenchmarkConcurrentRead -f 3 -wi 3 -i 3 -to 60m -rf json -rff BenchmarkConcurrentRead.json | tee BenchmarkConcurrentRead.txt
+
+# Detecting actual CPU count: 12 detected
+# JMH version: 1.37
+# VM version: JDK 22, OpenJDK 64-Bit Server VM, 22+36-2370
+# VM invoker: /home/ganesh/Documents/jdk-22/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 10 s each
+# Measurement: 3 iterations, 10 s each
+# Timeout: 60 min per iteration
+# Threads: 12 threads, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: io.github.theuntamed839.BenchmarkConcurrentRead.concurrentSearch
+# Parameters: (dbProvider = DATASTORE4J, entryCount = 1000000, keySize = 500, valueSize = 500)
+
+# Run progress: 0.00% complete, ETA 00:24:00
+# Fork: 1 of 3
+# Warmup Iteration   1: 535664.295 ops/s
+# Warmup Iteration   2: 598722.744 ops/s
+# Warmup Iteration   3: 596506.211 ops/s
+Iteration   1: 594242.489 ops/s
+Iteration   2: 597315.082 ops/s
+Iteration   3: DataStore4JAdaptor_d26862d6-7aed-467f-afce-5fdf490f9b08 Folder size: 1039
+598200.954 ops/s
+
+# Run progress: 4.17% complete, ETA 00:29:16
+# Fork: 2 of 3
+# Warmup Iteration   1: 530203.456 ops/s
+# Warmup Iteration   2: 588538.167 ops/s
+# Warmup Iteration   3: 587219.882 ops/s
+Iteration   1: 587104.464 ops/s
+Iteration   2: 591408.014 ops/s
+Iteration   3: DataStore4JAdaptor_2b75bde5-c96b-444c-b48d-cd3188c15683 Folder size: 1039
+588323.921 ops/s
+
+# Run progress: 8.33% complete, ETA 00:28:04
+# Fork: 3 of 3
+# Warmup Iteration   1: 525305.254 ops/s
+# Warmup Iteration   2: 589378.446 ops/s
+# Warmup Iteration   3: 580994.663 ops/s
+Iteration   1: 588972.970 ops/s
+Iteration   2: 591028.740 ops/s
+Iteration   3: DataStore4JAdaptor_693f9166-4bf5-47c7-91fb-7249051a82e8 Folder size: 1039
+587106.913 ops/s
+
+
+Result "io.github.theuntamed839.BenchmarkConcurrentRead.concurrentSearch":
+  591522.616 ±(99.9%) 7068.783 ops/s [Average]
+  (min, avg, max) = (587104.464, 591522.616, 598200.954), stdev = 4206.520
+  CI (99.9%): [584453.833, 598591.400] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 22, OpenJDK 64-Bit Server VM, 22+36-2370
+# VM invoker: /home/ganesh/Documents/jdk-22/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 10 s each
+# Measurement: 3 iterations, 10 s each
+# Timeout: 60 min per iteration
+# Threads: 12 threads, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: io.github.theuntamed839.BenchmarkConcurrentRead.concurrentSearch
+# Parameters: (dbProvider = DATASTORE4J, entryCount = 5000000, keySize = 500, valueSize = 500)
+
+# Run progress: 12.50% complete, ETA 00:26:48
+# Fork: 1 of 3
+# Warmup Iteration   1: 249132.235 ops/s
+# Warmup Iteration   2: 295394.417 ops/s
+# Warmup Iteration   3: 307861.957 ops/s
+Iteration   1: 303606.563 ops/s
+Iteration   2: 308278.285 ops/s
+Iteration   3: DataStore4JAdaptor_b4798a16-0397-4a50-8f46-d628f9f5365f Folder size: 5196
+305187.052 ops/s
+
+# Run progress: 16.67% complete, ETA 00:31:30
+# Fork: 2 of 3
+# Warmup Iteration   1: 251865.974 ops/s
+# Warmup Iteration   2: 297560.033 ops/s
+# Warmup Iteration   3: 307673.295 ops/s
+Iteration   1: 309379.764 ops/s
+Iteration   2: 307978.289 ops/s
+Iteration   3: DataStore4JAdaptor_43181477-b9ca-4940-affa-6c2c06ee9d5b Folder size: 5196
+303625.018 ops/s
+
+# Run progress: 20.83% complete, ETA 00:33:21
+# Fork: 3 of 3
+# Warmup Iteration   1: 253373.222 ops/s
+# Warmup Iteration   2: 299637.488 ops/s
+# Warmup Iteration   3: 301380.696 ops/s
+Iteration   1: 299084.654 ops/s
+Iteration   2: 303188.377 ops/s
+Iteration   3: DataStore4JAdaptor_dba5fb92-3086-45b0-9788-658140bd5c6a Folder size: 5196
+303229.835 ops/s
+
+
+Result "io.github.theuntamed839.BenchmarkConcurrentRead.concurrentSearch":
+  304839.760 ±(99.9%) 5440.129 ops/s [Average]
+  (min, avg, max) = (299084.654, 304839.760, 309379.764), stdev = 3237.333
+  CI (99.9%): [299399.631, 310279.888] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 22, OpenJDK 64-Bit Server VM, 22+36-2370
+# VM invoker: /home/ganesh/Documents/jdk-22/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 10 s each
+# Measurement: 3 iterations, 10 s each
+# Timeout: 60 min per iteration
+# Threads: 12 threads, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: io.github.theuntamed839.BenchmarkConcurrentRead.concurrentSearch
+# Parameters: (dbProvider = ROCKSDB, entryCount = 1000000, keySize = 500, valueSize = 500)
+
+# Run progress: 25.00% complete, ETA 00:33:39
+# Fork: 1 of 3
+# Warmup Iteration   1: 260637.765 ops/s
+# Warmup Iteration   2: 264900.971 ops/s
+# Warmup Iteration   3: 261336.449 ops/s
+Iteration   1: 258128.953 ops/s
+Iteration   2: 255393.384 ops/s
+Iteration   3: RocksDBAdaptor_e22fe8d2-ff3b-41e5-93bd-bc355c0f1497 Folder size: 971
+252072.598 ops/s
+
+# Run progress: 29.17% complete, ETA 00:30:04
+# Fork: 2 of 3
+# Warmup Iteration   1: 244779.070 ops/s
+# Warmup Iteration   2: 252702.578 ops/s
+# Warmup Iteration   3: 250964.211 ops/s
+Iteration   1: 248382.948 ops/s
+Iteration   2: 247766.719 ops/s
+Iteration   3: RocksDBAdaptor_d4e6e6eb-0362-4a63-8146-24ec95d1262e Folder size: 971
+246259.332 ops/s
+
+# Run progress: 33.33% complete, ETA 00:27:05
+# Fork: 3 of 3
+# Warmup Iteration   1: 239758.078 ops/s
+# Warmup Iteration   2: 249040.931 ops/s
+# Warmup Iteration   3: 248591.940 ops/s
+Iteration   1: 246594.095 ops/s
+Iteration   2: 245460.604 ops/s
+Iteration   3: RocksDBAdaptor_8c79c39b-2c25-4741-bc12-1640b40465c3 Folder size: 971
+245623.118 ops/s
+
+
+Result "io.github.theuntamed839.BenchmarkConcurrentRead.concurrentSearch":
+  249520.195 ±(99.9%) 7754.407 ops/s [Average]
+  (min, avg, max) = (245460.604, 249520.195, 258128.953), stdev = 4614.523
+  CI (99.9%): [241765.788, 257274.602] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 22, OpenJDK 64-Bit Server VM, 22+36-2370
+# VM invoker: /home/ganesh/Documents/jdk-22/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 10 s each
+# Measurement: 3 iterations, 10 s each
+# Timeout: 60 min per iteration
+# Threads: 12 threads, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: io.github.theuntamed839.BenchmarkConcurrentRead.concurrentSearch
+# Parameters: (dbProvider = ROCKSDB, entryCount = 5000000, keySize = 500, valueSize = 500)
+
+# Run progress: 37.50% complete, ETA 00:24:30
+# Fork: 1 of 3
+# Warmup Iteration   1: 54597.921 ops/s
+# Warmup Iteration   2: 53168.548 ops/s
+# Warmup Iteration   3: 53163.648 ops/s
+Iteration   1: 392671.674 ops/s
+Iteration   2: 482333.761 ops/s
+Iteration   3: RocksDBAdaptor_3e84cf68-011a-4fb3-9b46-d8f321ad5401 Folder size: 4855
+488119.325 ops/s
+
+# Run progress: 41.67% complete, ETA 00:23:13
+# Fork: 2 of 3
+# Warmup Iteration   1: 59995.200 ops/s
+# Warmup Iteration   2: 57588.691 ops/s
+# Warmup Iteration   3: 56994.900 ops/s
+Iteration   1: 328084.246 ops/s
+Iteration   2: 465021.378 ops/s
+Iteration   3: RocksDBAdaptor_171c6f5f-0ed4-4ecb-ba3e-4e26d83b2c31 Folder size: 4855
+471498.445 ops/s
+
+# Run progress: 45.83% complete, ETA 00:21:51
+# Fork: 3 of 3
+# Warmup Iteration   1: 71373.617 ops/s
+# Warmup Iteration   2: 69393.634 ops/s
+# Warmup Iteration   3: 68072.352 ops/s
+Iteration   1: 67642.118 ops/s
+Iteration   2: 323820.456 ops/s
+Iteration   3: RocksDBAdaptor_aceb3082-da1f-41ce-a2a8-c6d199b76bac Folder size: 4855
+451391.173 ops/s
+
+
+Result "io.github.theuntamed839.BenchmarkConcurrentRead.concurrentSearch":
+  385620.286 ±(99.9%) 227134.295 ops/s [Average]
+  (min, avg, max) = (67642.118, 385620.286, 488119.325), stdev = 135163.976
+  CI (99.9%): [158485.991, 612754.581] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 22, OpenJDK 64-Bit Server VM, 22+36-2370
+# VM invoker: /home/ganesh/Documents/jdk-22/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 10 s each
+# Measurement: 3 iterations, 10 s each
+# Timeout: 60 min per iteration
+# Threads: 12 threads, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: io.github.theuntamed839.BenchmarkConcurrentRead.concurrentSearch
+# Parameters: (dbProvider = LEVELDB_JAVA, entryCount = 1000000, keySize = 500, valueSize = 500)
+
+# Run progress: 50.00% complete, ETA 00:20:32
+# Fork: 1 of 3
+# Warmup Iteration   1: 67246.166 ops/s
+# Warmup Iteration   2: 76967.696 ops/s
+# Warmup Iteration   3: 88676.961 ops/s
+Iteration   1: 91341.867 ops/s
+Iteration   2: 74131.019 ops/s
+Iteration   3: PureJavaLevelDBAdaptor_f500e00a-a7c2-41ee-aa1d-d997ab5cbbf3 Folder size: 988
+138669.967 ops/s
+
+# Run progress: 54.17% complete, ETA 00:19:02
+# Fork: 2 of 3
+# Warmup Iteration   1: 34475.552 ops/s
+# Warmup Iteration   2: 55811.801 ops/s
+# Warmup Iteration   3: 83937.247 ops/s
+Iteration   1: 75133.189 ops/s
+Iteration   2: 79645.736 ops/s
+Iteration   3: PureJavaLevelDBAdaptor_237750bc-5575-43c7-af87-ed82ec6891e5 Folder size: 993
+78222.682 ops/s
+
+# Run progress: 58.33% complete, ETA 00:17:26
+# Fork: 3 of 3
+# Warmup Iteration   1: 39302.682 ops/s
+# Warmup Iteration   2: 48871.633 ops/s
+# Warmup Iteration   3: 70655.346 ops/s
+Iteration   1: 71490.018 ops/s
+Iteration   2: 61465.437 ops/s
+Iteration   3: PureJavaLevelDBAdaptor_6e248cb3-02a3-4c3d-a269-325f952d7981 Folder size: 994
+72329.509 ops/s
+
+
+Result "io.github.theuntamed839.BenchmarkConcurrentRead.concurrentSearch":
+  82492.158 ±(99.9%) 37814.956 ops/s [Average]
+  (min, avg, max) = (61465.437, 82492.158, 138669.967), stdev = 22503.074
+  CI (99.9%): [44677.202, 120307.114] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 22, OpenJDK 64-Bit Server VM, 22+36-2370
+# VM invoker: /home/ganesh/Documents/jdk-22/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 10 s each
+# Measurement: 3 iterations, 10 s each
+# Timeout: 60 min per iteration
+# Threads: 12 threads, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: io.github.theuntamed839.BenchmarkConcurrentRead.concurrentSearch
+# Parameters: (dbProvider = LEVELDB_JAVA, entryCount = 5000000, keySize = 500, valueSize = 500)
+
+# Run progress: 62.50% complete, ETA 00:15:47
+# Fork: 1 of 3
+# Warmup Iteration   1: 21122.289 ops/s
+# Warmup Iteration   2: 19987.870 ops/s
+# Warmup Iteration   3: 22225.509 ops/s
+Iteration   1: 21312.449 ops/s
+Iteration   2: 29203.621 ops/s
+Iteration   3: PureJavaLevelDBAdaptor_3502a3dd-123c-4620-a212-71fffca94111 Folder size: 4990
+35052.467 ops/s
+
+# Run progress: 66.67% complete, ETA 00:18:28
+# Fork: 2 of 3
+# Warmup Iteration   1: 19453.731 ops/s
+# Warmup Iteration   2: 16162.448 ops/s
+# Warmup Iteration   3: 17698.586 ops/s
+Iteration   1: 16568.238 ops/s
+Iteration   2: 24811.992 ops/s
+Iteration   3: PureJavaLevelDBAdaptor_69dee65b-46a2-4284-aae8-e6c2c2f85cfe Folder size: 4990
+37130.333 ops/s
+
+# Run progress: 70.83% complete, ETA 00:19:37
+# Fork: 3 of 3
+# Warmup Iteration   1: 20132.746 ops/s
+# Warmup Iteration   2: 22950.138 ops/s
+# Warmup Iteration   3: 23333.164 ops/s
+Iteration   1: 22674.274 ops/s
+Iteration   2: 22031.820 ops/s
+Iteration   3: PureJavaLevelDBAdaptor_e595e181-9fcb-4a46-b5e4-4117005e3bd8 Folder size: 4990
+38198.657 ops/s
+
+
+Result "io.github.theuntamed839.BenchmarkConcurrentRead.concurrentSearch":
+  27442.650 ±(99.9%) 13088.533 ops/s [Average]
+  (min, avg, max) = (16568.238, 27442.650, 38198.657), stdev = 7788.776
+  CI (99.9%): [14354.117, 40531.183] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 22, OpenJDK 64-Bit Server VM, 22+36-2370
+# VM invoker: /home/ganesh/Documents/jdk-22/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 10 s each
+# Measurement: 3 iterations, 10 s each
+# Timeout: 60 min per iteration
+# Threads: 12 threads, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: io.github.theuntamed839.BenchmarkConcurrentRead.concurrentSearch
+# Parameters: (dbProvider = LEVELDB_NATIVE, entryCount = 1000000, keySize = 500, valueSize = 500)
+
+# Run progress: 75.00% complete, ETA 00:19:29
+# Fork: 1 of 3
+# Warmup Iteration   1: 733764.146 ops/s
+# Warmup Iteration   2: 1340586.437 ops/s
+# Warmup Iteration   3: 1511521.837 ops/s
+Iteration   1: 1508506.351 ops/s
+Iteration   2: 1509759.711 ops/s
+Iteration   3: <failure>
+
+java.lang.NullPointerException: Cannot invoke "org.fusesource.leveldbjni.internal.NativeBuffer$Pool.delete()" because "next" is null
+	at org.fusesource.leveldbjni.internal.NativeBuffer.popMemoryPool(NativeBuffer.java:191)
+	at org.fusesource.leveldbjni.JniDBFactory.popMemoryPool(JniDBFactory.java:210)
+	at io.github.theuntamed839.dbs.NativeLevelDBAdaptor.closeAndDestroy(NativeLevelDBAdaptor.java:39)
+	at io.github.theuntamed839.AbstractBenchmark.tearDown(AbstractBenchmark.java:51)
+	at io.github.theuntamed839.BenchmarkConcurrentRead.tearDown(BenchmarkConcurrentRead.java:23)
+	at io.github.theuntamed839.jmh_generated.BenchmarkConcurrentRead_concurrentSearch_jmhTest.concurrentSearch_Throughput(BenchmarkConcurrentRead_concurrentSearch_jmhTest.java:103)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:527)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:504)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+
+
+
+# Run progress: 79.17% complete, ETA 00:16:00
+# Fork: 2 of 3
+# Warmup Iteration   1: 737121.139 ops/s
+# Warmup Iteration   2: 1323821.315 ops/s
+# Warmup Iteration   3: 1487150.609 ops/s
+Iteration   1: 1479274.228 ops/s
+Iteration   2: 1483575.245 ops/s
+Iteration   3: <failure>
+
+java.lang.NullPointerException: Cannot invoke "org.fusesource.leveldbjni.internal.NativeBuffer$Pool.delete()" because "next" is null
+	at org.fusesource.leveldbjni.internal.NativeBuffer.popMemoryPool(NativeBuffer.java:191)
+	at org.fusesource.leveldbjni.JniDBFactory.popMemoryPool(JniDBFactory.java:210)
+	at io.github.theuntamed839.dbs.NativeLevelDBAdaptor.closeAndDestroy(NativeLevelDBAdaptor.java:39)
+	at io.github.theuntamed839.AbstractBenchmark.tearDown(AbstractBenchmark.java:51)
+	at io.github.theuntamed839.BenchmarkConcurrentRead.tearDown(BenchmarkConcurrentRead.java:23)
+	at io.github.theuntamed839.jmh_generated.BenchmarkConcurrentRead_concurrentSearch_jmhTest.concurrentSearch_Throughput(BenchmarkConcurrentRead_concurrentSearch_jmhTest.java:103)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:527)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:504)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+
+
+
+# Run progress: 83.33% complete, ETA 00:12:37
+# Fork: 3 of 3
+# Warmup Iteration   1: 731923.445 ops/s
+# Warmup Iteration   2: 1331817.759 ops/s
+# Warmup Iteration   3: 1489825.688 ops/s
+Iteration   1: 1486529.788 ops/s
+Iteration   2: 1471682.389 ops/s
+Iteration   3: <failure>
+
+java.lang.NullPointerException: Cannot invoke "org.fusesource.leveldbjni.internal.NativeBuffer$Pool.delete()" because "next" is null
+	at org.fusesource.leveldbjni.internal.NativeBuffer.popMemoryPool(NativeBuffer.java:191)
+	at org.fusesource.leveldbjni.JniDBFactory.popMemoryPool(JniDBFactory.java:210)
+	at io.github.theuntamed839.dbs.NativeLevelDBAdaptor.closeAndDestroy(NativeLevelDBAdaptor.java:39)
+	at io.github.theuntamed839.AbstractBenchmark.tearDown(AbstractBenchmark.java:51)
+	at io.github.theuntamed839.BenchmarkConcurrentRead.tearDown(BenchmarkConcurrentRead.java:23)
+	at io.github.theuntamed839.jmh_generated.BenchmarkConcurrentRead_concurrentSearch_jmhTest.concurrentSearch_Throughput(BenchmarkConcurrentRead_concurrentSearch_jmhTest.java:103)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:527)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:504)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+
+
+
+
+Result "io.github.theuntamed839.BenchmarkConcurrentRead.concurrentSearch":
+  1489887.952 ±(99.9%) 44102.517 ops/s [Average]
+  (min, avg, max) = (1471682.389, 1489887.952, 1509759.711), stdev = 15727.382
+  CI (99.9%): [1445785.435, 1533990.469] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 22, OpenJDK 64-Bit Server VM, 22+36-2370
+# VM invoker: /home/ganesh/Documents/jdk-22/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 10 s each
+# Measurement: 3 iterations, 10 s each
+# Timeout: 60 min per iteration
+# Threads: 12 threads, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: io.github.theuntamed839.BenchmarkConcurrentRead.concurrentSearch
+# Parameters: (dbProvider = LEVELDB_NATIVE, entryCount = 5000000, keySize = 500, valueSize = 500)
+
+# Run progress: 87.50% complete, ETA 00:09:20
+# Fork: 1 of 3
+# Warmup Iteration   1: 68155.844 ops/s
+# Warmup Iteration   2: 75110.440 ops/s
+# Warmup Iteration   3: 73230.077 ops/s
+Iteration   1: 70352.744 ops/s
+Iteration   2: 71356.122 ops/s
+Iteration   3: <failure>
+
+java.lang.NullPointerException: Cannot invoke "org.fusesource.leveldbjni.internal.NativeBuffer$Pool.delete()" because "next" is null
+	at org.fusesource.leveldbjni.internal.NativeBuffer.popMemoryPool(NativeBuffer.java:191)
+	at org.fusesource.leveldbjni.JniDBFactory.popMemoryPool(JniDBFactory.java:210)
+	at io.github.theuntamed839.dbs.NativeLevelDBAdaptor.closeAndDestroy(NativeLevelDBAdaptor.java:39)
+	at io.github.theuntamed839.AbstractBenchmark.tearDown(AbstractBenchmark.java:51)
+	at io.github.theuntamed839.BenchmarkConcurrentRead.tearDown(BenchmarkConcurrentRead.java:23)
+	at io.github.theuntamed839.jmh_generated.BenchmarkConcurrentRead_concurrentSearch_jmhTest.concurrentSearch_Throughput(BenchmarkConcurrentRead_concurrentSearch_jmhTest.java:103)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:527)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:504)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+
+
+
+# Run progress: 91.67% complete, ETA 00:07:13
+# Fork: 2 of 3
+# Warmup Iteration   1: 64868.886 ops/s
+# Warmup Iteration   2: 72308.422 ops/s
+# Warmup Iteration   3: 71451.015 ops/s
+Iteration   1: 71428.700 ops/s
+Iteration   2: 72085.234 ops/s
+Iteration   3: <failure>
+
+java.lang.NullPointerException: Cannot invoke "org.fusesource.leveldbjni.internal.NativeBuffer$Pool.delete()" because "next" is null
+	at org.fusesource.leveldbjni.internal.NativeBuffer.popMemoryPool(NativeBuffer.java:191)
+	at org.fusesource.leveldbjni.JniDBFactory.popMemoryPool(JniDBFactory.java:210)
+	at io.github.theuntamed839.dbs.NativeLevelDBAdaptor.closeAndDestroy(NativeLevelDBAdaptor.java:39)
+	at io.github.theuntamed839.AbstractBenchmark.tearDown(AbstractBenchmark.java:51)
+	at io.github.theuntamed839.BenchmarkConcurrentRead.tearDown(BenchmarkConcurrentRead.java:23)
+	at io.github.theuntamed839.jmh_generated.BenchmarkConcurrentRead_concurrentSearch_jmhTest.concurrentSearch_Throughput(BenchmarkConcurrentRead_concurrentSearch_jmhTest.java:103)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:527)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:504)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+
+
+
+# Run progress: 95.83% complete, ETA 00:04:04
+# Fork: 3 of 3
+# Warmup Iteration   1: 61058.659 ops/s
+# Warmup Iteration   2: 69397.954 ops/s
+# Warmup Iteration   3: 71504.909 ops/s
+Iteration   1: 74478.020 ops/s
+Iteration   2: 72052.089 ops/s
+Iteration   3: <failure>
+
+java.lang.NullPointerException: Cannot invoke "org.fusesource.leveldbjni.internal.NativeBuffer$Pool.delete()" because "next" is null
+	at org.fusesource.leveldbjni.internal.NativeBuffer.popMemoryPool(NativeBuffer.java:191)
+	at org.fusesource.leveldbjni.JniDBFactory.popMemoryPool(JniDBFactory.java:210)
+	at io.github.theuntamed839.dbs.NativeLevelDBAdaptor.closeAndDestroy(NativeLevelDBAdaptor.java:39)
+	at io.github.theuntamed839.AbstractBenchmark.tearDown(AbstractBenchmark.java:51)
+	at io.github.theuntamed839.BenchmarkConcurrentRead.tearDown(BenchmarkConcurrentRead.java:23)
+	at io.github.theuntamed839.jmh_generated.BenchmarkConcurrentRead_concurrentSearch_jmhTest.concurrentSearch_Throughput(BenchmarkConcurrentRead_concurrentSearch_jmhTest.java:103)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:527)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:504)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+
+
+
+
+Result "io.github.theuntamed839.BenchmarkConcurrentRead.concurrentSearch":
+  71958.818 ±(99.9%) 3884.543 ops/s [Average]
+  (min, avg, max) = (70352.744, 71958.818, 74478.020), stdev = 1385.265
+  CI (99.9%): [68074.275, 75843.361] (assumes normal distribution)
+
+
+# Run complete. Total time: 01:48:28
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark                                   (dbProvider)  (entryCount)  (keySize)  (valueSize)   Mode  Cnt        Score        Error  Units
+BenchmarkConcurrentRead.concurrentSearch     DATASTORE4J       1000000        500          500  thrpt    9   591522.616 ±   7068.783  ops/s
+BenchmarkConcurrentRead.concurrentSearch     DATASTORE4J       5000000        500          500  thrpt    9   304839.760 ±   5440.129  ops/s
+BenchmarkConcurrentRead.concurrentSearch         ROCKSDB       1000000        500          500  thrpt    9   249520.195 ±   7754.407  ops/s
+BenchmarkConcurrentRead.concurrentSearch         ROCKSDB       5000000        500          500  thrpt    9   385620.286 ± 227134.295  ops/s
+BenchmarkConcurrentRead.concurrentSearch    LEVELDB_JAVA       1000000        500          500  thrpt    9    82492.158 ±  37814.956  ops/s
+BenchmarkConcurrentRead.concurrentSearch    LEVELDB_JAVA       5000000        500          500  thrpt    9    27442.650 ±  13088.533  ops/s
+BenchmarkConcurrentRead.concurrentSearch  LEVELDB_NATIVE       1000000        500          500  thrpt    6  1489887.952 ±  44102.517  ops/s
+BenchmarkConcurrentRead.concurrentSearch  LEVELDB_NATIVE       5000000        500          500  thrpt    6    71958.818 ±   3884.543  ops/s
+
+Benchmark result is saved to BenchmarkConcurrentRead.json

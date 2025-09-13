@@ -1,0 +1,168 @@
+java -jar ./target/dbBenchmarks.jar BenchmarkConcurrentWrite -f 1 -wi 2 -i 10 -to 60m -rf json -rff BenchmarkConcurrentWrite.json | tee BenchmarkConcurrentWrite.txt
+
+# Detecting actual CPU count: 12 detected
+# JMH version: 1.37
+# VM version: JDK 22, OpenJDK 64-Bit Server VM, 22+36-2370
+# VM invoker: /home/ganesh/Documents/jdk-22/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 2 iterations, 10 s each
+# Measurement: 10 iterations, 10 s each
+# Timeout: 60 min per iteration
+# Threads: 12 threads, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: io.github.theuntamed839.BenchmarkConcurrentWrite.prepopulatedConcurrentWrite
+# Parameters: (dbProvider = DATASTORE4J, entryCount = 5000000, keySize = 500, valueSize = 500)
+
+# Run progress: 0.00% complete, ETA 00:08:00
+# Fork: 1 of 1
+# Warmup Iteration   1: 50904.533 ops/s
+# Warmup Iteration   2: 52818.503 ops/s
+Iteration   1: 52827.835 ops/s
+Iteration   2: 55179.627 ops/s
+Iteration   3: 47193.672 ops/s
+Iteration   4: 50949.603 ops/s
+Iteration   5: 60191.948 ops/s
+Iteration   6: 49073.411 ops/s
+Iteration   7: 56177.972 ops/s
+Iteration   8: 44972.480 ops/s
+Iteration   9: 60000.358 ops/s
+Iteration  10: DataStore4JAdaptor_c5513edb-b97f-412c-bd3f-787a0734d5ca Folder size: 11857
+55155.210 ops/s
+
+
+Result "io.github.theuntamed839.BenchmarkConcurrentWrite.prepopulatedConcurrentWrite":
+  53172.212 ±(99.9%) 7770.256 ops/s [Average]
+  (min, avg, max) = (44972.480, 53172.212, 60191.948), stdev = 5139.543
+  CI (99.9%): [45401.955, 60942.468] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 22, OpenJDK 64-Bit Server VM, 22+36-2370
+# VM invoker: /home/ganesh/Documents/jdk-22/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 2 iterations, 10 s each
+# Measurement: 10 iterations, 10 s each
+# Timeout: 60 min per iteration
+# Threads: 12 threads, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: io.github.theuntamed839.BenchmarkConcurrentWrite.prepopulatedConcurrentWrite
+# Parameters: (dbProvider = ROCKSDB, entryCount = 5000000, keySize = 500, valueSize = 500)
+
+# Run progress: 25.00% complete, ETA 00:10:28
+# Fork: 1 of 1
+# Warmup Iteration   1: 33535.462 ops/s
+# Warmup Iteration   2: 102668.905 ops/s
+Iteration   1: 32999.522 ops/s
+Iteration   2: 9285.815 ops/s
+Iteration   3: 120745.508 ops/s
+Iteration   4: 15375.133 ops/s
+Iteration   5: 9007.268 ops/s
+Iteration   6: 118202.416 ops/s
+Iteration   7: 14637.020 ops/s
+Iteration   8: 12030.966 ops/s
+Iteration   9: 12066.228 ops/s
+Iteration  10: RocksDBAdaptor_00299201-bcbf-48d8-8622-7c62c749f9af Folder size: 10632
+114128.995 ops/s
+
+
+Result "io.github.theuntamed839.BenchmarkConcurrentWrite.prepopulatedConcurrentWrite":
+  45847.887 ±(99.9%) 75683.068 ops/s [Average]
+  (min, avg, max) = (9007.268, 45847.887, 120745.508), stdev = 50059.664
+  CI (99.9%): [≈ 0, 121530.956] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 22, OpenJDK 64-Bit Server VM, 22+36-2370
+# VM invoker: /home/ganesh/Documents/jdk-22/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 2 iterations, 10 s each
+# Measurement: 10 iterations, 10 s each
+# Timeout: 60 min per iteration
+# Threads: 12 threads, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: io.github.theuntamed839.BenchmarkConcurrentWrite.prepopulatedConcurrentWrite
+# Parameters: (dbProvider = LEVELDB_JAVA, entryCount = 5000000, keySize = 500, valueSize = 500)
+
+# Run progress: 50.00% complete, ETA 00:06:22
+# Fork: 1 of 1
+# Warmup Iteration   1: 11487.303 ops/s
+# Warmup Iteration   2: 7779.433 ops/s
+Iteration   1: 4761.948 ops/s
+Iteration   2: 5350.266 ops/s
+Iteration   3: 3046.348 ops/s
+Iteration   4: 7234.641 ops/s
+Iteration   5: 7678.281 ops/s
+Iteration   6: 7762.106 ops/s
+Iteration   7: 6800.194 ops/s
+Iteration   8: 7454.772 ops/s
+Iteration   9: 2373.794 ops/s
+Iteration  10: PureJavaLevelDBAdaptor_772ab8fe-745d-4d40-a434-a9a186d997ae Folder size: 5923
+8878.422 ops/s
+
+
+Result "io.github.theuntamed839.BenchmarkConcurrentWrite.prepopulatedConcurrentWrite":
+  6134.077 ±(99.9%) 3271.290 ops/s [Average]
+  (min, avg, max) = (2373.794, 6134.077, 8878.422), stdev = 2163.756
+  CI (99.9%): [2862.787, 9405.368] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 22, OpenJDK 64-Bit Server VM, 22+36-2370
+# VM invoker: /home/ganesh/Documents/jdk-22/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 2 iterations, 10 s each
+# Measurement: 10 iterations, 10 s each
+# Timeout: 60 min per iteration
+# Threads: 12 threads, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: io.github.theuntamed839.BenchmarkConcurrentWrite.prepopulatedConcurrentWrite
+# Parameters: (dbProvider = LEVELDB_NATIVE, entryCount = 5000000, keySize = 500, valueSize = 500)
+
+# Run progress: 75.00% complete, ETA 00:06:35
+# Fork: 1 of 1
+# Warmup Iteration   1: 9590.542 ops/s
+# Warmup Iteration   2: 3337.189 ops/s
+Iteration   1: 5975.233 ops/s
+Iteration   2: 5719.505 ops/s
+Iteration   3: 6013.888 ops/s
+Iteration   4: 5350.947 ops/s
+Iteration   5: 5214.514 ops/s
+Iteration   6: 5612.125 ops/s
+Iteration   7: 2450.510 ops/s
+Iteration   8: 6678.018 ops/s
+Iteration   9: 3097.295 ops/s
+Iteration  10: NativeLevelDBAdaptor_f4459b47-0933-484f-8c72-814846d0ecd5 Folder size: 5759
+5298.816 ops/s
+
+
+Result "io.github.theuntamed839.BenchmarkConcurrentWrite.prepopulatedConcurrentWrite":
+  5141.085 ±(99.9%) 2007.400 ops/s [Average]
+  (min, avg, max) = (2450.510, 5141.085, 6678.018), stdev = 1327.771
+  CI (99.9%): [3133.684, 7148.485] (assumes normal distribution)
+
+
+# Run complete. Total time: 00:36:33
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark                                               (dbProvider)  (entryCount)  (keySize)  (valueSize)   Mode  Cnt      Score       Error  Units
+BenchmarkConcurrentWrite.prepopulatedConcurrentWrite     DATASTORE4J       5000000        500          500  thrpt   10  53172.212 ±  7770.256  ops/s
+BenchmarkConcurrentWrite.prepopulatedConcurrentWrite         ROCKSDB       5000000        500          500  thrpt   10  45847.887 ± 75683.068  ops/s
+BenchmarkConcurrentWrite.prepopulatedConcurrentWrite    LEVELDB_JAVA       5000000        500          500  thrpt   10   6134.077 ±  3271.290  ops/s
+BenchmarkConcurrentWrite.prepopulatedConcurrentWrite  LEVELDB_NATIVE       5000000        500          500  thrpt   10   5141.085 ±  2007.400  ops/s
+
+Benchmark result is saved to BenchmarkConcurrentWrite.json

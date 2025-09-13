@@ -1,0 +1,1867 @@
+java  -jar ./target/dbBenchmarks.jar BenchmarkRead -f 3 -wi 3 -i 3 -to 60m -rf json -rff BenchmarkRead.json | tee BenchmarkRead.txt
+
+# JMH version: 1.37
+# VM version: JDK 22, OpenJDK 64-Bit Server VM, 22+36-2370
+# VM invoker: /home/ganesh/Documents/jdk-22/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, single-shot each
+# Measurement: 3 iterations, single-shot each
+# Timeout: 60 min per iteration
+# Threads: 1 thread
+# Benchmark mode: Single shot invocation time
+# Benchmark: io.github.theuntamed839.BenchmarkRead.linearSearch
+# Parameters: (dbProvider = DATASTORE4J, entryCount = 1000000, keySize = 500, valueSize = 500)
+
+# Run progress: 0.00% complete, ETA 00:00:00
+# Fork: 1 of 3
+# Warmup Iteration   1: 8.805 s/op
+# Warmup Iteration   2: 8.165 s/op
+# Warmup Iteration   3: 8.188 s/op
+Iteration   1: 8.004 s/op
+Iteration   2: 8.187 s/op
+Iteration   3: DataStore4JAdaptor_4d1d108f-263a-476f-b1c0-d8327af90891 Folder size: 1039
+7.933 s/op
+
+# Run progress: 1.39% complete, ETA 01:17:04
+# Fork: 2 of 3
+# Warmup Iteration   1: 9.100 s/op
+# Warmup Iteration   2: 8.501 s/op
+# Warmup Iteration   3: 8.239 s/op
+Iteration   1: 8.379 s/op
+Iteration   2: 8.198 s/op
+Iteration   3: DataStore4JAdaptor_7e4484e7-f400-42c5-930d-7e3b008e12b2 Folder size: 1039
+8.188 s/op
+
+# Run progress: 2.78% complete, ETA 01:17:03
+# Fork: 3 of 3
+# Warmup Iteration   1: 9.038 s/op
+# Warmup Iteration   2: 7.833 s/op
+# Warmup Iteration   3: 7.781 s/op
+Iteration   1: 7.783 s/op
+Iteration   2: 7.685 s/op
+Iteration   3: DataStore4JAdaptor_15b06bda-2f9b-4fcd-a8b6-ee0c9de2846e Folder size: 1039
+7.752 s/op
+
+
+Result "io.github.theuntamed839.BenchmarkRead.linearSearch":
+  N = 9
+  mean =      8.012 ±(99.9%) 0.405 s/op
+
+  Histogram, s/op:
+    [7.600, 7.650) = 0 
+    [7.650, 7.700) = 1 
+    [7.700, 7.750) = 0 
+    [7.750, 7.800) = 2 
+    [7.800, 7.850) = 0 
+    [7.850, 7.900) = 0 
+    [7.900, 7.950) = 1 
+    [7.950, 8.000) = 0 
+    [8.000, 8.050) = 1 
+    [8.050, 8.100) = 0 
+    [8.100, 8.150) = 0 
+    [8.150, 8.200) = 3 
+    [8.200, 8.250) = 0 
+    [8.250, 8.300) = 0 
+    [8.300, 8.350) = 0 
+
+  Percentiles, s/op:
+      p(0.0000) =      7.685 s/op
+     p(50.0000) =      8.004 s/op
+     p(90.0000) =      8.379 s/op
+     p(95.0000) =      8.379 s/op
+     p(99.0000) =      8.379 s/op
+     p(99.9000) =      8.379 s/op
+     p(99.9900) =      8.379 s/op
+     p(99.9990) =      8.379 s/op
+     p(99.9999) =      8.379 s/op
+    p(100.0000) =      8.379 s/op
+
+
+# JMH version: 1.37
+# VM version: JDK 22, OpenJDK 64-Bit Server VM, 22+36-2370
+# VM invoker: /home/ganesh/Documents/jdk-22/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, single-shot each
+# Measurement: 3 iterations, single-shot each
+# Timeout: 60 min per iteration
+# Threads: 1 thread
+# Benchmark mode: Single shot invocation time
+# Benchmark: io.github.theuntamed839.BenchmarkRead.linearSearch
+# Parameters: (dbProvider = DATASTORE4J, entryCount = 5000000, keySize = 500, valueSize = 500)
+
+# Run progress: 4.17% complete, ETA 01:15:00
+# Fork: 1 of 3
+# Warmup Iteration   1: 80.585 s/op
+# Warmup Iteration   2: 79.514 s/op
+# Warmup Iteration   3: 78.080 s/op
+Iteration   1: 78.251 s/op
+Iteration   2: 79.130 s/op
+Iteration   3: DataStore4JAdaptor_85223f74-689c-4819-923e-82d3d69ca957 Folder size: 5196
+78.540 s/op
+
+# Run progress: 5.56% complete, ETA 03:34:29
+# Fork: 2 of 3
+# Warmup Iteration   1: 73.709 s/op
+# Warmup Iteration   2: 74.864 s/op
+# Warmup Iteration   3: 75.669 s/op
+Iteration   1: 74.197 s/op
+Iteration   2: 74.262 s/op
+Iteration   3: DataStore4JAdaptor_622ba24e-6661-45d4-b07b-8c4e62d412c8 Folder size: 5196
+76.290 s/op
+
+# Run progress: 6.94% complete, ETA 04:48:52
+# Fork: 3 of 3
+# Warmup Iteration   1: 75.708 s/op
+# Warmup Iteration   2: 73.564 s/op
+# Warmup Iteration   3: 73.376 s/op
+Iteration   1: 73.153 s/op
+Iteration   2: 73.214 s/op
+Iteration   3: DataStore4JAdaptor_d37752d1-7a0f-4496-adee-e5c259129f0f Folder size: 5196
+75.638 s/op
+
+
+Result "io.github.theuntamed839.BenchmarkRead.linearSearch":
+  N = 9
+  mean =     75.853 ±(99.9%) 3.917 s/op
+
+  Histogram, s/op:
+    [73.000, 73.500) = 2 
+    [73.500, 74.000) = 0 
+    [74.000, 74.500) = 2 
+    [74.500, 75.000) = 0 
+    [75.000, 75.500) = 0 
+    [75.500, 76.000) = 1 
+    [76.000, 76.500) = 1 
+    [76.500, 77.000) = 0 
+    [77.000, 77.500) = 0 
+    [77.500, 78.000) = 0 
+    [78.000, 78.500) = 1 
+    [78.500, 79.000) = 1 
+    [79.000, 79.500) = 1 
+
+  Percentiles, s/op:
+      p(0.0000) =     73.153 s/op
+     p(50.0000) =     75.638 s/op
+     p(90.0000) =     79.130 s/op
+     p(95.0000) =     79.130 s/op
+     p(99.0000) =     79.130 s/op
+     p(99.9000) =     79.130 s/op
+     p(99.9900) =     79.130 s/op
+     p(99.9990) =     79.130 s/op
+     p(99.9999) =     79.130 s/op
+    p(100.0000) =     79.130 s/op
+
+
+# JMH version: 1.37
+# VM version: JDK 22, OpenJDK 64-Bit Server VM, 22+36-2370
+# VM invoker: /home/ganesh/Documents/jdk-22/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, single-shot each
+# Measurement: 3 iterations, single-shot each
+# Timeout: 60 min per iteration
+# Threads: 1 thread
+# Benchmark mode: Single shot invocation time
+# Benchmark: io.github.theuntamed839.BenchmarkRead.linearSearch
+# Parameters: (dbProvider = ROCKSDB, entryCount = 1000000, keySize = 500, valueSize = 500)
+
+# Run progress: 8.33% complete, ETA 05:34:41
+# Fork: 1 of 3
+# Warmup Iteration   1: 25.663 s/op
+# Warmup Iteration   2: 25.279 s/op
+# Warmup Iteration   3: 25.258 s/op
+Iteration   1: 25.160 s/op
+Iteration   2: 25.216 s/op
+Iteration   3: RocksDBAdaptor_10ad190c-7d16-4ddd-8efa-c771abc67b44 Folder size: 971
+25.169 s/op
+
+# Run progress: 9.72% complete, ETA 05:07:19
+# Fork: 2 of 3
+# Warmup Iteration   1: 25.474 s/op
+# Warmup Iteration   2: 25.085 s/op
+# Warmup Iteration   3: 25.100 s/op
+Iteration   1: 24.890 s/op
+Iteration   2: 24.963 s/op
+Iteration   3: RocksDBAdaptor_912b778d-76e5-45b0-b9f6-4a15f3cdc5a6 Folder size: 971
+25.135 s/op
+
+# Run progress: 11.11% complete, ETA 04:46:00
+# Fork: 3 of 3
+# Warmup Iteration   1: 25.553 s/op
+# Warmup Iteration   2: 25.220 s/op
+# Warmup Iteration   3: 24.992 s/op
+Iteration   1: 25.017 s/op
+Iteration   2: 24.989 s/op
+Iteration   3: RocksDBAdaptor_1aac71b4-ebf7-48eb-9ab0-aa18775da9a5 Folder size: 971
+25.112 s/op
+
+
+Result "io.github.theuntamed839.BenchmarkRead.linearSearch":
+  N = 9
+  mean =     25.072 ±(99.9%) 0.186 s/op
+
+  Histogram, s/op:
+    [24.800, 24.850) = 0 
+    [24.850, 24.900) = 1 
+    [24.900, 24.950) = 0 
+    [24.950, 25.000) = 2 
+    [25.000, 25.050) = 1 
+    [25.050, 25.100) = 0 
+    [25.100, 25.150) = 2 
+    [25.150, 25.200) = 2 
+    [25.200, 25.250) = 1 
+
+  Percentiles, s/op:
+      p(0.0000) =     24.890 s/op
+     p(50.0000) =     25.112 s/op
+     p(90.0000) =     25.216 s/op
+     p(95.0000) =     25.216 s/op
+     p(99.0000) =     25.216 s/op
+     p(99.9000) =     25.216 s/op
+     p(99.9900) =     25.216 s/op
+     p(99.9990) =     25.216 s/op
+     p(99.9999) =     25.216 s/op
+    p(100.0000) =     25.216 s/op
+
+
+# JMH version: 1.37
+# VM version: JDK 22, OpenJDK 64-Bit Server VM, 22+36-2370
+# VM invoker: /home/ganesh/Documents/jdk-22/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, single-shot each
+# Measurement: 3 iterations, single-shot each
+# Timeout: 60 min per iteration
+# Threads: 1 thread
+# Benchmark mode: Single shot invocation time
+# Benchmark: io.github.theuntamed839.BenchmarkRead.linearSearch
+# Parameters: (dbProvider = ROCKSDB, entryCount = 5000000, keySize = 500, valueSize = 500)
+
+# Run progress: 12.50% complete, ETA 04:28:49
+# Fork: 1 of 3
+# Warmup Iteration   1: 70.538 s/op
+# Warmup Iteration   2: 51.029 s/op
+# Warmup Iteration   3: 50.487 s/op
+Iteration   1: 50.214 s/op
+Iteration   2: 50.251 s/op
+Iteration   3: RocksDBAdaptor_0af253f6-92ae-4d14-96db-a467c0da4bc9 Folder size: 4855
+50.141 s/op
+
+# Run progress: 13.89% complete, ETA 04:36:53
+# Fork: 2 of 3
+# Warmup Iteration   1: 70.357 s/op
+# Warmup Iteration   2: 49.889 s/op
+# Warmup Iteration   3: 50.263 s/op
+Iteration   1: 50.434 s/op
+Iteration   2: 50.036 s/op
+Iteration   3: RocksDBAdaptor_c17bbf80-5b20-4a53-b317-9ecce465be75 Folder size: 4855
+49.716 s/op
+
+# Run progress: 15.28% complete, ETA 04:42:12
+# Fork: 3 of 3
+# Warmup Iteration   1: 67.334 s/op
+# Warmup Iteration   2: 48.383 s/op
+# Warmup Iteration   3: 48.038 s/op
+Iteration   1: 47.782 s/op
+Iteration   2: 47.641 s/op
+Iteration   3: RocksDBAdaptor_23e05de1-e2f3-466d-b816-c12e494df2fb Folder size: 4855
+47.984 s/op
+
+
+Result "io.github.theuntamed839.BenchmarkRead.linearSearch":
+  N = 9
+  mean =     49.355 ±(99.9%) 1.989 s/op
+
+  Histogram, s/op:
+    [47.000, 47.250) = 0 
+    [47.250, 47.500) = 0 
+    [47.500, 47.750) = 1 
+    [47.750, 48.000) = 2 
+    [48.000, 48.250) = 0 
+    [48.250, 48.500) = 0 
+    [48.500, 48.750) = 0 
+    [48.750, 49.000) = 0 
+    [49.000, 49.250) = 0 
+    [49.250, 49.500) = 0 
+    [49.500, 49.750) = 1 
+    [49.750, 50.000) = 0 
+    [50.000, 50.250) = 3 
+    [50.250, 50.500) = 2 
+    [50.500, 50.750) = 0 
+
+  Percentiles, s/op:
+      p(0.0000) =     47.641 s/op
+     p(50.0000) =     50.036 s/op
+     p(90.0000) =     50.434 s/op
+     p(95.0000) =     50.434 s/op
+     p(99.0000) =     50.434 s/op
+     p(99.9000) =     50.434 s/op
+     p(99.9900) =     50.434 s/op
+     p(99.9990) =     50.434 s/op
+     p(99.9999) =     50.434 s/op
+    p(100.0000) =     50.434 s/op
+
+
+# JMH version: 1.37
+# VM version: JDK 22, OpenJDK 64-Bit Server VM, 22+36-2370
+# VM invoker: /home/ganesh/Documents/jdk-22/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, single-shot each
+# Measurement: 3 iterations, single-shot each
+# Timeout: 60 min per iteration
+# Threads: 1 thread
+# Benchmark mode: Single shot invocation time
+# Benchmark: io.github.theuntamed839.BenchmarkRead.linearSearch
+# Parameters: (dbProvider = LEVELDB_JAVA, entryCount = 1000000, keySize = 500, valueSize = 500)
+
+# Run progress: 16.67% complete, ETA 04:44:24
+# Fork: 1 of 3
+# Warmup Iteration   1: 26.813 s/op
+# Warmup Iteration   2: 21.446 s/op
+# Warmup Iteration   3: 21.566 s/op
+Iteration   1: 21.626 s/op
+Iteration   2: 21.640 s/op
+Iteration   3: PureJavaLevelDBAdaptor_6cf39fde-09af-4166-b44c-faae6f40da39 Folder size: 988
+21.599 s/op
+
+# Run progress: 18.06% complete, ETA 04:32:28
+# Fork: 2 of 3
+# Warmup Iteration   1: 27.149 s/op
+# Warmup Iteration   2: 21.770 s/op
+# Warmup Iteration   3: 21.825 s/op
+Iteration   1: 21.778 s/op
+Iteration   2: 21.899 s/op
+Iteration   3: PureJavaLevelDBAdaptor_8771bfa6-f66c-45ff-a198-36674bc67ead Folder size: 988
+21.894 s/op
+
+# Run progress: 19.44% complete, ETA 04:22:01
+# Fork: 3 of 3
+# Warmup Iteration   1: 27.483 s/op
+# Warmup Iteration   2: 21.933 s/op
+# Warmup Iteration   3: 22.091 s/op
+Iteration   1: 22.098 s/op
+Iteration   2: 22.052 s/op
+Iteration   3: PureJavaLevelDBAdaptor_b5d3b545-aa04-4a59-abff-aa1b7c88dceb Folder size: 988
+22.142 s/op
+
+
+Result "io.github.theuntamed839.BenchmarkRead.linearSearch":
+  N = 9
+  mean =     21.859 ±(99.9%) 0.353 s/op
+
+  Histogram, s/op:
+    [21.500, 21.550) = 0 
+    [21.550, 21.600) = 1 
+    [21.600, 21.650) = 2 
+    [21.650, 21.700) = 0 
+    [21.700, 21.750) = 0 
+    [21.750, 21.800) = 1 
+    [21.800, 21.850) = 0 
+    [21.850, 21.900) = 2 
+    [21.900, 21.950) = 0 
+    [21.950, 22.000) = 0 
+    [22.000, 22.050) = 0 
+    [22.050, 22.100) = 2 
+    [22.100, 22.150) = 1 
+    [22.150, 22.200) = 0 
+
+  Percentiles, s/op:
+      p(0.0000) =     21.599 s/op
+     p(50.0000) =     21.894 s/op
+     p(90.0000) =     22.142 s/op
+     p(95.0000) =     22.142 s/op
+     p(99.0000) =     22.142 s/op
+     p(99.9000) =     22.142 s/op
+     p(99.9900) =     22.142 s/op
+     p(99.9990) =     22.142 s/op
+     p(99.9999) =     22.142 s/op
+    p(100.0000) =     22.142 s/op
+
+
+# JMH version: 1.37
+# VM version: JDK 22, OpenJDK 64-Bit Server VM, 22+36-2370
+# VM invoker: /home/ganesh/Documents/jdk-22/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, single-shot each
+# Measurement: 3 iterations, single-shot each
+# Timeout: 60 min per iteration
+# Threads: 1 thread
+# Benchmark mode: Single shot invocation time
+# Benchmark: io.github.theuntamed839.BenchmarkRead.linearSearch
+# Parameters: (dbProvider = LEVELDB_JAVA, entryCount = 5000000, keySize = 500, valueSize = 500)
+
+# Run progress: 20.83% complete, ETA 04:12:32
+# Fork: 1 of 3
+# Warmup Iteration   1: 312.996 s/op
+# Warmup Iteration   2: 295.422 s/op
+# Warmup Iteration   3: 295.540 s/op
+Iteration   1: 295.169 s/op
+Iteration   2: 295.483 s/op
+Iteration   3: PureJavaLevelDBAdaptor_ef6402a8-a397-4a5d-b144-f4647579d801 Folder size: 4990
+295.138 s/op
+
+# Run progress: 22.22% complete, ETA 06:12:54
+# Fork: 2 of 3
+# Warmup Iteration   1: 325.001 s/op
+# Warmup Iteration   2: 310.573 s/op
+# Warmup Iteration   3: 310.261 s/op
+Iteration   1: 311.272 s/op
+Iteration   2: 311.114 s/op
+Iteration   3: PureJavaLevelDBAdaptor_e6654702-36cf-4c93-ae74-19b2ecd68093 Folder size: 4987
+311.006 s/op
+
+# Run progress: 23.61% complete, ETA 07:57:50
+# Fork: 3 of 3
+# Warmup Iteration   1: 311.583 s/op
+# Warmup Iteration   2: 292.362 s/op
+# Warmup Iteration   3: 292.694 s/op
+Iteration   1: 292.814 s/op
+Iteration   2: 291.466 s/op
+Iteration   3: PureJavaLevelDBAdaptor_7f7abd23-7887-487d-b2c8-80d36f645a52 Folder size: 4990
+291.932 s/op
+
+
+Result "io.github.theuntamed839.BenchmarkRead.linearSearch":
+  N = 9
+  mean =    299.488 ±(99.9%) 14.869 s/op
+
+  Histogram, s/op:
+    [290.000, 292.500) = 2 
+    [292.500, 295.000) = 1 
+    [295.000, 297.500) = 3 
+    [297.500, 300.000) = 0 
+    [300.000, 302.500) = 0 
+    [302.500, 305.000) = 0 
+    [305.000, 307.500) = 0 
+    [307.500, 310.000) = 0 
+    [310.000, 312.500) = 3 
+    [312.500, 315.000) = 0 
+    [315.000, 317.500) = 0 
+
+  Percentiles, s/op:
+      p(0.0000) =    291.466 s/op
+     p(50.0000) =    295.169 s/op
+     p(90.0000) =    311.272 s/op
+     p(95.0000) =    311.272 s/op
+     p(99.0000) =    311.272 s/op
+     p(99.9000) =    311.272 s/op
+     p(99.9900) =    311.272 s/op
+     p(99.9990) =    311.272 s/op
+     p(99.9999) =    311.272 s/op
+    p(100.0000) =    311.272 s/op
+
+
+# JMH version: 1.37
+# VM version: JDK 22, OpenJDK 64-Bit Server VM, 22+36-2370
+# VM invoker: /home/ganesh/Documents/jdk-22/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, single-shot each
+# Measurement: 3 iterations, single-shot each
+# Timeout: 60 min per iteration
+# Threads: 1 thread
+# Benchmark mode: Single shot invocation time
+# Benchmark: io.github.theuntamed839.BenchmarkRead.linearSearch
+# Parameters: (dbProvider = LEVELDB_NATIVE, entryCount = 1000000, keySize = 500, valueSize = 500)
+
+# Run progress: 25.00% complete, ETA 09:21:05
+# Fork: 1 of 3
+# Warmup Iteration   1: 8.012 s/op
+# Warmup Iteration   2: 4.110 s/op
+# Warmup Iteration   3: 3.299 s/op
+Iteration   1: 2.835 s/op
+Iteration   2: 2.734 s/op
+Iteration   3: NativeLevelDBAdaptor_7c0c2550-c34b-4117-80e1-3cd3348d5cab Folder size: 989
+2.773 s/op
+
+# Run progress: 26.39% complete, ETA 08:46:30
+# Fork: 2 of 3
+# Warmup Iteration   1: 8.062 s/op
+# Warmup Iteration   2: 4.174 s/op
+# Warmup Iteration   3: 3.423 s/op
+Iteration   1: 2.869 s/op
+Iteration   2: 2.748 s/op
+Iteration   3: NativeLevelDBAdaptor_c5b06027-8ebe-4560-bfa1-177c56ea1f8b Folder size: 989
+2.809 s/op
+
+# Run progress: 27.78% complete, ETA 08:15:05
+# Fork: 3 of 3
+# Warmup Iteration   1: 7.958 s/op
+# Warmup Iteration   2: 4.152 s/op
+# Warmup Iteration   3: 3.321 s/op
+Iteration   1: 2.813 s/op
+Iteration   2: 2.679 s/op
+Iteration   3: NativeLevelDBAdaptor_29defa14-4b20-407a-8f31-811d53de9869 Folder size: 991
+2.723 s/op
+
+
+Result "io.github.theuntamed839.BenchmarkRead.linearSearch":
+  N = 9
+  mean =      2.776 ±(99.9%) 0.102 s/op
+
+  Histogram, s/op:
+    [2.600, 2.625) = 0 
+    [2.625, 2.650) = 0 
+    [2.650, 2.675) = 0 
+    [2.675, 2.700) = 1 
+    [2.700, 2.725) = 1 
+    [2.725, 2.750) = 2 
+    [2.750, 2.775) = 1 
+    [2.775, 2.800) = 0 
+    [2.800, 2.825) = 2 
+    [2.825, 2.850) = 1 
+    [2.850, 2.875) = 1 
+    [2.875, 2.900) = 0 
+
+  Percentiles, s/op:
+      p(0.0000) =      2.679 s/op
+     p(50.0000) =      2.773 s/op
+     p(90.0000) =      2.869 s/op
+     p(95.0000) =      2.869 s/op
+     p(99.0000) =      2.869 s/op
+     p(99.9000) =      2.869 s/op
+     p(99.9900) =      2.869 s/op
+     p(99.9990) =      2.869 s/op
+     p(99.9999) =      2.869 s/op
+    p(100.0000) =      2.869 s/op
+
+
+# JMH version: 1.37
+# VM version: JDK 22, OpenJDK 64-Bit Server VM, 22+36-2370
+# VM invoker: /home/ganesh/Documents/jdk-22/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, single-shot each
+# Measurement: 3 iterations, single-shot each
+# Timeout: 60 min per iteration
+# Threads: 1 thread
+# Benchmark mode: Single shot invocation time
+# Benchmark: io.github.theuntamed839.BenchmarkRead.linearSearch
+# Parameters: (dbProvider = LEVELDB_NATIVE, entryCount = 5000000, keySize = 500, valueSize = 500)
+
+# Run progress: 29.17% complete, ETA 07:46:32
+# Fork: 1 of 3
+# Warmup Iteration   1: 108.072 s/op
+# Warmup Iteration   2: 82.867 s/op
+# Warmup Iteration   3: 80.837 s/op
+Iteration   1: 80.496 s/op
+Iteration   2: 80.607 s/op
+Iteration   3: NativeLevelDBAdaptor_9c8e25e0-67d2-4518-9504-263a42e9c6ed Folder size: 5021
+80.207 s/op
+
+# Run progress: 30.56% complete, ETA 08:05:41
+# Fork: 2 of 3
+# Warmup Iteration   1: 112.306 s/op
+# Warmup Iteration   2: 82.177 s/op
+# Warmup Iteration   3: 80.743 s/op
+Iteration   1: 80.772 s/op
+Iteration   2: 79.997 s/op
+Iteration   3: NativeLevelDBAdaptor_2be9fab7-cbf7-421d-857c-ec009766f4f8 Folder size: 5020
+80.599 s/op
+
+# Run progress: 31.94% complete, ETA 08:20:58
+# Fork: 3 of 3
+# Warmup Iteration   1: 111.925 s/op
+# Warmup Iteration   2: 83.158 s/op
+# Warmup Iteration   3: 82.067 s/op
+Iteration   1: 81.228 s/op
+Iteration   2: 81.162 s/op
+Iteration   3: NativeLevelDBAdaptor_72192081-0bcd-4326-a5f5-75c56c5b57d2 Folder size: 5020
+80.938 s/op
+
+
+Result "io.github.theuntamed839.BenchmarkRead.linearSearch":
+  N = 9
+  mean =     80.667 ±(99.9%) 0.688 s/op
+
+  Histogram, s/op:
+    [79.000, 79.250) = 0 
+    [79.250, 79.500) = 0 
+    [79.500, 79.750) = 0 
+    [79.750, 80.000) = 1 
+    [80.000, 80.250) = 1 
+    [80.250, 80.500) = 1 
+    [80.500, 80.750) = 2 
+    [80.750, 81.000) = 2 
+    [81.000, 81.250) = 2 
+    [81.250, 81.500) = 0 
+    [81.500, 81.750) = 0 
+
+  Percentiles, s/op:
+      p(0.0000) =     79.997 s/op
+     p(50.0000) =     80.607 s/op
+     p(90.0000) =     81.228 s/op
+     p(95.0000) =     81.228 s/op
+     p(99.0000) =     81.228 s/op
+     p(99.9000) =     81.228 s/op
+     p(99.9900) =     81.228 s/op
+     p(99.9990) =     81.228 s/op
+     p(99.9999) =     81.228 s/op
+    p(100.0000) =     81.228 s/op
+
+
+# JMH version: 1.37
+# VM version: JDK 22, OpenJDK 64-Bit Server VM, 22+36-2370
+# VM invoker: /home/ganesh/Documents/jdk-22/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, single-shot each
+# Measurement: 3 iterations, single-shot each
+# Timeout: 60 min per iteration
+# Threads: 1 thread
+# Benchmark mode: Single shot invocation time
+# Benchmark: io.github.theuntamed839.BenchmarkRead.randomSearch
+# Parameters: (dbProvider = DATASTORE4J, entryCount = 1000000, keySize = 500, valueSize = 500)
+
+# Run progress: 33.33% complete, ETA 08:33:07
+# Fork: 1 of 3
+# Warmup Iteration   1: 9.658 s/op
+# Warmup Iteration   2: 8.504 s/op
+# Warmup Iteration   3: 8.668 s/op
+Iteration   1: 8.653 s/op
+Iteration   2: 8.629 s/op
+Iteration   3: DataStore4JAdaptor_eb9621c2-4263-49df-8e41-6007b98af1e8 Folder size: 1039
+8.613 s/op
+
+# Run progress: 34.72% complete, ETA 08:04:28
+# Fork: 2 of 3
+# Warmup Iteration   1: 9.478 s/op
+# Warmup Iteration   2: 8.741 s/op
+# Warmup Iteration   3: 8.648 s/op
+Iteration   1: 8.518 s/op
+Iteration   2: 8.520 s/op
+Iteration   3: DataStore4JAdaptor_0c9bc9d8-04dd-4498-a68f-609c95b6b4ad Folder size: 1039
+8.412 s/op
+
+# Run progress: 36.11% complete, ETA 07:37:55
+# Fork: 3 of 3
+# Warmup Iteration   1: 9.398 s/op
+# Warmup Iteration   2: 8.552 s/op
+# Warmup Iteration   3: 8.623 s/op
+Iteration   1: 8.866 s/op
+Iteration   2: 8.759 s/op
+Iteration   3: DataStore4JAdaptor_93ecb240-5ce9-4f66-91c6-323ed2aa952b Folder size: 1039
+8.635 s/op
+
+
+Result "io.github.theuntamed839.BenchmarkRead.randomSearch":
+  N = 9
+  mean =      8.623 ±(99.9%) 0.226 s/op
+
+  Histogram, s/op:
+    [8.400, 8.450) = 1 
+    [8.450, 8.500) = 0 
+    [8.500, 8.550) = 2 
+    [8.550, 8.600) = 0 
+    [8.600, 8.650) = 3 
+    [8.650, 8.700) = 1 
+    [8.700, 8.750) = 0 
+    [8.750, 8.800) = 1 
+    [8.800, 8.850) = 0 
+
+  Percentiles, s/op:
+      p(0.0000) =      8.412 s/op
+     p(50.0000) =      8.629 s/op
+     p(90.0000) =      8.866 s/op
+     p(95.0000) =      8.866 s/op
+     p(99.0000) =      8.866 s/op
+     p(99.9000) =      8.866 s/op
+     p(99.9900) =      8.866 s/op
+     p(99.9990) =      8.866 s/op
+     p(99.9999) =      8.866 s/op
+    p(100.0000) =      8.866 s/op
+
+
+# JMH version: 1.37
+# VM version: JDK 22, OpenJDK 64-Bit Server VM, 22+36-2370
+# VM invoker: /home/ganesh/Documents/jdk-22/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, single-shot each
+# Measurement: 3 iterations, single-shot each
+# Timeout: 60 min per iteration
+# Threads: 1 thread
+# Benchmark mode: Single shot invocation time
+# Benchmark: io.github.theuntamed839.BenchmarkRead.randomSearch
+# Parameters: (dbProvider = DATASTORE4J, entryCount = 5000000, keySize = 500, valueSize = 500)
+
+# Run progress: 37.50% complete, ETA 07:13:17
+# Fork: 1 of 3
+# Warmup Iteration   1: 80.361 s/op
+# Warmup Iteration   2: 82.425 s/op
+# Warmup Iteration   3: 80.628 s/op
+Iteration   1: 80.235 s/op
+Iteration   2: 82.443 s/op
+Iteration   3: DataStore4JAdaptor_aec10971-6f24-4360-91d1-89c06803ade9 Folder size: 5196
+80.949 s/op
+
+# Run progress: 38.89% complete, ETA 07:03:34
+# Fork: 2 of 3
+# Warmup Iteration   1: 83.873 s/op
+# Warmup Iteration   2: 85.035 s/op
+# Warmup Iteration   3: 82.299 s/op
+Iteration   1: 81.764 s/op
+Iteration   2: 83.378 s/op
+Iteration   3: DataStore4JAdaptor_611781be-0f82-47ae-8ce4-6250c5cf2504 Folder size: 5196
+82.490 s/op
+
+# Run progress: 40.28% complete, ETA 06:54:10
+# Fork: 3 of 3
+# Warmup Iteration   1: 78.934 s/op
+# Warmup Iteration   2: 78.143 s/op
+# Warmup Iteration   3: 78.602 s/op
+Iteration   1: 76.732 s/op
+Iteration   2: 77.101 s/op
+Iteration   3: DataStore4JAdaptor_2e4a5010-9337-4cb8-92f5-b85f291a1c6e Folder size: 5196
+76.683 s/op
+
+
+Result "io.github.theuntamed839.BenchmarkRead.randomSearch":
+  N = 9
+  mean =     80.197 ±(99.9%) 4.500 s/op
+
+  Histogram, s/op:
+    [76.000, 76.500) = 0 
+    [76.500, 77.000) = 2 
+    [77.000, 77.500) = 1 
+    [77.500, 78.000) = 0 
+    [78.000, 78.500) = 0 
+    [78.500, 79.000) = 0 
+    [79.000, 79.500) = 0 
+    [79.500, 80.000) = 0 
+    [80.000, 80.500) = 1 
+    [80.500, 81.000) = 1 
+    [81.000, 81.500) = 0 
+    [81.500, 82.000) = 1 
+    [82.000, 82.500) = 2 
+    [82.500, 83.000) = 0 
+    [83.000, 83.500) = 1 
+
+  Percentiles, s/op:
+      p(0.0000) =     76.683 s/op
+     p(50.0000) =     80.949 s/op
+     p(90.0000) =     83.378 s/op
+     p(95.0000) =     83.378 s/op
+     p(99.0000) =     83.378 s/op
+     p(99.9000) =     83.378 s/op
+     p(99.9900) =     83.378 s/op
+     p(99.9990) =     83.378 s/op
+     p(99.9999) =     83.378 s/op
+    p(100.0000) =     83.378 s/op
+
+
+# JMH version: 1.37
+# VM version: JDK 22, OpenJDK 64-Bit Server VM, 22+36-2370
+# VM invoker: /home/ganesh/Documents/jdk-22/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, single-shot each
+# Measurement: 3 iterations, single-shot each
+# Timeout: 60 min per iteration
+# Threads: 1 thread
+# Benchmark mode: Single shot invocation time
+# Benchmark: io.github.theuntamed839.BenchmarkRead.randomSearch
+# Parameters: (dbProvider = ROCKSDB, entryCount = 1000000, keySize = 500, valueSize = 500)
+
+# Run progress: 41.67% complete, ETA 06:43:57
+# Fork: 1 of 3
+# Warmup Iteration   1: 25.662 s/op
+# Warmup Iteration   2: 25.138 s/op
+# Warmup Iteration   3: 25.131 s/op
+Iteration   1: 25.101 s/op
+Iteration   2: 25.116 s/op
+Iteration   3: RocksDBAdaptor_e91a2437-b1dc-4010-b5a6-bd00c24bc569 Folder size: 971
+25.120 s/op
+
+# Run progress: 43.06% complete, ETA 06:25:08
+# Fork: 2 of 3
+# Warmup Iteration   1: 25.624 s/op
+# Warmup Iteration   2: 25.256 s/op
+# Warmup Iteration   3: 25.434 s/op
+Iteration   1: 25.463 s/op
+Iteration   2: 25.426 s/op
+Iteration   3: RocksDBAdaptor_38e9c393-adbd-4213-9d9b-ea32305a49aa Folder size: 971
+25.472 s/op
+
+# Run progress: 44.44% complete, ETA 06:07:21
+# Fork: 3 of 3
+# Warmup Iteration   1: 25.792 s/op
+# Warmup Iteration   2: 25.222 s/op
+# Warmup Iteration   3: 25.137 s/op
+Iteration   1: 25.185 s/op
+Iteration   2: 25.116 s/op
+Iteration   3: RocksDBAdaptor_a09cb903-63d5-46dd-9eae-8deb31366e07 Folder size: 971
+25.176 s/op
+
+
+Result "io.github.theuntamed839.BenchmarkRead.randomSearch":
+  N = 9
+  mean =     25.242 ±(99.9%) 0.272 s/op
+
+  Histogram, s/op:
+    [25.100, 25.125) = 4 
+    [25.125, 25.150) = 0 
+    [25.150, 25.175) = 0 
+    [25.175, 25.200) = 2 
+    [25.200, 25.225) = 0 
+    [25.225, 25.250) = 0 
+    [25.250, 25.275) = 0 
+    [25.275, 25.300) = 0 
+    [25.300, 25.325) = 0 
+    [25.325, 25.350) = 0 
+    [25.350, 25.375) = 0 
+    [25.375, 25.400) = 0 
+    [25.400, 25.425) = 0 
+    [25.425, 25.450) = 1 
+    [25.450, 25.475) = 2 
+
+  Percentiles, s/op:
+      p(0.0000) =     25.101 s/op
+     p(50.0000) =     25.176 s/op
+     p(90.0000) =     25.472 s/op
+     p(95.0000) =     25.472 s/op
+     p(99.0000) =     25.472 s/op
+     p(99.9000) =     25.472 s/op
+     p(99.9900) =     25.472 s/op
+     p(99.9990) =     25.472 s/op
+     p(99.9999) =     25.472 s/op
+    p(100.0000) =     25.472 s/op
+
+
+# JMH version: 1.37
+# VM version: JDK 22, OpenJDK 64-Bit Server VM, 22+36-2370
+# VM invoker: /home/ganesh/Documents/jdk-22/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, single-shot each
+# Measurement: 3 iterations, single-shot each
+# Timeout: 60 min per iteration
+# Threads: 1 thread
+# Benchmark mode: Single shot invocation time
+# Benchmark: io.github.theuntamed839.BenchmarkRead.randomSearch
+# Parameters: (dbProvider = ROCKSDB, entryCount = 5000000, keySize = 500, valueSize = 500)
+
+# Run progress: 45.83% complete, ETA 05:50:28
+# Fork: 1 of 3
+# Warmup Iteration   1: 68.712 s/op
+# Warmup Iteration   2: 51.240 s/op
+# Warmup Iteration   3: 51.046 s/op
+Iteration   1: 50.854 s/op
+Iteration   2: 49.290 s/op
+Iteration   3: RocksDBAdaptor_a4f0bf56-0cf7-4bbe-891d-3b00f8cdafdf Folder size: 4855
+49.890 s/op
+
+# Run progress: 47.22% complete, ETA 05:38:24
+# Fork: 2 of 3
+# Warmup Iteration   1: 70.921 s/op
+# Warmup Iteration   2: 51.240 s/op
+# Warmup Iteration   3: 50.806 s/op
+Iteration   1: 50.430 s/op
+Iteration   2: 50.436 s/op
+Iteration   3: RocksDBAdaptor_a1a03439-2bb1-409e-8774-b880c641b32e Folder size: 4856
+50.595 s/op
+
+# Run progress: 48.61% complete, ETA 05:26:44
+# Fork: 3 of 3
+# Warmup Iteration   1: 69.477 s/op
+# Warmup Iteration   2: 51.061 s/op
+# Warmup Iteration   3: 50.993 s/op
+Iteration   1: 50.915 s/op
+Iteration   2: 50.455 s/op
+Iteration   3: RocksDBAdaptor_0a60c413-9ed6-44e0-bd73-8301e39a251e Folder size: 4855
+50.458 s/op
+
+
+Result "io.github.theuntamed839.BenchmarkRead.randomSearch":
+  N = 9
+  mean =     50.369 ±(99.9%) 0.841 s/op
+
+  Histogram, s/op:
+    [49.000, 49.125) = 0 
+    [49.125, 49.250) = 0 
+    [49.250, 49.375) = 1 
+    [49.375, 49.500) = 0 
+    [49.500, 49.625) = 0 
+    [49.625, 49.750) = 0 
+    [49.750, 49.875) = 0 
+    [49.875, 50.000) = 1 
+    [50.000, 50.125) = 0 
+    [50.125, 50.250) = 0 
+    [50.250, 50.375) = 0 
+    [50.375, 50.500) = 4 
+    [50.500, 50.625) = 1 
+    [50.625, 50.750) = 0 
+    [50.750, 50.875) = 1 
+
+  Percentiles, s/op:
+      p(0.0000) =     49.290 s/op
+     p(50.0000) =     50.455 s/op
+     p(90.0000) =     50.915 s/op
+     p(95.0000) =     50.915 s/op
+     p(99.0000) =     50.915 s/op
+     p(99.9000) =     50.915 s/op
+     p(99.9900) =     50.915 s/op
+     p(99.9990) =     50.915 s/op
+     p(99.9999) =     50.915 s/op
+    p(100.0000) =     50.915 s/op
+
+
+# JMH version: 1.37
+# VM version: JDK 22, OpenJDK 64-Bit Server VM, 22+36-2370
+# VM invoker: /home/ganesh/Documents/jdk-22/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, single-shot each
+# Measurement: 3 iterations, single-shot each
+# Timeout: 60 min per iteration
+# Threads: 1 thread
+# Benchmark mode: Single shot invocation time
+# Benchmark: io.github.theuntamed839.BenchmarkRead.randomSearch
+# Parameters: (dbProvider = LEVELDB_JAVA, entryCount = 1000000, keySize = 500, valueSize = 500)
+
+# Run progress: 50.00% complete, ETA 05:15:21
+# Fork: 1 of 3
+# Warmup Iteration   1: 27.347 s/op
+# Warmup Iteration   2: 22.276 s/op
+# Warmup Iteration   3: 22.110 s/op
+Iteration   1: 22.070 s/op
+Iteration   2: 22.084 s/op
+Iteration   3: PureJavaLevelDBAdaptor_59e3ddaa-96e8-4782-8c69-048d76f2028d Folder size: 988
+22.132 s/op
+
+# Run progress: 51.39% complete, ETA 05:01:20
+# Fork: 2 of 3
+# Warmup Iteration   1: 31.304 s/op
+# Warmup Iteration   2: 27.149 s/op
+# Warmup Iteration   3: 27.197 s/op
+Iteration   1: 27.119 s/op
+Iteration   2: 27.153 s/op
+Iteration   3: PureJavaLevelDBAdaptor_e931b8bf-128c-48b8-8dd0-b1c8632a2684 Folder size: 988
+27.194 s/op
+
+# Run progress: 52.78% complete, ETA 04:48:24
+# Fork: 3 of 3
+# Warmup Iteration   1: 26.754 s/op
+# Warmup Iteration   2: 21.339 s/op
+# Warmup Iteration   3: 21.432 s/op
+Iteration   1: 21.412 s/op
+Iteration   2: 21.432 s/op
+Iteration   3: PureJavaLevelDBAdaptor_a6d8fffd-7694-4204-8464-736ea35785f7 Folder size: 988
+21.399 s/op
+
+
+Result "io.github.theuntamed839.BenchmarkRead.randomSearch":
+  N = 9
+  mean =     23.555 ±(99.9%) 4.565 s/op
+
+  Histogram, s/op:
+    [21.000, 21.500) = 3 
+    [21.500, 22.000) = 0 
+    [22.000, 22.500) = 3 
+    [22.500, 23.000) = 0 
+    [23.000, 23.500) = 0 
+    [23.500, 24.000) = 0 
+    [24.000, 24.500) = 0 
+    [24.500, 25.000) = 0 
+    [25.000, 25.500) = 0 
+    [25.500, 26.000) = 0 
+    [26.000, 26.500) = 0 
+    [26.500, 27.000) = 0 
+    [27.000, 27.500) = 3 
+
+  Percentiles, s/op:
+      p(0.0000) =     21.399 s/op
+     p(50.0000) =     22.084 s/op
+     p(90.0000) =     27.194 s/op
+     p(95.0000) =     27.194 s/op
+     p(99.0000) =     27.194 s/op
+     p(99.9000) =     27.194 s/op
+     p(99.9900) =     27.194 s/op
+     p(99.9990) =     27.194 s/op
+     p(99.9999) =     27.194 s/op
+    p(100.0000) =     27.194 s/op
+
+
+# JMH version: 1.37
+# VM version: JDK 22, OpenJDK 64-Bit Server VM, 22+36-2370
+# VM invoker: /home/ganesh/Documents/jdk-22/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, single-shot each
+# Measurement: 3 iterations, single-shot each
+# Timeout: 60 min per iteration
+# Threads: 1 thread
+# Benchmark mode: Single shot invocation time
+# Benchmark: io.github.theuntamed839.BenchmarkRead.randomSearch
+# Parameters: (dbProvider = LEVELDB_JAVA, entryCount = 5000000, keySize = 500, valueSize = 500)
+
+# Run progress: 54.17% complete, ETA 04:35:23
+# Fork: 1 of 3
+# Warmup Iteration   1: 359.410 s/op
+# Warmup Iteration   2: 340.630 s/op
+# Warmup Iteration   3: 341.382 s/op
+Iteration   1: 339.505 s/op
+Iteration   2: 340.403 s/op
+Iteration   3: PureJavaLevelDBAdaptor_3d77a91c-18c3-46be-9834-b5f1f4b92c8e Folder size: 4990
+340.674 s/op
+
+# Run progress: 55.56% complete, ETA 04:56:08
+# Fork: 2 of 3
+# Warmup Iteration   1: 355.750 s/op
+# Warmup Iteration   2: 333.504 s/op
+# Warmup Iteration   3: 334.520 s/op
+Iteration   1: 334.275 s/op
+Iteration   2: 335.369 s/op
+Iteration   3: PureJavaLevelDBAdaptor_696bf87b-a44b-4d29-93a4-a0223c4db2af Folder size: 4990
+333.726 s/op
+
+# Run progress: 56.94% complete, ETA 05:12:56
+# Fork: 3 of 3
+# Warmup Iteration   1: 383.830 s/op
+# Warmup Iteration   2: 370.973 s/op
+# Warmup Iteration   3: 372.001 s/op
+Iteration   1: 372.088 s/op
+Iteration   2: 370.982 s/op
+Iteration   3: PureJavaLevelDBAdaptor_d8d009cf-c287-4476-a97f-c8c2bfe68ea6 Folder size: 4990
+371.133 s/op
+
+
+Result "io.github.theuntamed839.BenchmarkRead.randomSearch":
+  N = 9
+  mean =    348.684 ±(99.9%) 28.951 s/op
+
+  Histogram, s/op:
+    [330.000, 335.000) = 2 
+    [335.000, 340.000) = 2 
+    [340.000, 345.000) = 2 
+    [345.000, 350.000) = 0 
+    [350.000, 355.000) = 0 
+    [355.000, 360.000) = 0 
+    [360.000, 365.000) = 0 
+    [365.000, 370.000) = 0 
+    [370.000, 375.000) = 3 
+
+  Percentiles, s/op:
+      p(0.0000) =    333.726 s/op
+     p(50.0000) =    340.403 s/op
+     p(90.0000) =    372.088 s/op
+     p(95.0000) =    372.088 s/op
+     p(99.0000) =    372.088 s/op
+     p(99.9000) =    372.088 s/op
+     p(99.9900) =    372.088 s/op
+     p(99.9990) =    372.088 s/op
+     p(99.9999) =    372.088 s/op
+    p(100.0000) =    372.088 s/op
+
+
+# JMH version: 1.37
+# VM version: JDK 22, OpenJDK 64-Bit Server VM, 22+36-2370
+# VM invoker: /home/ganesh/Documents/jdk-22/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, single-shot each
+# Measurement: 3 iterations, single-shot each
+# Timeout: 60 min per iteration
+# Threads: 1 thread
+# Benchmark mode: Single shot invocation time
+# Benchmark: io.github.theuntamed839.BenchmarkRead.randomSearch
+# Parameters: (dbProvider = LEVELDB_NATIVE, entryCount = 1000000, keySize = 500, valueSize = 500)
+
+# Run progress: 58.33% complete, ETA 05:29:25
+# Fork: 1 of 3
+# Warmup Iteration   1: 8.086 s/op
+# Warmup Iteration   2: 4.186 s/op
+# Warmup Iteration   3: 3.438 s/op
+Iteration   1: 2.843 s/op
+Iteration   2: 2.811 s/op
+Iteration   3: NativeLevelDBAdaptor_53980962-646b-4c39-8f3f-1484906aec5a Folder size: 989
+2.841 s/op
+
+# Run progress: 59.72% complete, ETA 05:12:10
+# Fork: 2 of 3
+# Warmup Iteration   1: 8.138 s/op
+# Warmup Iteration   2: 4.196 s/op
+# Warmup Iteration   3: 3.436 s/op
+Iteration   1: 2.873 s/op
+Iteration   2: 2.816 s/op
+Iteration   3: NativeLevelDBAdaptor_362abbaf-7c46-47c7-8c9f-09dd0d00b599 Folder size: 989
+2.835 s/op
+
+# Run progress: 61.11% complete, ETA 04:55:37
+# Fork: 3 of 3
+# Warmup Iteration   1: 8.076 s/op
+# Warmup Iteration   2: 4.239 s/op
+# Warmup Iteration   3: 3.427 s/op
+Iteration   1: 2.895 s/op
+Iteration   2: 2.842 s/op
+Iteration   3: NativeLevelDBAdaptor_6a2b4e45-4353-40b1-b6d8-3e47396ed263 Folder size: 991
+2.868 s/op
+
+
+Result "io.github.theuntamed839.BenchmarkRead.randomSearch":
+  N = 9
+  mean =      2.847 ±(99.9%) 0.045 s/op
+
+  Histogram, s/op:
+    [2.810, 2.815) = 1 
+    [2.815, 2.820) = 1 
+    [2.820, 2.825) = 0 
+    [2.825, 2.830) = 0 
+    [2.830, 2.835) = 1 
+    [2.835, 2.840) = 0 
+    [2.840, 2.845) = 3 
+    [2.845, 2.850) = 0 
+    [2.850, 2.855) = 0 
+    [2.855, 2.860) = 0 
+    [2.860, 2.865) = 0 
+    [2.865, 2.870) = 1 
+    [2.870, 2.875) = 1 
+    [2.875, 2.880) = 0 
+    [2.880, 2.885) = 0 
+    [2.885, 2.890) = 0 
+    [2.890, 2.895) = 1 
+
+  Percentiles, s/op:
+      p(0.0000) =      2.811 s/op
+     p(50.0000) =      2.842 s/op
+     p(90.0000) =      2.895 s/op
+     p(95.0000) =      2.895 s/op
+     p(99.0000) =      2.895 s/op
+     p(99.9000) =      2.895 s/op
+     p(99.9900) =      2.895 s/op
+     p(99.9990) =      2.895 s/op
+     p(99.9999) =      2.895 s/op
+    p(100.0000) =      2.895 s/op
+
+
+# JMH version: 1.37
+# VM version: JDK 22, OpenJDK 64-Bit Server VM, 22+36-2370
+# VM invoker: /home/ganesh/Documents/jdk-22/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, single-shot each
+# Measurement: 3 iterations, single-shot each
+# Timeout: 60 min per iteration
+# Threads: 1 thread
+# Benchmark mode: Single shot invocation time
+# Benchmark: io.github.theuntamed839.BenchmarkRead.randomSearch
+# Parameters: (dbProvider = LEVELDB_NATIVE, entryCount = 5000000, keySize = 500, valueSize = 500)
+
+# Run progress: 62.50% complete, ETA 04:39:45
+# Fork: 1 of 3
+# Warmup Iteration   1: 105.123 s/op
+# Warmup Iteration   2: 81.080 s/op
+# Warmup Iteration   3: 80.965 s/op
+Iteration   1: 80.857 s/op
+Iteration   2: 80.923 s/op
+Iteration   3: NativeLevelDBAdaptor_7912de59-9c72-4656-b0a9-f5a078d939d2 Folder size: 5020
+80.617 s/op
+
+# Run progress: 63.89% complete, ETA 04:35:40
+# Fork: 2 of 3
+# Warmup Iteration   1: 109.099 s/op
+# Warmup Iteration   2: 81.992 s/op
+# Warmup Iteration   3: 81.643 s/op
+Iteration   1: 81.597 s/op
+Iteration   2: 81.790 s/op
+Iteration   3: NativeLevelDBAdaptor_05f5312e-b537-4645-9e7a-7652792cf92e Folder size: 5021
+81.432 s/op
+
+# Run progress: 65.28% complete, ETA 04:30:48
+# Fork: 3 of 3
+# Warmup Iteration   1: 110.567 s/op
+# Warmup Iteration   2: 82.836 s/op
+# Warmup Iteration   3: 82.988 s/op
+Iteration   1: 83.773 s/op
+Iteration   2: 83.393 s/op
+Iteration   3: NativeLevelDBAdaptor_0e74193b-3347-48bc-ab5c-f00d45ca0540 Folder size: 5020
+83.173 s/op
+
+
+Result "io.github.theuntamed839.BenchmarkRead.randomSearch":
+  N = 9
+  mean =     81.951 ±(99.9%) 2.001 s/op
+
+  Histogram, s/op:
+    [80.000, 80.250) = 0 
+    [80.250, 80.500) = 0 
+    [80.500, 80.750) = 1 
+    [80.750, 81.000) = 2 
+    [81.000, 81.250) = 0 
+    [81.250, 81.500) = 1 
+    [81.500, 81.750) = 1 
+    [81.750, 82.000) = 1 
+    [82.000, 82.250) = 0 
+    [82.250, 82.500) = 0 
+    [82.500, 82.750) = 0 
+    [82.750, 83.000) = 0 
+    [83.000, 83.250) = 1 
+    [83.250, 83.500) = 1 
+    [83.500, 83.750) = 0 
+
+  Percentiles, s/op:
+      p(0.0000) =     80.617 s/op
+     p(50.0000) =     81.597 s/op
+     p(90.0000) =     83.773 s/op
+     p(95.0000) =     83.773 s/op
+     p(99.0000) =     83.773 s/op
+     p(99.9000) =     83.773 s/op
+     p(99.9900) =     83.773 s/op
+     p(99.9990) =     83.773 s/op
+     p(99.9999) =     83.773 s/op
+    p(100.0000) =     83.773 s/op
+
+
+# JMH version: 1.37
+# VM version: JDK 22, OpenJDK 64-Bit Server VM, 22+36-2370
+# VM invoker: /home/ganesh/Documents/jdk-22/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, single-shot each
+# Measurement: 3 iterations, single-shot each
+# Timeout: 60 min per iteration
+# Threads: 1 thread
+# Benchmark mode: Single shot invocation time
+# Benchmark: io.github.theuntamed839.BenchmarkRead.reverseSearch
+# Parameters: (dbProvider = DATASTORE4J, entryCount = 1000000, keySize = 500, valueSize = 500)
+
+# Run progress: 66.67% complete, ETA 04:25:19
+# Fork: 1 of 3
+# Warmup Iteration   1: 9.115 s/op
+# Warmup Iteration   2: 8.452 s/op
+# Warmup Iteration   3: 8.671 s/op
+Iteration   1: 8.591 s/op
+Iteration   2: 8.625 s/op
+Iteration   3: DataStore4JAdaptor_5d1310ee-73ab-46d9-bcdd-7f7985219188 Folder size: 1039
+8.528 s/op
+
+# Run progress: 68.06% complete, ETA 04:09:36
+# Fork: 2 of 3
+# Warmup Iteration   1: 9.059 s/op
+# Warmup Iteration   2: 8.254 s/op
+# Warmup Iteration   3: 8.320 s/op
+Iteration   1: 8.389 s/op
+Iteration   2: 8.486 s/op
+Iteration   3: DataStore4JAdaptor_914afa4d-2c42-4d67-b4fe-d2b010501150 Folder size: 1039
+8.364 s/op
+
+# Run progress: 69.44% complete, ETA 03:54:27
+# Fork: 3 of 3
+# Warmup Iteration   1: 9.070 s/op
+# Warmup Iteration   2: 8.317 s/op
+# Warmup Iteration   3: 8.540 s/op
+Iteration   1: 8.476 s/op
+Iteration   2: 8.449 s/op
+Iteration   3: DataStore4JAdaptor_92ea1208-d8d5-4920-b261-6af1a195acd4 Folder size: 1039
+8.584 s/op
+
+
+Result "io.github.theuntamed839.BenchmarkRead.reverseSearch":
+  N = 9
+  mean =      8.499 ±(99.9%) 0.152 s/op
+
+  Histogram, s/op:
+    [8.300, 8.325) = 0 
+    [8.325, 8.350) = 0 
+    [8.350, 8.375) = 1 
+    [8.375, 8.400) = 1 
+    [8.400, 8.425) = 0 
+    [8.425, 8.450) = 1 
+    [8.450, 8.475) = 0 
+    [8.475, 8.500) = 2 
+    [8.500, 8.525) = 0 
+    [8.525, 8.550) = 1 
+    [8.550, 8.575) = 0 
+    [8.575, 8.600) = 2 
+    [8.600, 8.625) = 1 
+    [8.625, 8.650) = 0 
+    [8.650, 8.675) = 0 
+    [8.675, 8.700) = 0 
+
+  Percentiles, s/op:
+      p(0.0000) =      8.364 s/op
+     p(50.0000) =      8.486 s/op
+     p(90.0000) =      8.625 s/op
+     p(95.0000) =      8.625 s/op
+     p(99.0000) =      8.625 s/op
+     p(99.9000) =      8.625 s/op
+     p(99.9900) =      8.625 s/op
+     p(99.9990) =      8.625 s/op
+     p(99.9999) =      8.625 s/op
+    p(100.0000) =      8.625 s/op
+
+
+# JMH version: 1.37
+# VM version: JDK 22, OpenJDK 64-Bit Server VM, 22+36-2370
+# VM invoker: /home/ganesh/Documents/jdk-22/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, single-shot each
+# Measurement: 3 iterations, single-shot each
+# Timeout: 60 min per iteration
+# Threads: 1 thread
+# Benchmark mode: Single shot invocation time
+# Benchmark: io.github.theuntamed839.BenchmarkRead.reverseSearch
+# Parameters: (dbProvider = DATASTORE4J, entryCount = 5000000, keySize = 500, valueSize = 500)
+
+# Run progress: 70.83% complete, ETA 03:39:52
+# Fork: 1 of 3
+# Warmup Iteration   1: 79.888 s/op
+# Warmup Iteration   2: 78.233 s/op
+# Warmup Iteration   3: 78.217 s/op
+Iteration   1: 78.210 s/op
+Iteration   2: 77.308 s/op
+Iteration   3: DataStore4JAdaptor_f566ec88-4400-4fbc-a14b-14cc62b9bf8c Folder size: 5196
+79.605 s/op
+
+# Run progress: 72.22% complete, ETA 03:28:58
+# Fork: 2 of 3
+# Warmup Iteration   1: 76.789 s/op
+# Warmup Iteration   2: 75.419 s/op
+# Warmup Iteration   3: 75.127 s/op
+Iteration   1: 77.861 s/op
+Iteration   2: 77.604 s/op
+Iteration   3: DataStore4JAdaptor_0a0dcb6a-5aaf-472a-b607-591a679f9e7c Folder size: 5196
+76.543 s/op
+
+# Run progress: 73.61% complete, ETA 03:18:02
+# Fork: 3 of 3
+# Warmup Iteration   1: 75.506 s/op
+# Warmup Iteration   2: 73.502 s/op
+# Warmup Iteration   3: 76.053 s/op
+Iteration   1: 75.189 s/op
+Iteration   2: 74.368 s/op
+Iteration   3: DataStore4JAdaptor_f1a620cc-bf8f-4222-ad7d-c027142a280c Folder size: 5196
+73.762 s/op
+
+
+Result "io.github.theuntamed839.BenchmarkRead.reverseSearch":
+  N = 9
+  mean =     76.717 ±(99.9%) 3.234 s/op
+
+  Histogram, s/op:
+    [73.000, 73.500) = 0 
+    [73.500, 74.000) = 1 
+    [74.000, 74.500) = 1 
+    [74.500, 75.000) = 0 
+    [75.000, 75.500) = 1 
+    [75.500, 76.000) = 0 
+    [76.000, 76.500) = 0 
+    [76.500, 77.000) = 1 
+    [77.000, 77.500) = 1 
+    [77.500, 78.000) = 2 
+    [78.000, 78.500) = 1 
+    [78.500, 79.000) = 0 
+    [79.000, 79.500) = 0 
+
+  Percentiles, s/op:
+      p(0.0000) =     73.762 s/op
+     p(50.0000) =     77.308 s/op
+     p(90.0000) =     79.605 s/op
+     p(95.0000) =     79.605 s/op
+     p(99.0000) =     79.605 s/op
+     p(99.9000) =     79.605 s/op
+     p(99.9900) =     79.605 s/op
+     p(99.9990) =     79.605 s/op
+     p(99.9999) =     79.605 s/op
+    p(100.0000) =     79.605 s/op
+
+
+# JMH version: 1.37
+# VM version: JDK 22, OpenJDK 64-Bit Server VM, 22+36-2370
+# VM invoker: /home/ganesh/Documents/jdk-22/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, single-shot each
+# Measurement: 3 iterations, single-shot each
+# Timeout: 60 min per iteration
+# Threads: 1 thread
+# Benchmark mode: Single shot invocation time
+# Benchmark: io.github.theuntamed839.BenchmarkRead.reverseSearch
+# Parameters: (dbProvider = ROCKSDB, entryCount = 1000000, keySize = 500, valueSize = 500)
+
+# Run progress: 75.00% complete, ETA 03:07:07
+# Fork: 1 of 3
+# Warmup Iteration   1: 25.429 s/op
+# Warmup Iteration   2: 24.953 s/op
+# Warmup Iteration   3: 24.931 s/op
+Iteration   1: 24.959 s/op
+Iteration   2: 24.922 s/op
+Iteration   3: RocksDBAdaptor_68fcd9e1-a3fe-4628-b62c-49062c8e0d85 Folder size: 971
+25.002 s/op
+
+# Run progress: 76.39% complete, ETA 02:54:19
+# Fork: 2 of 3
+# Warmup Iteration   1: 24.977 s/op
+# Warmup Iteration   2: 25.008 s/op
+# Warmup Iteration   3: 25.069 s/op
+Iteration   1: 24.955 s/op
+Iteration   2: 24.974 s/op
+Iteration   3: RocksDBAdaptor_379ccfad-f9d0-49cc-bafa-b064bba21e27 Folder size: 971
+25.065 s/op
+
+# Run progress: 77.78% complete, ETA 02:41:54
+# Fork: 3 of 3
+# Warmup Iteration   1: 25.685 s/op
+# Warmup Iteration   2: 25.467 s/op
+# Warmup Iteration   3: 25.120 s/op
+Iteration   1: 25.314 s/op
+Iteration   2: 25.346 s/op
+Iteration   3: RocksDBAdaptor_b1f89f06-350e-451e-8edf-dbfe4cffd9b5 Folder size: 971
+25.334 s/op
+
+
+Result "io.github.theuntamed839.BenchmarkRead.reverseSearch":
+  N = 9
+  mean =     25.097 ±(99.9%) 0.303 s/op
+
+  Histogram, s/op:
+    [24.900, 24.950) = 1 
+    [24.950, 25.000) = 3 
+    [25.000, 25.050) = 1 
+    [25.050, 25.100) = 1 
+    [25.100, 25.150) = 0 
+    [25.150, 25.200) = 0 
+    [25.200, 25.250) = 0 
+    [25.250, 25.300) = 0 
+    [25.300, 25.350) = 3 
+
+  Percentiles, s/op:
+      p(0.0000) =     24.922 s/op
+     p(50.0000) =     25.002 s/op
+     p(90.0000) =     25.346 s/op
+     p(95.0000) =     25.346 s/op
+     p(99.0000) =     25.346 s/op
+     p(99.9000) =     25.346 s/op
+     p(99.9900) =     25.346 s/op
+     p(99.9990) =     25.346 s/op
+     p(99.9999) =     25.346 s/op
+    p(100.0000) =     25.346 s/op
+
+
+# JMH version: 1.37
+# VM version: JDK 22, OpenJDK 64-Bit Server VM, 22+36-2370
+# VM invoker: /home/ganesh/Documents/jdk-22/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, single-shot each
+# Measurement: 3 iterations, single-shot each
+# Timeout: 60 min per iteration
+# Threads: 1 thread
+# Benchmark mode: Single shot invocation time
+# Benchmark: io.github.theuntamed839.BenchmarkRead.reverseSearch
+# Parameters: (dbProvider = ROCKSDB, entryCount = 5000000, keySize = 500, valueSize = 500)
+
+# Run progress: 79.17% complete, ETA 02:29:49
+# Fork: 1 of 3
+# Warmup Iteration   1: 63.539 s/op
+# Warmup Iteration   2: 49.753 s/op
+# Warmup Iteration   3: 49.660 s/op
+Iteration   1: 49.836 s/op
+Iteration   2: 49.572 s/op
+Iteration   3: RocksDBAdaptor_b5424494-bf3b-460e-9c44-8a53192be051 Folder size: 4855
+49.787 s/op
+
+# Run progress: 80.56% complete, ETA 02:18:53
+# Fork: 2 of 3
+# Warmup Iteration   1: 64.797 s/op
+# Warmup Iteration   2: 52.623 s/op
+# Warmup Iteration   3: 52.592 s/op
+Iteration   1: 52.251 s/op
+Iteration   2: 52.462 s/op
+Iteration   3: RocksDBAdaptor_af15ea73-a3fc-4fc5-8bee-dd25946e9504 Folder size: 4855
+52.270 s/op
+
+# Run progress: 81.94% complete, ETA 02:08:11
+# Fork: 3 of 3
+# Warmup Iteration   1: 66.401 s/op
+# Warmup Iteration   2: 50.200 s/op
+# Warmup Iteration   3: 49.855 s/op
+Iteration   1: 49.855 s/op
+Iteration   2: 49.807 s/op
+Iteration   3: RocksDBAdaptor_c003646d-354c-4be7-8f8b-6b754f95f516 Folder size: 4855
+49.880 s/op
+
+
+Result "io.github.theuntamed839.BenchmarkRead.reverseSearch":
+  N = 9
+  mean =     50.635 ±(99.9%) 2.140 s/op
+
+  Histogram, s/op:
+    [49.000, 49.250) = 0 
+    [49.250, 49.500) = 0 
+    [49.500, 49.750) = 1 
+    [49.750, 50.000) = 5 
+    [50.000, 50.250) = 0 
+    [50.250, 50.500) = 0 
+    [50.500, 50.750) = 0 
+    [50.750, 51.000) = 0 
+    [51.000, 51.250) = 0 
+    [51.250, 51.500) = 0 
+    [51.500, 51.750) = 0 
+    [51.750, 52.000) = 0 
+    [52.000, 52.250) = 0 
+    [52.250, 52.500) = 3 
+    [52.500, 52.750) = 0 
+
+  Percentiles, s/op:
+      p(0.0000) =     49.572 s/op
+     p(50.0000) =     49.855 s/op
+     p(90.0000) =     52.462 s/op
+     p(95.0000) =     52.462 s/op
+     p(99.0000) =     52.462 s/op
+     p(99.9000) =     52.462 s/op
+     p(99.9900) =     52.462 s/op
+     p(99.9990) =     52.462 s/op
+     p(99.9999) =     52.462 s/op
+    p(100.0000) =     52.462 s/op
+
+
+# JMH version: 1.37
+# VM version: JDK 22, OpenJDK 64-Bit Server VM, 22+36-2370
+# VM invoker: /home/ganesh/Documents/jdk-22/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, single-shot each
+# Measurement: 3 iterations, single-shot each
+# Timeout: 60 min per iteration
+# Threads: 1 thread
+# Benchmark mode: Single shot invocation time
+# Benchmark: io.github.theuntamed839.BenchmarkRead.reverseSearch
+# Parameters: (dbProvider = LEVELDB_JAVA, entryCount = 1000000, keySize = 500, valueSize = 500)
+
+# Run progress: 83.33% complete, ETA 01:57:35
+# Fork: 1 of 3
+# Warmup Iteration   1: 27.120 s/op
+# Warmup Iteration   2: 22.414 s/op
+# Warmup Iteration   3: 22.428 s/op
+Iteration   1: 22.387 s/op
+Iteration   2: 22.396 s/op
+Iteration   3: PureJavaLevelDBAdaptor_337768de-0901-47cf-9511-ab9f63568382 Folder size: 988
+22.378 s/op
+
+# Run progress: 84.72% complete, ETA 01:46:36
+# Fork: 2 of 3
+# Warmup Iteration   1: 27.088 s/op
+# Warmup Iteration   2: 22.290 s/op
+# Warmup Iteration   3: 22.390 s/op
+Iteration   1: 22.430 s/op
+Iteration   2: 22.450 s/op
+Iteration   3: PureJavaLevelDBAdaptor_754515cd-d055-4751-a6a4-10ac3a34b3c4 Folder size: 988
+22.384 s/op
+
+# Run progress: 86.11% complete, ETA 01:35:52
+# Fork: 3 of 3
+# Warmup Iteration   1: 33.715 s/op
+# Warmup Iteration   2: 31.790 s/op
+# Warmup Iteration   3: 31.658 s/op
+Iteration   1: 31.741 s/op
+Iteration   2: 31.707 s/op
+Iteration   3: PureJavaLevelDBAdaptor_387ec07c-3197-457d-b7a6-c114aa45aaa7 Folder size: 988
+31.617 s/op
+
+
+Result "io.github.theuntamed839.BenchmarkRead.reverseSearch":
+  N = 9
+  mean =     25.499 ±(99.9%) 7.801 s/op
+
+  Histogram, s/op:
+    [22.000, 23.000) = 6 
+    [23.000, 24.000) = 0 
+    [24.000, 25.000) = 0 
+    [25.000, 26.000) = 0 
+    [26.000, 27.000) = 0 
+    [27.000, 28.000) = 0 
+    [28.000, 29.000) = 0 
+    [29.000, 30.000) = 0 
+    [30.000, 31.000) = 0 
+
+  Percentiles, s/op:
+      p(0.0000) =     22.378 s/op
+     p(50.0000) =     22.430 s/op
+     p(90.0000) =     31.741 s/op
+     p(95.0000) =     31.741 s/op
+     p(99.0000) =     31.741 s/op
+     p(99.9000) =     31.741 s/op
+     p(99.9900) =     31.741 s/op
+     p(99.9990) =     31.741 s/op
+     p(99.9999) =     31.741 s/op
+    p(100.0000) =     31.741 s/op
+
+
+# JMH version: 1.37
+# VM version: JDK 22, OpenJDK 64-Bit Server VM, 22+36-2370
+# VM invoker: /home/ganesh/Documents/jdk-22/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, single-shot each
+# Measurement: 3 iterations, single-shot each
+# Timeout: 60 min per iteration
+# Threads: 1 thread
+# Benchmark mode: Single shot invocation time
+# Benchmark: io.github.theuntamed839.BenchmarkRead.reverseSearch
+# Parameters: (dbProvider = LEVELDB_JAVA, entryCount = 5000000, keySize = 500, valueSize = 500)
+
+# Run progress: 87.50% complete, ETA 01:25:30
+# Fork: 1 of 3
+# Warmup Iteration   1: 327.781 s/op
+# Warmup Iteration   2: 305.643 s/op
+# Warmup Iteration   3: 306.783 s/op
+Iteration   1: 306.251 s/op
+Iteration   2: 306.582 s/op
+Iteration   3: PureJavaLevelDBAdaptor_13db695a-6d13-4add-b71f-38b58247080c Folder size: 4990
+305.144 s/op
+
+# Run progress: 88.89% complete, ETA 01:19:59
+# Fork: 2 of 3
+# Warmup Iteration   1: 345.741 s/op
+# Warmup Iteration   2: 324.437 s/op
+# Warmup Iteration   3: 324.635 s/op
+Iteration   1: 323.823 s/op
+Iteration   2: 324.361 s/op
+Iteration   3: PureJavaLevelDBAdaptor_815a8484-7c71-42a1-bf93-0fa454f3ac71 Folder size: 4990
+324.129 s/op
+
+# Run progress: 90.28% complete, ETA 01:13:30
+# Fork: 3 of 3
+# Warmup Iteration   1: 317.931 s/op
+# Warmup Iteration   2: 296.786 s/op
+# Warmup Iteration   3: 297.613 s/op
+Iteration   1: 296.873 s/op
+Iteration   2: 298.079 s/op
+Iteration   3: PureJavaLevelDBAdaptor_3e9ba13e-36dd-4ac2-9855-33e877b146d9 Folder size: 4990
+297.548 s/op
+
+
+Result "io.github.theuntamed839.BenchmarkRead.reverseSearch":
+  N = 9
+  mean =    309.199 ±(99.9%) 19.794 s/op
+
+  Histogram, s/op:
+    [290.000, 292.500) = 0 
+    [292.500, 295.000) = 0 
+    [295.000, 297.500) = 1 
+    [297.500, 300.000) = 2 
+    [300.000, 302.500) = 0 
+    [302.500, 305.000) = 0 
+    [305.000, 307.500) = 3 
+    [307.500, 310.000) = 0 
+    [310.000, 312.500) = 0 
+    [312.500, 315.000) = 0 
+    [315.000, 317.500) = 0 
+    [317.500, 320.000) = 0 
+    [320.000, 322.500) = 0 
+    [322.500, 325.000) = 3 
+    [325.000, 327.500) = 0 
+
+  Percentiles, s/op:
+      p(0.0000) =    296.873 s/op
+     p(50.0000) =    306.251 s/op
+     p(90.0000) =    324.361 s/op
+     p(95.0000) =    324.361 s/op
+     p(99.0000) =    324.361 s/op
+     p(99.9000) =    324.361 s/op
+     p(99.9900) =    324.361 s/op
+     p(99.9990) =    324.361 s/op
+     p(99.9999) =    324.361 s/op
+    p(100.0000) =    324.361 s/op
+
+
+# JMH version: 1.37
+# VM version: JDK 22, OpenJDK 64-Bit Server VM, 22+36-2370
+# VM invoker: /home/ganesh/Documents/jdk-22/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, single-shot each
+# Measurement: 3 iterations, single-shot each
+# Timeout: 60 min per iteration
+# Threads: 1 thread
+# Benchmark mode: Single shot invocation time
+# Benchmark: io.github.theuntamed839.BenchmarkRead.reverseSearch
+# Parameters: (dbProvider = LEVELDB_NATIVE, entryCount = 1000000, keySize = 500, valueSize = 500)
+
+# Run progress: 91.67% complete, ETA 01:05:41
+# Fork: 1 of 3
+# Warmup Iteration   1: 7.884 s/op
+# Warmup Iteration   2: 4.066 s/op
+# Warmup Iteration   3: 3.289 s/op
+Iteration   1: 2.711 s/op
+Iteration   2: 2.652 s/op
+Iteration   3: NativeLevelDBAdaptor_b33f3efd-3a8b-4772-93fe-2af517d12339 Folder size: 994
+2.680 s/op
+
+# Run progress: 93.06% complete, ETA 00:54:02
+# Fork: 2 of 3
+# Warmup Iteration   1: 7.755 s/op
+# Warmup Iteration   2: 3.952 s/op
+# Warmup Iteration   3: 3.260 s/op
+Iteration   1: 2.697 s/op
+Iteration   2: 2.604 s/op
+Iteration   3: NativeLevelDBAdaptor_5c0e3cfc-1fef-496f-b6ca-c5740fa553eb Folder size: 991
+2.625 s/op
+
+# Run progress: 94.44% complete, ETA 00:42:41
+# Fork: 3 of 3
+# Warmup Iteration   1: 7.917 s/op
+# Warmup Iteration   2: 3.976 s/op
+# Warmup Iteration   3: 3.238 s/op
+Iteration   1: 2.712 s/op
+Iteration   2: 2.631 s/op
+Iteration   3: NativeLevelDBAdaptor_6798b05f-4fdb-46f9-88c0-a273ec4ac05b Folder size: 991
+2.650 s/op
+
+
+Result "io.github.theuntamed839.BenchmarkRead.reverseSearch":
+  N = 9
+  mean =      2.662 ±(99.9%) 0.066 s/op
+
+  Histogram, s/op:
+    [2.600, 2.613) = 1 
+    [2.613, 2.625) = 1 
+    [2.625, 2.638) = 1 
+    [2.638, 2.650) = 1 
+    [2.650, 2.663) = 1 
+    [2.663, 2.675) = 0 
+    [2.675, 2.688) = 1 
+    [2.688, 2.700) = 1 
+    [2.700, 2.713) = 2 
+    [2.713, 2.725) = 0 
+    [2.725, 2.738) = 0 
+    [2.738, 2.750) = 0 
+    [2.750, 2.763) = 0 
+    [2.763, 2.775) = 0 
+    [2.775, 2.788) = 0 
+    [2.788, 2.800) = 0 
+
+  Percentiles, s/op:
+      p(0.0000) =      2.604 s/op
+     p(50.0000) =      2.652 s/op
+     p(90.0000) =      2.712 s/op
+     p(95.0000) =      2.712 s/op
+     p(99.0000) =      2.712 s/op
+     p(99.9000) =      2.712 s/op
+     p(99.9900) =      2.712 s/op
+     p(99.9990) =      2.712 s/op
+     p(99.9999) =      2.712 s/op
+    p(100.0000) =      2.712 s/op
+
+
+# JMH version: 1.37
+# VM version: JDK 22, OpenJDK 64-Bit Server VM, 22+36-2370
+# VM invoker: /home/ganesh/Documents/jdk-22/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, single-shot each
+# Measurement: 3 iterations, single-shot each
+# Timeout: 60 min per iteration
+# Threads: 1 thread
+# Benchmark mode: Single shot invocation time
+# Benchmark: io.github.theuntamed839.BenchmarkRead.reverseSearch
+# Parameters: (dbProvider = LEVELDB_NATIVE, entryCount = 5000000, keySize = 500, valueSize = 500)
+
+# Run progress: 95.83% complete, ETA 00:31:37
+# Fork: 1 of 3
+# Warmup Iteration   1: 98.977 s/op
+# Warmup Iteration   2: 81.658 s/op
+# Warmup Iteration   3: 81.311 s/op
+Iteration   1: 81.497 s/op
+Iteration   2: 81.930 s/op
+Iteration   3: NativeLevelDBAdaptor_960bf425-2a94-4351-afc1-1b78ca960cb8 Folder size: 5021
+82.127 s/op
+
+# Run progress: 97.22% complete, ETA 00:21:24
+# Fork: 2 of 3
+# Warmup Iteration   1: 97.991 s/op
+# Warmup Iteration   2: 81.395 s/op
+# Warmup Iteration   3: 80.834 s/op
+Iteration   1: 81.223 s/op
+Iteration   2: 81.353 s/op
+Iteration   3: NativeLevelDBAdaptor_ff127147-16d0-475e-8bdb-9f196b52d008 Folder size: 5021
+80.712 s/op
+
+# Run progress: 98.61% complete, ETA 00:10:50
+# Fork: 3 of 3
+# Warmup Iteration   1: 100.273 s/op
+# Warmup Iteration   2: 81.364 s/op
+# Warmup Iteration   3: 81.412 s/op
+Iteration   1: 81.216 s/op
+Iteration   2: 80.703 s/op
+Iteration   3: NativeLevelDBAdaptor_f7951740-ad64-445d-ba01-0ab1ac05d735 Folder size: 5021
+80.538 s/op
+
+
+Result "io.github.theuntamed839.BenchmarkRead.reverseSearch":
+  N = 9
+  mean =     81.255 ±(99.9%) 0.920 s/op
+
+  Histogram, s/op:
+    [80.000, 80.250) = 0 
+    [80.250, 80.500) = 0 
+    [80.500, 80.750) = 3 
+    [80.750, 81.000) = 0 
+    [81.000, 81.250) = 2 
+    [81.250, 81.500) = 2 
+    [81.500, 81.750) = 0 
+    [81.750, 82.000) = 1 
+    [82.000, 82.250) = 1 
+    [82.250, 82.500) = 0 
+    [82.500, 82.750) = 0 
+
+  Percentiles, s/op:
+      p(0.0000) =     80.538 s/op
+     p(50.0000) =     81.223 s/op
+     p(90.0000) =     82.127 s/op
+     p(95.0000) =     82.127 s/op
+     p(99.0000) =     82.127 s/op
+     p(99.9000) =     82.127 s/op
+     p(99.9900) =     82.127 s/op
+     p(99.9990) =     82.127 s/op
+     p(99.9999) =     82.127 s/op
+    p(100.0000) =     82.127 s/op
+
+
+# Run complete. Total time: 13:11:30
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark                      (dbProvider)  (entryCount)  (keySize)  (valueSize)  Mode  Cnt    Score    Error  Units
+BenchmarkRead.linearSearch      DATASTORE4J       1000000        500          500    ss    9    8.012 ±  0.405   s/op
+BenchmarkRead.linearSearch      DATASTORE4J       5000000        500          500    ss    9   75.853 ±  3.917   s/op
+BenchmarkRead.linearSearch          ROCKSDB       1000000        500          500    ss    9   25.072 ±  0.186   s/op
+BenchmarkRead.linearSearch          ROCKSDB       5000000        500          500    ss    9   49.355 ±  1.989   s/op
+BenchmarkRead.linearSearch     LEVELDB_JAVA       1000000        500          500    ss    9   21.859 ±  0.353   s/op
+BenchmarkRead.linearSearch     LEVELDB_JAVA       5000000        500          500    ss    9  299.488 ± 14.869   s/op
+BenchmarkRead.linearSearch   LEVELDB_NATIVE       1000000        500          500    ss    9    2.776 ±  0.102   s/op
+BenchmarkRead.linearSearch   LEVELDB_NATIVE       5000000        500          500    ss    9   80.667 ±  0.688   s/op
+BenchmarkRead.randomSearch      DATASTORE4J       1000000        500          500    ss    9    8.623 ±  0.226   s/op
+BenchmarkRead.randomSearch      DATASTORE4J       5000000        500          500    ss    9   80.197 ±  4.500   s/op
+BenchmarkRead.randomSearch          ROCKSDB       1000000        500          500    ss    9   25.242 ±  0.272   s/op
+BenchmarkRead.randomSearch          ROCKSDB       5000000        500          500    ss    9   50.369 ±  0.841   s/op
+BenchmarkRead.randomSearch     LEVELDB_JAVA       1000000        500          500    ss    9   23.555 ±  4.565   s/op
+BenchmarkRead.randomSearch     LEVELDB_JAVA       5000000        500          500    ss    9  348.684 ± 28.951   s/op
+BenchmarkRead.randomSearch   LEVELDB_NATIVE       1000000        500          500    ss    9    2.847 ±  0.045   s/op
+BenchmarkRead.randomSearch   LEVELDB_NATIVE       5000000        500          500    ss    9   81.951 ±  2.001   s/op
+BenchmarkRead.reverseSearch     DATASTORE4J       1000000        500          500    ss    9    8.499 ±  0.152   s/op
+BenchmarkRead.reverseSearch     DATASTORE4J       5000000        500          500    ss    9   76.717 ±  3.234   s/op
+BenchmarkRead.reverseSearch         ROCKSDB       1000000        500          500    ss    9   25.097 ±  0.303   s/op
+BenchmarkRead.reverseSearch         ROCKSDB       5000000        500          500    ss    9   50.635 ±  2.140   s/op
+BenchmarkRead.reverseSearch    LEVELDB_JAVA       1000000        500          500    ss    9   25.499 ±  7.801   s/op
+BenchmarkRead.reverseSearch    LEVELDB_JAVA       5000000        500          500    ss    9  309.199 ± 19.794   s/op
+BenchmarkRead.reverseSearch  LEVELDB_NATIVE       1000000        500          500    ss    9    2.662 ±  0.066   s/op
+BenchmarkRead.reverseSearch  LEVELDB_NATIVE       5000000        500          500    ss    9   81.255 ±  0.920   s/op
+
+Benchmark result is saved to BenchmarkRead.json
