@@ -9,6 +9,12 @@ Swappiness: 60
 Swap file size: 2 GB
 ```
 
+The benchmarks are performed on four different database implementations:
+1. [RocksDB](https://github.com/facebook/rocksdb)
+2. [LevelDB Native](https://github.com/fusesource/leveldbjni)
+3. [LevelDB Java](https://github.com/dain/leveldb) (a Java port of LevelDB)
+4. [DataStore4J](https://github.com/theuntamed839/DataStore4J)
+
 **Note: The exact commands used to run each test are recorded at the top of the console output file for that benchmark**
 
 ### Write Benchmark:
@@ -109,7 +115,7 @@ BenchmarkRead.randomSearch         ROCKSDB      10000000        500          500
 BenchmarkRead.randomSearch  LEVELDB_NATIVE      10000000        500          500    ss       804.094           s/op
 ```
 
-RocksDB continues to lead in read performance, with DataStore4J close behind.
+RocksDB continues to lead in read performance, with DataStore4J coming at second place.
 
 #### Variable Size Data Read:
 JMH Benchmark results for reading 1 million and 5 million entries with variable size (up to 500 bytes key and up to 500 bytes value)
@@ -162,7 +168,7 @@ BenchmarkVariableSizeDataRead.randomSearch  LEVELDB_NATIVE      10000000        
 ```
 #### Iteration Behavior:
 Observing the JMH iterations makes it clear that RocksDB and LevelDB Native perform some form of caching in each iteration.
-I am not an expert on these databases, but it seems they also take advantage of the OS page cache with kernel-level hints on read
+It seems like they take advantage of the OS page cache with kernel-level hints on read
 patterns, which benefits them significantly ?
 
 ```text
@@ -208,7 +214,8 @@ With each warmup iteration and measurement iteration for RocksDB and LevelDB Nat
 the time taken decreases significantly, indicating effective data caching.
 DataStore4J, on the other hand, remained in the same speed bracket all iterations, something to take note of.
 
-We had a benchmark specifically to test this scenario.
+We had a benchmark which tests this type of scenario.
+
 #### Fixed Size Data Read (Fresh DB for each iteration):
 JMH Benchmark results for reading 5 million entries with Fixed size (500 bytes key and 500 bytes value) data. Mode is Single Shot.
 ```text
@@ -232,7 +239,7 @@ and not created afresh each time.
 
 ### Concurrency Benchmark:
 One of the main features of DataStore4J is its concurrency support. It allows multiple threads to read and write to the database
-simultaneously without any external locking mechanism.
+ without any external locking mechanism.
 
 #### Concurrent Writes:
 JMH Benchmark results for concurrent writes with 12 threads writing to a pre-populated database with 5 million entries with
@@ -313,16 +320,15 @@ The results show that RocksDB is the most space-efficient of the three databases
 All three databases are relatively close in size, which is expected given that the raw data (10M entries * 1KB/entry)
 is approximately 10GB.
 
-Another point to note is that Disk seeks and reading from disk is much slower than reading from memory. Some thing which DataStore4J needs to work on.
+## Summary
 
-Summary:
+DataStore4J demonstrates strong write performance, achieving results comparable to RocksDB, while delivering read performance relative to LevelDB JNI or better.
+Its concurrency shows stable and predictable throughput, with noticeable advantages in cold start scenarios where the database is initialized afresh.
 
-Writes: DataStore4J competes closely with RocksDB for large-scale writes.
+Nevertheless, read performance still lags behind RocksDB, highlighting opportunities for further optimization.
 
-Reads: RocksDB leads overall, though DataStore4J remains competitive and more consistent under some conditions.
-
-Concurrency: DataStore4J excels in stable, concurrent write throughput, while RocksDB shows higher variability.
-
-Space Efficiency: RocksDB is slightly more compact, though differences are minor.
-
-Improvement Areas: DataStore4J can enhance read performance and caching strategies to better match RocksDB. and improve in efficiently compressing data on disk.
+### Benchmark observations suggest two primary improvement areas:
+1. Caching strategies: Unlike RocksDB and LevelDB, whose read performance improves across iterations due to effective caching, 
+DataStore4J shows limited benefit from repeated access. This indicates the need for more advanced caching mechanisms.
+2. On-disk data efficiency: For 10 million entries, DataStore4J consumes approximately 700MB more disk space than RocksDB.
+While the difference may appear modest, higher storage usage translates into additional disk seeks, which negatively impacts read performance.
