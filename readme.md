@@ -7,7 +7,6 @@ A thread-safe, high-performance key-value store, built on an LSM-tree architectu
 * Zero-configuration, fully embeddable library.
 * Supports memory-mapped files for efficient OS-level management and FileChannel-based I/O for portability
 * Uses Arena to map and unmap memory-mapped files, avoiding potential memory leaks.
-* Compatible with custom Java file systems (e.g., [JIMFS](https://github.com/google/jimfs)) for in-memory execution, useful in testing and simulations.
 * Uses Write-Ahead Logging (WAL) before memtable flush
 
 ### Getting started:
@@ -40,7 +39,6 @@ import io.github.theuntamed839.datastore4j.db.DbOptions;
 
 Path dbPath = Files.createDirectory(Path.of("PathForDB"));
 DbOptions opt = new DbOptions();
-// opt.disallowUseOfMMap(); // to disable mmap
 DB db = new DataStore4J(dbPath, opt);
 
 byte[] key = "key".getBytes();
@@ -56,7 +54,7 @@ byte[] result = db.get(key);
 db.put(key, "newValue".getBytes());
 
 // delete
-db.delete(key);
+        db.delete(key);
 
 // get search stats
 SearchStats searchStats = db.getSearchStats();
