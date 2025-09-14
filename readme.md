@@ -54,7 +54,7 @@ byte[] result = db.get(key);
 db.put(key, "newValue".getBytes());
 
 // delete
-        db.delete(key);
+db.delete(key);
 
 // get search stats
 SearchStats searchStats = db.getSearchStats();
