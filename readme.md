@@ -1,5 +1,5 @@
 # DataStore4J
-**DataStore4J** A thread-safe, high-performance key-value store, built on an LSM-tree architecture inspired by [LevelDB](https://github.com/google/leveldb), and written entirely in Java.
+A thread-safe, high-performance key-value store, built on an LSM-tree architecture inspired by [LevelDB](https://github.com/google/leveldb), and written entirely in Java.
 
 ### Features:
 * Implemented entirely in Java (no JNI or native code).
@@ -81,6 +81,6 @@ db.close();
 3. [ ] Enhance crash recovery mechanisms to enable database restoration from any intermediate state.
 4. [ ] Improve robustness for large datasets, including graceful handling of exceptions such as excessive open files or memory exhaustion.
 5. [ ] Provide configurable selection of LZ4 implementations via the API.
-6. [ ] [Implement a more efficient file search algorithm](https://github.com/theuntamed839/DataStore4J/blob/00c8de4c7551e1ae39052cb0fd3f5be8a9bd4c71/DataStore4J/src/main/java/io/github/theuntamed839/datastore4j/search/Search.java#L69) 
+6. [ ] [Implement a more efficient file search algorithm](https://github.com/theuntamed839/DataStore4J/blob/00c8de4c7551e1ae39052cb0fd3f5be8a9bd4c71/DataStore4J/src/main/java/io/github/theuntamed839/datastore4j/search/Search.java#L69)
 7. [ ] Add support for custom key comparators.
 8. [ ] Enhance concurrency, ensuring reads are fully independent of writes.

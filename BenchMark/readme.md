@@ -1,4 +1,4 @@
-### Benchmarks:
+# Benchmarks:
 The following benchmarks were run on the system with the following specifications:
 ```text
 OS: Ubuntu 20.04.6 LTS x86_64
@@ -29,7 +29,7 @@ The results are saved to BenchmarkRead.json and BenchmarkRead.txt.
 
 **Note: The exact commands used to run each test are recorded at the top of the console output file for that benchmark**
 
-### Write Benchmark:
+## Write Benchmark:
 JMH Benchmark results for writing 1 million and 5 million entries with fixed size (500 bytes key and 500 bytes value) and variable
 size (up to 500 bytes key and up to 500 bytes value) data.
 
@@ -74,9 +74,9 @@ BenchmarkWrite.writeFixedSizeData       ROCKSDB      10000000        500        
 ```
 DataStore4J demonstrates write performance on par with RocksDB for 10 million fixed-size entries.
 
-### Read Benchmark:
+## Read Benchmark:
 
-#### Fixed Size Data Read:
+### Fixed Size Data Read:
 JMH Benchmark results for reading 1 million and 5 million entries with fixed size (500 bytes key and 500 bytes value) data.
 
 The mode is Single Shot.
@@ -129,7 +129,7 @@ BenchmarkRead.randomSearch  LEVELDB_NATIVE      10000000        500          500
 
 RocksDB continues to lead in read performance, with DataStore4J coming at second place.
 
-#### Variable Size Data Read:
+### Variable Size Data Read:
 JMH Benchmark results for reading 1 million and 5 million entries with variable size (up to 500 bytes key and up to 500 bytes value)
 data.
 
@@ -178,7 +178,7 @@ BenchmarkVariableSizeDataRead.randomSearch     DATASTORE4J      10000000        
 BenchmarkVariableSizeDataRead.randomSearch         ROCKSDB      10000000        500          500    ss       122.458           s/op
 BenchmarkVariableSizeDataRead.randomSearch  LEVELDB_NATIVE      10000000        500          500    ss       170.211           s/op
 ```
-#### Iteration Behavior:
+### Iteration Behavior:
 Observing the JMH iterations makes it clear that RocksDB and LevelDB Native perform some form of caching in each iteration.
 It seems like they take advantage of the OS page cache with kernel-level hints on read
 patterns, which benefits them significantly ?
@@ -228,7 +228,7 @@ DataStore4J, on the other hand, remained in the same speed bracket all iteration
 
 We had a benchmark which tests this type of scenario.
 
-#### Fixed Size Data Read (Fresh DB for each iteration):
+### Fixed Size Data Read (Fresh DB for each iteration):
 JMH Benchmark results for reading 5 million entries with Fixed size (500 bytes key and 500 bytes value) data. Mode is Single Shot.
 ```text
 Benchmark                          (dbProvider)  (entryCount)  (keySize)  (valueSize)  Mode  Cnt    Score   Error  Units
@@ -249,11 +249,11 @@ DataStore4J leads in this benchmark, where each iteration starts with a fresh da
 But again this is not a very realistic scenario as in real world applications the database will be used over a period of time
 and not created afresh each time.
 
-### Concurrency Benchmark:
+## Concurrency Benchmark:
 One of the main features of DataStore4J is its concurrency support. It allows multiple threads to read and write to the database
  without any external locking mechanism.
 
-#### Concurrent Writes:
+### Concurrent Writes:
 JMH Benchmark results for concurrent writes with 12 threads writing to a pre-populated database with 5 million entries with
 fixed size (500 bytes key and 500 bytes value) data.
 
@@ -289,7 +289,7 @@ A closer look at the percentile data from the raw JMH results provides clear evi
 The table shows a massive gap between RocksDB's median performance and its 99th percentile.
 This means that a significant portion of its benchmark runs were extremely slow, even though the peak performance was high.
 
-#### Concurrent Reads:
+### Concurrent Reads:
 JMH benchmark results for concurrent reads using 12 threads on a pre-populated database containing 5 million entries with fixed-size
 data (500-byte key and 500-byte value). The benchmark performs random reads from the existing list of inserted keys.
 
@@ -316,10 +316,11 @@ Comparing the percentile data for the top two performers reinforces this point:
 |----|----------------------------|-----------|
 | 50th (Median)  | 303476                      | 478622|
 | 99th  | 315260                | 583600 |
+
 Although RocksDB's median and 99th percentile are higher than DataStore4J's, the significant spread between its own median and
 99th percentile indicates that a large number of its reads were much slower than its peak performance.
 
-### Database Folder Size Comparison
+## Database Folder Size Comparison
 This table compares the on-disk size of the database folders after populating each database with 10 million key-value pairs, where both the key and value are 500 bytes.
 
 | Database | Folder Size(MB) |
