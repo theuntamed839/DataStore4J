@@ -103,6 +103,7 @@ public class ExpandingByteBuffer extends OutputStream {
     }
 
     public void limit(int size) {
+        // todo we should check before we limit the size
         buffer.limit(size);
     }
 

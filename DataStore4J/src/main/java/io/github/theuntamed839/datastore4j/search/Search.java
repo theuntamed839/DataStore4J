@@ -17,7 +17,7 @@ import java.util.zip.CRC32C;
 import java.util.zip.Checksum;
 
 public class Search implements AutoCloseable{
-    private static final ThreadLocal<Checksum> crc32cThreadLocal = ThreadLocal.withInitial(CRC32C::new);
+    private static final ThreadLocal<Checksum> crc32cThreadLocal = ThreadLocal.withInitial(CRC32C::new); // todo https://www.youtube.com/shorts/7HBI6VwM7wk ?
     private final LoadingCache<byte[], KVUnit> kvCache;
     private final SafeCache<SSTInfo, Finder> readerCache;
     private final Map<Integer, Long> readerStats;

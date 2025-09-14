@@ -66,7 +66,7 @@ public class DataStore4J implements DB, AutoCloseable{
 
     @Override
     public byte[] get(byte[] key) throws Exception {
-        long stamp = stampedLock.readLock();
+//        long stamp = stampedLock.readLock();
         try {
             ensureOpen();
             Objects.requireNonNull(key);
@@ -88,7 +88,7 @@ public class DataStore4J implements DB, AutoCloseable{
                 return kvUnit.getValue();
             }
         }finally {
-            stampedLock.unlockRead(stamp);
+//            stampedLock.unlockRead(stamp);
         }
     }
 
@@ -99,6 +99,9 @@ public class DataStore4J implements DB, AutoCloseable{
     }
 
     private void writeUnit(KVUnit kvUnit, Operations operations) throws Exception {
+        // todo we can get rid of locks linked to both write and read, as not all the time they are needed, and moreover when we're trying to flush the memtable,
+        // we can actually first move it to secondary memtable and then flush which reduce the dependency of locks
+
         long stamp = stampedLock.writeLock();
         try {
             ensureOpen();
@@ -110,9 +113,8 @@ public class DataStore4J implements DB, AutoCloseable{
             }
 
             var immutableMem = ImmutableMem.of(memtable);
-
-            compactor.persistLevel0(immutableMem);
             search.addSecondaryMemtable(immutableMem);
+            compactor.persistLevel0(immutableMem);
 
             walManager.rotateLog();
             memtable = new SkipListMemtable(dbComponentProvider.getMemtableSize(), dbComponentProvider.getComparator());

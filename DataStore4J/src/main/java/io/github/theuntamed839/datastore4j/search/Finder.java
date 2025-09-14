@@ -33,7 +33,7 @@ public class Finder implements AutoCloseable{
         this.reader = reader;
         this.pointerList = pointerList;
         this.byteArrayComparator = byteArrayComparator;
-        this.checksumsCache = Caffeine.newBuilder()
+        this.checksumsCache = Caffeine.newBuilder() // todo similar way we can also store the locations.
                 .softValues() //todo should we have hard limit instead ?
                 .build();
         this.singleClusterSize = singleClusterSize;

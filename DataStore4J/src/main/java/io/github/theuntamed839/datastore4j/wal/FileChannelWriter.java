@@ -10,7 +10,6 @@ public final class FileChannelWriter implements LogWriter {
 
     public FileChannelWriter(Path filePath) throws IOException {
         this.channel = FileChannel.open(filePath, java.nio.file.StandardOpenOption.WRITE, java.nio.file.StandardOpenOption.CREATE);
-        channel.force(true);
     }
 
     @Override
@@ -26,5 +25,6 @@ public final class FileChannelWriter implements LogWriter {
     @Override
     public void write(ByteBuffer buffer) throws IOException {
         channel.write(buffer);
+//        channel.force(false);
     }
 }
