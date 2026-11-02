@@ -1,6 +1,10 @@
 # DataStore4J
 A thread-safe, high-performance key-value store, built on an LSM-tree architecture inspired by [LevelDB](https://github.com/google/leveldb), and written entirely in Java.
 
+<p align="center">
+    <img src="DataStore4J_Logo.png" alt="DataStore4J logo" width="200">
+</p>
+
 ### Features:
 * Implemented entirely in Java (no JNI or native code).
 * Thread-safe with concurrency support.
